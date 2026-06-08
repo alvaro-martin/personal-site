@@ -1,0 +1,308 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contactme": "Contact me"
+    },
+    "hero": {
+        "hello": "Hello, I'm Alvaro Martín",
+        "title1": "Mechanical & Electrical Engineer",
+        "title2": "Full-Stack Software Developer",
+        "title3": "IoT Researcher",
+        "description": "Founder & CEO of Aubo: Solutions oriented to the electrical and industrial sector with IoT + Cloud + IA.",
+        "button": "Contact me"
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle": "My introduction",
+        "description": "I am a constructive paranoid obsessed with the future. The 3 words that define me: Curious, Eager and Self-taught. My 3 heroes: Franz Kafka, Nikola Tesla and Bruce Lee. I'm very interested in Software Development & Engineering to provide innovative solutions for the Electrical & Industrial sector using the Internet of Things, Artificial Intelligence, Digital Twins, 3D Web Development, Blockchain, etc. There is no day that I stop learning.",
+        "subnumber1": "Years experience",
+        "subnumber2": "Published papers",
+        "subnumber3": "Completed projects",
+        "cv": "Download CV",
+        "cvLink": "https://certificados-almartin.s3.amazonaws.com/CV+-+EN+-+Alvaro+Aspilcueta.pdf"
+    },
+    "services": {
+        "title": "Services",
+        "subtitle": "What I offer",
+        "service1": "Mechanical & Electrical Engineer",
+        "service1-1": "Preventive Maintenance Projects Implementation.",
+        "service1-2": "Industrial OPC Servers integration to the cloud.",
+        "service1-3": "Industrial Equipment Remote Monitoring implementation.",
+        "service1-4": "PLC's programming.",
+        "service2": "Frontend Developer",
+        "service2-1": "User Interface design.",
+        "service2-2": "Web page design.",
+        "service2-3": "Web page development.",
+        "service3": "Backend & Cloud Developer",
+        "service3-1": "Node JS development.",
+        "service3-2": "Firebase development.",
+        "service3-3": "Amplify development.",
+        "service3-4": "AWS Certified.",
+        "service4": "IoT Projects",
+        "service4-1": "WiFi Projects implementation.",
+        "service4-2": "Sigfox Projects implementation.",
+        "service4-3": "LoRaWAN Projects Implementation.",
+        "service4-4": "AWS IoT Core expert.",
+        "service5": "Machine Learning Projects",
+        "service5-1": "TinyML Projects implementation.",
+        "service5-2": "TensorFlow model development.",
+        "service5-3": "OpenCV Computer Vision model development.",
+        "service6": "Research",
+        "service6-1": "Thesis advisory.",
+        "service6-2": "Scientific articles writing advisory.",
+        "service6-3": "Research projects advisory",
+        "viewMore": "View more"
+    },
+    "contactme": {
+        "title": "Contact me",
+        "subtitle": "Get in touch",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "button": "Send Message",
+        "location": "Location",
+        "emaildata": "hello@aubo.io",
+        "locationData": "Lima, Peru"
+    },
+    "newProject": {
+        "title": "You have a new project?",
+        "subtitle": "Contact me now and let's move your project forward!",
+        "button": "Contact me"
+    },
+    "footer": {
+        "title": "Alvaro Martín",
+        "subtitle1": "Mechanical & Electrical Engineer",
+        "subtitle2": "Full-Stack Software Developer",
+        "subtitle3": "IoT Researcher",
+        "link1": "About me",
+        "link2": "Skills",
+        "link3": "Services",
+        "link4": "Portfolio",
+        "madeBy": "Made with ❤️ by 🙋🏽‍♂️",
+        "copyright": "All rights reserved."
+    },
+    "skills": {
+        "title": "Skills",
+        "subtitle": "My technical level",
+        "engineer": {
+            "title": "Mechanical & Electrical",
+            "subtitle": "Engineering",
+            "maintenance": "Maintenance planning",
+            "opc": "OPC UA protocol",
+            "digsilent": "Digsilent",
+            "design": "Transmission Lines design",
+            "power": "Power Systems analysis",
+            "plc": "Siemens PLC programming",
+            "autocad": "AutoCAD",
+            "solidworks": "SolidWorks"
+        },
+        "frontend": {
+            "title": "Frontend Developer",
+            "subtitle": "Client side",
+            "html": "HTML",
+            "js": "JavaScript",
+            "css": "CSS",
+            "react": "React",
+            "styled-components": "React Styled-components",
+            "testing": "Testing",
+            "3d": "Three JS for 3D Web Development"
+        },
+        "backend": {
+            "title": "Backend Developer",
+            "subtitle": "Server side",
+            "node": "Node JS",
+            "python": "Python",
+            "firebase": "Firebase",
+            "amplify": "AWS Amplify",
+            "aws": "AWS - Amazon Web Services",
+            "iac-aws": "IaC - AWS CloudFormation",
+            "iac-terraform": "IaC - Terraform",
+            "gcp": "GCP - Google Cloud Platform",
+            "az": "Azure",
+            "bash": "Bash scripting"
+        },
+        "iot": {
+            "title": "IoT Engineer",
+            "subtitle": "Projects",
+            "wifi": "WiFi",
+            "sigfox": "Sigfox",
+            "lorawan": "LoRaWAN",
+            "https": "HTTPS",
+            "mqtt": "MQTT",
+            "micros": "Microcontrollers programming",
+            "C": "C++"
+        },
+        "ml": {
+            "title": "Machine Learning",
+            "subtitle": "Projects",
+            "tf": "TensorFlow",
+            "tfjs": "TensorFlow JS",
+            "tinyml": "Tiny ML",
+            "opencv": "OpenCV"
+        },
+        "english": {
+            "title": "English",
+            "subtitle": "Conversational Level / B2 - Upper Intermediate",
+            "reading": "Reading",
+            "listening": "Listening",
+            "writing": "Writing",
+            "speaking": "Speaking"
+        }
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "subtitle": "Most recent work",
+        "project1": {
+            "title": "NFT Hydroponic Module Construction and Parameters Monitoring",
+            "subtitle": "Design, monitoring and construction of NFT (Nutrient Film Technique) Hydroponic Module and measurement of water quality parameters in real time (in progress)."
+        },
+        "project2": {
+            "title": "Development of IoT Platform for Truck Tracking.",
+            "subtitle": "Aubo IoT platform for real-time parameter monitoring (in progress)."
+        },
+        "project3": {
+            "title": "Integration of Industrial OPC Server and variable monitoring in AWS",
+            "subtitle": "A program was developed to extract the data from the Industrial OPC Server and was integrated with AWS IoT Core to visualize it in real time in a dashboard."
+        },
+        "project4": {
+            "title": "LoRaWAN Training Universidad Nacional Amazonica Madre de Dios (UNAMAD)",
+            "subtitle": "LoRaWAN (LPWAN IoT technology), theory and practice with configuration of gateways, nodes and sensors, as well as connection to The Things Network server and the AWS cloud platform with real-time data visualization with a dashboard."
+        },
+        "project5": {
+            "title": "ParaLaOlla",
+            "subtitle": "Donate money to common pots in Peru. Web page to facilitate contact between donors and pots."
+        },
+        "project6": {
+            "title": "Oxímetro Perú",
+            "subtitle": "It's a social initiative led by professionals in the technological field. Its purpose is to provide access to vulnerable people with limited economic resources so that the level of Oxygen Saturation (SpO2) can be measured in critical places in Peru where the pandemic has affected it to a greater extent. To this end, measurement equipment (pulse oximeters) is being provided to volunteers and people interested in operating the service at certain measurement points.",
+            "button": "Demo",
+            "link": "https://oximetroperu.web.app/"
+        }
+    },
+    "research": {
+        "title": "Research",
+        "subtitle": "Papers",
+        "project1": {
+            "title": "Design of a low-cost IoT prototype for monitoring the water quality parameters of a fish farm in Madre de Dios, Peru",
+            "subtitle": "Advice on writing a research article for a professor at UNAMAD (Madre de Dios National Amazon University)."
+        },
+        "project2": {
+            "title": "San Marcos Smart City: A framework proposal for the development of Smart City Services based on ISO 37120:2018",
+            "subtitle": "Scientific article published in Springer."
+        },
+        "project3": {
+            "title": "Planning study for the development of the Smart Campus FIEE UNI",
+            "subtitle": "Scientific article in publication process. Planning study where various axes, indices, indicators and variables were defined for the management of an intelligent library. In addition, a web platform for the demonstration and implementation of a LoRaWAN environmental sensor was developed to monitor its parameters in real time with the AWS platform. Financed by the IIFIEE UNI.",
+            "button": "Demo",
+            "link": "https://smart-library-fiee-uni.web.app/variables.html"
+        },
+        "project4": {
+            "title": "Development of a system and web application of the Smart Campus FIEE for real-time visualization of the location of the UNI Bus using IoT LoRaWAN technologies",
+            "subtitle": "A prototype was developed with LoRaWAN technologies for tracking the UNI bus, the technology was used to develop graphical interfaces Vue.js, as well as Firebase for the deployment of the application and to display the bus coordinates in real time on a map.",
+            "button": "Demo",
+            "link": "https://bustrackuni.web.app/"
+        },
+        "project5": {
+            "title": "Recognition of movements from the hand to the face to combat COVID-19 for a vulnerable population using an IMU sensor and a deep learning model embedded in an SBC",
+            "subtitle": "It recognizes facial movements using a deep learning model with convolutional and recurrent networks that is embedded in the raspberry using TensorFlow Lite. Published by the Brazilian Technology Symposium 2020 organized by UNICAMP and UPC in a Springer Nature journal. Sole author.",
+            "button": "Presentation",
+            "link": "https://www.facebook.com/watch/live/?v=736446323572888&ref=search"
+        },
+        "project6": {
+            "title": "COVID-19 mobile application based on RSSI signals to comply with social distancing using the bluetooth signal of smartphones",
+            "subtitle": "Based on the level of intensity of the RSSI signals of the bluetooth of the smartphones, it is determined whether or not the social distancing of 1 meter is met, a simple neural network with tensorflow was used to classify the signals in Android Studio. Published in Elsevier, Data Science for COVID-19 Paper 26.",
+            "button": "See paper",
+            "link": "https://www.elsevier.com/books/data-science-for-covid-19/kose/978-0-12-824536-1"
+        },
+        "project7": {
+            "title": "Smart Campus Guidance System for visitors based on Bayesian Filters",
+            "subtitle": "Project based on a raspberry pi, a magnetometer and a 3D casing, so that based on the intensity of the signals read by the device, it infers the user's position and guides him through a graphic that indicates the direction to follow on a touch screen. to reach your destination. Financed by the IIFIEE UNI.",
+            "button": "See paper",
+            "link": "https://link.springer.com/chapter/10.1007%2F978-3-030-57566-3_46"
+        }
+    },
+    "acknowledgments": {
+        "title": "Acknowledgments",
+        "subtitle": "and Awards",
+        "project1": {
+            "title": "Distinction for Innovation in the National Digital Democracy Award 2021 to the IoT Community Peru",
+            "subtitle": "8th edition of the National Digital Democracy Award",
+            "button": "See",
+            "link": "https://democraciadigital.pe/blogs/nota-prensa-22-iniciativas-digitales-premiadas-8va-edicion-premio-nacional-democracia-digital"
+        },
+        "project2": {
+            "title": "Oxygen Tank Level Monitoring for Covid-19 patients",
+            "subtitle": "Oxygen Tank Level Monitoring for Covid-19 patients using computer vision, cloud computing and Telegram.",
+            "button": "Presentation",
+            "link": "https://www.facebook.com/watch/?v=438908840774804"
+        },
+        "project3": {
+            "title":"Oxygen Tank Level Monitoring for Covid-19 patients",
+            "subtitle": "Oxygen Tank Level Monitoring for Covid-19 patients using computer vision, cloud computing and Telegram.",
+            "button": "Presentation",
+            "link": "https://www.facebook.com/watch/?v=438908840774804"
+        },
+        "project4": {
+            "title": "Real-time monitoring system based on IoT for efficient management of the irrigation and maintenance service of a park in the district of San Isidro using Sigfox and Machine Learning technologies",
+            "subtitle": "A prototype was developed and implemented with LPWAN Sigfox technology to send data such as soil moisture (%), relative humidity (%) and ambient temperature (°C); the FIWARE cloud was used to receive and display the data in a dashboard; Finally, soil moisture was forecast 3 days in advance using Machine Learning."
+        },
+        "project5": {
+            "title": "Real-time monitoring system based on IoT for efficient management of the irrigation and maintenance service of a park in the district of San Isidro using Sigfox and Machine Learning technologies",
+            "subtitle": "Applied Technological Development Award at the IEEE INTERCON 2019 technology fair together with the UNMSM IoT Research Group."
+        },
+        "project6": {
+            "title": "Hackster Bounty Winner: Smart Shower Gadget Using Amazon Alexa and Arduino",
+            "subtitle": "Control the temperature of your shower water with your voice using Amazon Alexa and Arduino. You start by giving Amazon Alexa the order to turn on the shower, then it asks you for the temperature of the water at which you would like to bathe, you give it to it and based on this temperature collected by Arduino through the cloud, it controls the temperature using a PID controller, then whenever you want you can tell it to stop and terminate the process.",
+            "button": "See",
+            "link": "https://www.hackster.io/pipo-automation/smart-shower-gadget-c97f8e"
+        }
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "subtitle": "My personal journey",
+        "aubo": {
+            "title": "CEO & Founder",
+            "company": "Aubo",
+            "date": "2019 - Present"
+        },
+        "iotperu": {
+            "title": "Coordinator & Co-Founder",
+            "company": "IoT Peru Community",
+            "date": "2018 - Present"
+        },        
+        "bigdata": {
+            "title": "Cloud + IA + Blockchain Teacher",
+            "company": "Big Data IoT Cloud",
+            "date": "2021"
+        },
+        "iotunmsm": {
+            "title": "IoT Researcher",
+            "company": "UNMSM IoT Research Group",
+            "date": "2018 - Present"
+        },
+        "priconsa": {
+            "title": "High and Medium Voltage Project Design Engineer",
+            "company": "PRICONSA",
+            "date": "2015 - 2017"
+        },
+        "agp": {
+            "title": "Maintenance Planner Assistant",
+            "company": "AGP Group",
+            "date": "2015"
+        },
+        "milpo": {
+            "title": "Maintenance Engineering Intern",
+            "company": "Milpo Mining Company",
+            "date": "2015"
+        },
+        "uni": {
+            "title": "Mechanical & Electrical Eng. Student",
+            "company": "National University of Engineering",
+            "date": "2011 - 2015"
+        }
+    }
+}
