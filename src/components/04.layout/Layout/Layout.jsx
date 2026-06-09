@@ -1,13 +1,12 @@
-import { LayoutWrapper } from "./Layout.styles";
 import { Header, Footer } from "components/03.organisms";
 
 const Layout = ({children}) => {
     return (
-        <LayoutWrapper>
+        <div className="flex flex-col w-full h-screen">
             <Header />
             {children}
             <Footer />
-        </LayoutWrapper>
+        </div>
     )
 };
 

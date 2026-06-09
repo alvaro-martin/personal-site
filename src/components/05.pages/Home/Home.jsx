@@ -11,10 +11,10 @@ import {
     Journey
 } from "components/03.organisms";
 import { ScrollToTop } from "components/02.molecules";
-import { HomeWrapper } from "./Home.styles";
+
 const Home = () => {
     return (
-        <HomeWrapper>
+        <div className="flex flex-col items-center">
             <ScrollToTop />
             <Hero />
             <About />
@@ -26,7 +26,7 @@ const Home = () => {
             <Research />
             <Awards />
             <ContactMe />
-        </HomeWrapper>
+        </div>
     )
 };
 

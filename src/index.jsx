@@ -1,11 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import GlobalStyle from 'styles/globalStyles';
-import { ThemeProvider } from 'styled-components';
-import LightTheme from 'styles/themes/light';
-import DarkTheme from 'styles/themes/dark';
+import { ThemeProvider } from 'styles/ThemeContext';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import favicon from 'assets/me.jpg';
 import {I18nextProvider} from 'react-i18next';
@@ -29,19 +26,14 @@ i18next.init({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Index = () => {
-  const [theme, setTheme] = useState(LightTheme);
-
   return (
     <React.StrictMode>
       <I18nextProvider i18n={i18next}>
-        <ThemeProvider theme={{...theme, setTheme: () => {
-          setTheme(s => s.id === 'light' ? DarkTheme : LightTheme);
-        }}}>      
-          <GlobalStyle />
+        <ThemeProvider>
           <HelmetProvider>
             <Helmet>
               <link rel='shortcut icon' href={favicon} type='image/x-icon' />
-              <title>Alvaro Martín</title>
+              <title>Alvaro Martin</title>
             </Helmet>
             <App />
           </HelmetProvider>

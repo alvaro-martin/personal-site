@@ -1,10 +1,8 @@
-import { H5Heading } from "./H5.styles";
-
 const H5 = ({children}) => {
     return (
-        <H5Heading>
+        <h5 className="text-[color:var(--color-fontColor4)] text-[2.5rem] mx-8">
             {children}
-        </H5Heading>
+        </h5>
     )
 };
 
