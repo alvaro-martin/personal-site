@@ -14,9 +14,16 @@ export default defineConfig({
       translations: path.resolve(__dirname, 'src/translations'),
       assets: path.resolve(__dirname, 'src/assets'),
       data: path.resolve(__dirname, 'src/data'),
+      test: path.resolve(__dirname, 'src/test'),
     }
   },
   server: {
     port: 3000
+  },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/test/setup.js',
+    css: false,
   }
 })
