@@ -1,6 +1,8 @@
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import { useState } from "react";
 import {useTranslation} from 'react-i18next';
+import content from 'data/content.json';
+
 import SanMarcos from 'assets/sanmarcos.png';
 import SmartCampus from 'assets/smartcampus.png';
 import LoRaWAN from 'assets/lorawan.png';
@@ -9,20 +11,25 @@ import RSSI from 'assets/rssi.png';
 import Bayes from 'assets/bayes.png';
 import Piscigranja from 'assets/piscigranja.png';
 
-const projects = [
-    { img: Piscigranja, alt: 'piscigranja', titleKey: 'research.project1.title', subtitleKey: 'research.project1.subtitle' },
-    { img: SanMarcos, alt: 'sanmarcos', titleKey: 'research.project2.title', subtitleKey: 'research.project2.subtitle' },
-    { img: SmartCampus, alt: 'smartcampus', titleKey: 'research.project3.title', subtitleKey: 'research.project3.subtitle', linkKey: 'research.project3.link', buttonKey: 'research.project3.button' },
-    { img: LoRaWAN, alt: 'lorawan', titleKey: 'research.project4.title', subtitleKey: 'research.project4.subtitle', linkKey: 'research.project4.link', buttonKey: 'research.project4.button' },
-    { img: Gesture, alt: 'gesture', titleKey: 'research.project5.title', subtitleKey: 'research.project5.subtitle', linkKey: 'research.project5.link', buttonKey: 'research.project5.button' },
-    { img: RSSI, alt: 'rssi', titleKey: 'research.project6.title', subtitleKey: 'research.project6.subtitle', linkKey: 'research.project6.link', buttonKey: 'research.project6.button' },
-    { img: Bayes, alt: 'bayes', titleKey: 'research.project7.title', subtitleKey: 'research.project7.subtitle', linkKey: 'research.project7.link', buttonKey: 'research.project7.button' },
-];
+const imageMap = {
+    piscigranja: Piscigranja,
+    sanmarcos: SanMarcos,
+    smartcampus: SmartCampus,
+    lorawan: LoRaWAN,
+    covid: Gesture,
+    rssi: RSSI,
+    bayes: Bayes,
+};
+
+const projects = content.research.projects.map(p => ({
+    ...p,
+    img: imageMap[p.imageKey],
+}));
 
 const Research = () => {
     const [t] = useTranslation("global");
     const [project, setProject] = useState(1);
-    const numberProjects = 7;
+    const numberProjects = projects.length;
 
     const DecreaseIndex = () => {
         if(project === 1){

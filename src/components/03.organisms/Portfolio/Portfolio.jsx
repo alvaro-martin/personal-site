@@ -1,6 +1,8 @@
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import { useState } from "react";
 import {useTranslation} from 'react-i18next';
+import content from 'data/content.json';
+
 import Hydroponic from 'assets/hydroponic.jpg';
 import AuboPlatform from 'assets/auboplatform.png';
 import OPCUA from 'assets/opcua.png';
@@ -8,19 +10,24 @@ import UNAMAD from 'assets/unamad.jpg';
 import Olla from 'assets/olla.jpg';
 import Oximetro from 'assets/oximetro.png';
 
-const projects = [
-    { img: Hydroponic, alt: 'hydroponic', titleKey: 'portfolio.project1.title', subtitleKey: 'portfolio.project1.subtitle' },
-    { img: AuboPlatform, alt: 'aubo', titleKey: 'portfolio.project2.title', subtitleKey: 'portfolio.project2.subtitle' },
-    { img: OPCUA, alt: 'OPCUA', titleKey: 'portfolio.project3.title', subtitleKey: 'portfolio.project3.subtitle' },
-    { img: UNAMAD, alt: 'UNAMAD', titleKey: 'portfolio.project4.title', subtitleKey: 'portfolio.project4.subtitle' },
-    { img: Olla, alt: 'olla', titleKey: 'portfolio.project5.title', subtitleKey: 'portfolio.project5.subtitle' },
-    { img: Oximetro, alt: 'Oximetro', titleKey: 'portfolio.project6.title', subtitleKey: 'portfolio.project6.subtitle', linkKey: 'portfolio.project6.link', buttonKey: 'portfolio.project6.button' },
-];
+const imageMap = {
+    hydroponic: Hydroponic,
+    auboplatform: AuboPlatform,
+    opcua: OPCUA,
+    unamad: UNAMAD,
+    olla: Olla,
+    oximetro: Oximetro,
+};
+
+const projects = content.portfolio.projects.map(p => ({
+    ...p,
+    img: imageMap[p.imageKey],
+}));
 
 const Portfolio = () => {
     const [t] = useTranslation("global");
     const [project, setProject] = useState(1);
-    const numberProjects = 6;
+    const numberProjects = projects.length;
 
     const DecreaseIndex = () => {
         if(project === 1){

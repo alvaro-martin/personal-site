@@ -1,0 +1,165 @@
+{
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/almartinuni/",
+    "twitter": "https://twitter.com/AuboIoT",
+    "youtube": "https://www.youtube.com/channel/UCe9h3MH2VjcRy5csMZDcWWg",
+    "whatsapp": "https://wa.me/message/PPPUMYTCGAVEI1",
+    "website": "https://aubo.io"
+  },
+  "hero": {
+    "photo": "assets/me2.png",
+    "photoAlt": "Alvaro Martin"
+  },
+  "about": {
+    "photo": "assets/intercon.png",
+    "photoAlt": "Alvaro Martin at Intercon",
+    "stats": [
+      { "value": "03+", "labelKey": "about.subnumber1" },
+      { "value": "04+", "labelKey": "about.subnumber2" },
+      { "value": "11+", "labelKey": "about.subnumber3" }
+    ]
+  },
+  "skills": {
+    "categories": [
+      {
+        "icon": "MdOutlineEngineering",
+        "titleKey": "skills.engineer.title",
+        "subtitleKey": "skills.engineer.subtitle",
+        "skills": [
+          { "titleKey": "skills.engineer.maintenance", "percent": "40%" },
+          { "titleKey": "skills.engineer.opc", "percent": "40%" },
+          { "titleKey": "skills.engineer.digsilent", "percent": "50%" },
+          { "titleKey": "skills.engineer.design", "percent": "60%" },
+          { "titleKey": "skills.engineer.power", "percent": "50%" },
+          { "titleKey": "skills.engineer.plc", "percent": "30%" },
+          { "titleKey": "skills.engineer.autocad", "percent": "60%" },
+          { "titleKey": "skills.engineer.solidworks", "percent": "60%" }
+        ]
+      },
+      {
+        "icon": "MdWeb",
+        "titleKey": "skills.frontend.title",
+        "subtitleKey": "skills.frontend.subtitle",
+        "skills": [
+          { "titleKey": "skills.frontend.html", "percent": "80%" },
+          { "titleKey": "skills.frontend.js", "percent": "70%" },
+          { "titleKey": "skills.frontend.css", "percent": "90%" },
+          { "titleKey": "skills.frontend.react", "percent": "70%" },
+          { "titleKey": "skills.frontend.styled-components", "percent": "80%" },
+          { "titleKey": "skills.frontend.testing", "percent": "30%" }
+        ]
+      },
+      {
+        "icon": "TiWeatherCloudy",
+        "titleKey": "skills.backend.title",
+        "subtitleKey": "skills.backend.subtitle",
+        "skills": [
+          { "titleKey": "skills.backend.node", "percent": "40%" },
+          { "titleKey": "skills.backend.python", "percent": "60%" },
+          { "titleKey": "skills.backend.firebase", "percent": "60%" },
+          { "titleKey": "skills.backend.amplify", "percent": "70%" },
+          { "titleKey": "skills.backend.aws", "percent": "50%" },
+          { "titleKey": "skills.backend.iac-aws", "percent": "50%" },
+          { "titleKey": "skills.backend.iac-terraform", "percent": "30%" },
+          { "titleKey": "skills.backend.gcp", "percent": "40%" },
+          { "titleKey": "skills.backend.az", "percent": "30%" },
+          { "titleKey": "skills.backend.bash", "percent": "60%" }
+        ]
+      },
+      {
+        "icon": "RiBusWifiLine",
+        "titleKey": "skills.iot.title",
+        "subtitleKey": "skills.iot.subtitle",
+        "skills": [
+          { "titleKey": "skills.iot.wifi", "percent": "80%" },
+          { "titleKey": "skills.iot.sigfox", "percent": "80%" },
+          { "titleKey": "skills.iot.lorawan", "percent": "80%" },
+          { "titleKey": "skills.iot.https", "percent": "80%" },
+          { "titleKey": "skills.iot.mqtt", "percent": "80%" },
+          { "titleKey": "skills.iot.micros", "percent": "50%" },
+          { "titleKey": "skills.iot.C", "percent": "40%" }
+        ]
+      },
+      {
+        "icon": "FaRobot",
+        "titleKey": "skills.ml.title",
+        "subtitleKey": "skills.ml.subtitle",
+        "skills": [
+          { "titleKey": "skills.ml.tf", "percent": "60%" },
+          { "titleKey": "skills.ml.tfjs", "percent": "45%" },
+          { "titleKey": "skills.ml.tinyml", "percent": "60%" }
+        ]
+      },
+      {
+        "icon": "FaFlagUsa",
+        "titleKey": "skills.english.title",
+        "subtitleKey": "skills.english.subtitle",
+        "skills": [
+          { "titleKey": "skills.english.reading", "percent": "90%" },
+          { "titleKey": "skills.english.listening", "percent": "90%" },
+          { "titleKey": "skills.english.writing", "percent": "80%" },
+          { "titleKey": "skills.english.speaking", "percent": "80%" }
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      { "imageKey": "hydroponic", "alt": "hydroponic", "titleKey": "portfolio.project1.title", "subtitleKey": "portfolio.project1.subtitle" },
+      { "imageKey": "auboplatform", "alt": "aubo", "titleKey": "portfolio.project2.title", "subtitleKey": "portfolio.project2.subtitle" },
+      { "imageKey": "opcua", "alt": "OPCUA", "titleKey": "portfolio.project3.title", "subtitleKey": "portfolio.project3.subtitle" },
+      { "imageKey": "unamad", "alt": "UNAMAD", "titleKey": "portfolio.project4.title", "subtitleKey": "portfolio.project4.subtitle" },
+      { "imageKey": "olla", "alt": "olla", "titleKey": "portfolio.project5.title", "subtitleKey": "portfolio.project5.subtitle" },
+      { "imageKey": "oximetro", "alt": "Oximetro", "titleKey": "portfolio.project6.title", "subtitleKey": "portfolio.project6.subtitle", "linkKey": "portfolio.project6.link", "buttonKey": "portfolio.project6.button" }
+    ]
+  },
+  "research": {
+    "projects": [
+      { "imageKey": "piscigranja", "alt": "piscigranja", "titleKey": "research.project1.title", "subtitleKey": "research.project1.subtitle" },
+      { "imageKey": "sanmarcos", "alt": "sanmarcos", "titleKey": "research.project2.title", "subtitleKey": "research.project2.subtitle" },
+      { "imageKey": "smartcampus", "alt": "smartcampus", "titleKey": "research.project3.title", "subtitleKey": "research.project3.subtitle", "linkKey": "research.project3.link", "buttonKey": "research.project3.button" },
+      { "imageKey": "lorawan", "alt": "lorawan", "titleKey": "research.project4.title", "subtitleKey": "research.project4.subtitle", "linkKey": "research.project4.link", "buttonKey": "research.project4.button" },
+      { "imageKey": "covid", "alt": "gesture", "titleKey": "research.project5.title", "subtitleKey": "research.project5.subtitle", "linkKey": "research.project5.link", "buttonKey": "research.project5.button" },
+      { "imageKey": "rssi", "alt": "rssi", "titleKey": "research.project6.title", "subtitleKey": "research.project6.subtitle", "linkKey": "research.project6.link", "buttonKey": "research.project6.button" },
+      { "imageKey": "bayes", "alt": "bayes", "titleKey": "research.project7.title", "subtitleKey": "research.project7.subtitle", "linkKey": "research.project7.link", "buttonKey": "research.project7.button" }
+    ]
+  },
+  "awards": {
+    "projects": [
+      { "imageKey": "democracia", "alt": "democracia", "titleKey": "acknowledgments.project1.title", "subtitleKey": "acknowledgments.project1.subtitle", "linkKey": "acknowledgments.project1.link", "buttonKey": "acknowledgments.project1.button" },
+      { "imageKey": "nahui", "alt": "nahui", "titleKey": "acknowledgments.project2.title", "subtitleKey": "acknowledgments.project2.subtitle", "linkKey": "acknowledgments.project2.link", "buttonKey": "acknowledgments.project2.button" },
+      { "imageKey": "cip", "alt": "cip", "titleKey": "acknowledgments.project3.title", "subtitleKey": "acknowledgments.project3.subtitle", "linkKey": "acknowledgments.project3.link", "buttonKey": "acknowledgments.project3.button" },
+      { "imageKey": "sigfox1", "alt": "sigfox1", "titleKey": "acknowledgments.project4.title", "subtitleKey": "acknowledgments.project4.subtitle" },
+      { "imageKey": "sigfox2", "alt": "sigfox2", "titleKey": "acknowledgments.project5.title", "subtitleKey": "acknowledgments.project5.subtitle" },
+      { "imageKey": "hackster", "alt": "hackster", "titleKey": "acknowledgments.project6.title", "subtitleKey": "acknowledgments.project6.subtitle", "linkKey": "acknowledgments.project6.link", "buttonKey": "acknowledgments.project6.button" }
+    ]
+  },
+  "journey": {
+    "entries": [
+      { "titleKey": "experience.aubo.title", "companyKey": "experience.aubo.company", "dateKey": "experience.aubo.date", "gcs": 1, "gce": 2, "grs": 1, "gre": 2, "decoratorGrs": 1, "decoratorGre": 2 },
+      { "titleKey": "experience.iotperu.title", "companyKey": "experience.iotperu.company", "dateKey": "experience.iotperu.date", "gcs": 3, "gce": 4, "grs": 2, "gre": 3, "decoratorGrs": 2, "decoratorGre": 3 },
+      { "titleKey": "experience.bigdata.title", "companyKey": "experience.bigdata.company", "dateKey": "experience.bigdata.date", "gcs": 1, "gce": 2, "grs": 3, "gre": 4, "decoratorGrs": 3, "decoratorGre": 4 },
+      { "titleKey": "experience.iotunmsm.title", "companyKey": "experience.iotunmsm.company", "dateKey": "experience.iotunmsm.date", "gcs": 3, "gce": 4, "grs": 4, "gre": 5, "decoratorGrs": 4, "decoratorGre": 5 },
+      { "titleKey": "experience.priconsa.title", "companyKey": "experience.priconsa.company", "dateKey": "experience.priconsa.date", "gcs": 1, "gce": 2, "grs": 5, "gre": 6, "decoratorGrs": 5, "decoratorGre": 6 },
+      { "titleKey": "experience.agp.title", "companyKey": "experience.agp.company", "dateKey": "experience.agp.date", "gcs": 3, "gce": 4, "grs": 6, "gre": 7, "decoratorGrs": 6, "decoratorGre": 7 },
+      { "titleKey": "experience.milpo.title", "companyKey": "experience.milpo.company", "dateKey": "experience.milpo.date", "gcs": 1, "gce": 2, "grs": 7, "gre": 8, "decoratorGrs": 7, "decoratorGre": 8 },
+      { "titleKey": "experience.uni.title", "companyKey": "experience.uni.company", "dateKey": "experience.uni.date", "gcs": 3, "gce": 4, "grs": 8, "gre": 9, "decoratorGrs": 8, "decoratorGre": 9 }
+    ]
+  },
+  "footer": {
+    "anchors": [
+      { "href": "#aboutme", "labelKey": "footer.link1" },
+      { "href": "#skills", "labelKey": "footer.link2" },
+      { "href": "#services", "labelKey": "footer.link3" },
+      { "href": "#portfolio", "labelKey": "footer.link4" }
+    ],
+    "copyrightYear": "2022"
+  },
+  "header": {
+    "brandName": "Alvaro Martin",
+    "flags": {
+      "es": "assets/ES-flag.png",
+      "en": "assets/US-flag.png"
+    }
+  }
+}

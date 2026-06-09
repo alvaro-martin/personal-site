@@ -1,6 +1,8 @@
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import { useState } from "react";
 import {useTranslation} from 'react-i18next';
+import content from 'data/content.json';
+
 import Democracia from 'assets/democracia.png';
 import Nahui from 'assets/nahui.png';
 import CIP from 'assets/cip.png';
@@ -8,19 +10,24 @@ import Sigfox1 from 'assets/sigfox1.png';
 import Sigfox2 from 'assets/sigfox2.png';
 import Hackster from 'assets/hackster.png';
 
-const projects = [
-    { img: Democracia, alt: 'democracia', titleKey: 'acknowledgments.project1.title', subtitleKey: 'acknowledgments.project1.subtitle', linkKey: 'acknowledgments.project1.link', buttonKey: 'acknowledgments.project1.button' },
-    { img: Nahui, alt: 'nahui', titleKey: 'acknowledgments.project2.title', subtitleKey: 'acknowledgments.project2.subtitle', linkKey: 'acknowledgments.project2.link', buttonKey: 'acknowledgments.project2.button' },
-    { img: CIP, alt: 'cip', titleKey: 'acknowledgments.project3.title', subtitleKey: 'acknowledgments.project3.subtitle', linkKey: 'acknowledgments.project3.link', buttonKey: 'acknowledgments.project3.button' },
-    { img: Sigfox1, alt: 'sigfox1', titleKey: 'acknowledgments.project4.title', subtitleKey: 'acknowledgments.project4.subtitle' },
-    { img: Sigfox2, alt: 'sigfox2', titleKey: 'acknowledgments.project5.title', subtitleKey: 'acknowledgments.project5.subtitle' },
-    { img: Hackster, alt: 'hackster', titleKey: 'acknowledgments.project6.title', subtitleKey: 'acknowledgments.project6.subtitle', linkKey: 'acknowledgments.project6.link', buttonKey: 'acknowledgments.project6.button' },
-];
+const imageMap = {
+    democracia: Democracia,
+    nahui: Nahui,
+    cip: CIP,
+    sigfox1: Sigfox1,
+    sigfox2: Sigfox2,
+    hackster: Hackster,
+};
+
+const projects = content.awards.projects.map(p => ({
+    ...p,
+    img: imageMap[p.imageKey],
+}));
 
 const Awards = () => {
     const [t] = useTranslation("global");
     const [project, setProject] = useState(1);
-    const numberProjects = 6;
+    const numberProjects = projects.length;
 
     const DecreaseIndex = () => {
         if(project === 1){

@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import USflag from 'assets/US-flag.png';
-import ESflag from 'assets/ES-flag.png';
+import content from 'data/content.json';
 import { Toggle } from "components/02.molecules";
 import { H5 } from "components/01.atoms";
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 import { useTheme } from "styles/ThemeContext";
+
+import USflag from 'assets/US-flag.png';
+import ESflag from 'assets/ES-flag.png';
 
 const Header = () => {
     const [t, i18n] = useTranslation("global");
@@ -18,7 +20,7 @@ const Header = () => {
 
     return (
         <header className="bg-[color:var(--color-background6)] flex flex-row items-center justify-between h-[8rem] w-full p-4 fixed right-0 top-0 z-[2] border-b border-[color:var(--color-background2)] mb-[8rem]">
-            <H5>Alvaro Martin</H5>
+            <H5>{content.header.brandName}</H5>
 
             <div className={`flex flex-row items-center max-[1200px]:${isOpen ? 'absolute flex-col top-[6rem] right-0 box-border bg-[color:var(--color-background6)] w-full z-[2] border border-solid p-8' : 'hidden'}`}>
                 <nav className={`flex flex-row items-center max-[1200px]:${isOpen ? 'flex-col' : ''}`}>

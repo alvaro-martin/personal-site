@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Photo from 'assets/me2.png';
+import content from 'data/content.json';
 import {TiArrowRightOutline} from 'react-icons/ti';
 import { 
     BsLinkedin, 
@@ -8,6 +8,16 @@ import {
     BsWhatsapp 
 } from 'react-icons/bs';
 import {BiWorld} from 'react-icons/bi';
+
+import Photo from 'assets/me2.png';
+
+const socialIcons = [
+    { icon: BsLinkedin, url: content.social.linkedin },
+    { icon: BsTwitter, url: content.social.twitter },
+    { icon: BsYoutube, url: content.social.youtube },
+    { icon: BsWhatsapp, url: content.social.whatsapp },
+    { icon: BiWorld, url: content.social.website },
+];
 
 const Hero = () => {
     const [t] = useTranslation("global");
@@ -26,14 +36,12 @@ const Hero = () => {
                 </a>
             </div>
             <div className="w-[250px] h-[250px] m-[3rem] animate-[clipImage_1s_infinite] bg-[color:var(--color-background2)] flex justify-center items-center max-[650px]:w-[200px] max-[650px]:h-[200px]">
-                <img src={Photo} alt='photo_x' width='85%' height='85%' />
+                <img src={Photo} alt={content.hero.photoAlt} width='85%' height='85%' />
             </div>
             <div className="flex flex-col items-center justify-center max-[778px]:flex-row">
-                <a href='https://www.linkedin.com/in/almartinuni/' target='_blank' className="text-[color:var(--color-fontColor4)] text-[2rem] no-underline px-4 cursor-pointer my-[0.6rem]"><BsLinkedin /></a>
-                <a href='https://twitter.com/AuboIoT' target='_blank' className="text-[color:var(--color-fontColor4)] text-[2rem] no-underline px-4 cursor-pointer my-[0.6rem]"><BsTwitter /></a>
-                <a href='https://www.youtube.com/channel/UCe9h3MH2VjcRy5csMZDcWWg' target='_blank' className="text-[color:var(--color-fontColor4)] text-[2rem] no-underline px-4 cursor-pointer my-[0.6rem]"><BsYoutube /></a>
-                <a href='https://wa.me/message/PPPUMYTCGAVEI1' target='_blank' className="text-[color:var(--color-fontColor4)] text-[2rem] no-underline px-4 cursor-pointer my-[0.6rem]"><BsWhatsapp /></a>
-                <a href="https://aubo.io" target='_blank' className="text-[color:var(--color-fontColor4)] text-[2rem] no-underline px-4 cursor-pointer my-[0.6rem]"><BiWorld /></a>
+                {socialIcons.map(({ icon: Icon, url }, idx) => (
+                    <a key={idx} href={url} target='_blank' className="text-[color:var(--color-fontColor4)] text-[2rem] no-underline px-4 cursor-pointer my-[0.6rem]"><Icon /></a>
+                ))}
             </div>
        </section>
     );
