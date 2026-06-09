@@ -1,6 +1,41 @@
+@import "tailwindcss";
 @import '@fontsource/radio-canada/400.css';
 @import '@fontsource/radio-canada/500.css';
 @import '@fontsource/radio-canada/700.css';
+
+@theme {
+  /* Background tokens */
+  --color-background1: white;
+  --color-background2: #6865C3;
+  --color-background3: #EFEFFE;
+  --color-background4: white;
+  --color-background5: #6865C3;
+  --color-background6: white;
+
+  /* Font color tokens */
+  --color-fontColor1: black;
+  --color-fontColor2: white;
+  --color-fontColor3: gray;
+  --color-fontColor4: #6865C3;
+  --color-fontColor5: #FE9F4B;
+
+  /* Semantic color aliases */
+  --color-primary: #6865C3;
+  --color-accent: #FE9F4B;
+  --color-bg-light: white;
+  --color-bg-dark: #1A1525;
+  --color-text-light: black;
+  --color-text-dark: white;
+  --color-text-muted: gray;
+}
+
+/* Dark theme overrides using data-theme attribute */
+[data-theme="dark"] {
+  --color-background1: #1A1525;
+  --color-background5: black;
+  --color-background6: black;
+  --color-fontColor1: white;
+}
 
 body {
   margin: 0;
