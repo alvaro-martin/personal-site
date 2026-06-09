@@ -1,0 +1,33 @@
+import { 
+    About, 
+    ContactMe, 
+    Hero, 
+    Portfolio, 
+    Services, 
+    NewProject, 
+    Skills, 
+    Research,
+    Awards,
+    Journey
+} from "components/03.organisms";
+import { ScrollToTop } from "components/02.molecules";
+
+const Home = () => {
+    return (
+        <div className="flex flex-col items-center">
+            <ScrollToTop />
+            <Hero />
+            <About />
+            <Journey />
+            <Skills />
+            <Services />
+            <NewProject />
+            <Portfolio />
+            <Research />
+            <Awards />
+            <ContactMe />
+        </div>
+    )
+};
+
+export {Home};
