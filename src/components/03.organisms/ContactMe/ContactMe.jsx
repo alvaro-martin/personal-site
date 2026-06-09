@@ -4,7 +4,7 @@ import {HiOutlineMail} from 'react-icons/hi';
 import {GoLocation} from 'react-icons/go';
 import {TiArrowRightOutline} from 'react-icons/ti';
 import { useState } from "react";
-import {send} from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -31,11 +31,11 @@ const ContactMe = () => {
            const expresionRegular = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/;
            
            if(expresionRegular.test(toSend.reply_to)){
-               send(
-               process.env.REACT_APP_EMAILJS_SERVICE_ID,
-               process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+               emailjs.send(
+               import.meta.env.VITE_EMAILJS_SERVICE_ID,
+               import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                toSend,
-               process.env.REACT_APP_EMAILJS_KEY
+               { publicKey: import.meta.env.VITE_EMAILJS_KEY }
                )
                .then((response) => {
                    console.log('SUCCESS!', response.status, response.text);

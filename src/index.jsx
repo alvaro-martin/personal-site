@@ -6,19 +6,12 @@ import GlobalStyle from 'styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import LightTheme from 'styles/themes/light';
 import DarkTheme from 'styles/themes/dark';
-import { Helmet } from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import favicon from 'assets/me.jpg';
-import WebFont from 'webfontloader';
 import {I18nextProvider} from 'react-i18next';
 import i18next from 'i18next';
 import global_es from 'translations/es/global.json';
 import global_en from 'translations/en/global.json';
-
-WebFont.load({
-  google: {
-    families: ['Radio Canada:400,500,700', 'sans-serif']
-  }
-});
 
 i18next.init({
   interpolation: {escapeValue: false},
@@ -45,11 +38,13 @@ const Index = () => {
           setTheme(s => s.id === 'light' ? DarkTheme : LightTheme);
         }}}>      
           <GlobalStyle />
-          <Helmet>
-            <link rel='shortcut icon' href={favicon} type='image/x-icon' />
-            <title>Alvaro Martín</title>
-          </Helmet>
-          <App />
+          <HelmetProvider>
+            <Helmet>
+              <link rel='shortcut icon' href={favicon} type='image/x-icon' />
+              <title>Alvaro Martín</title>
+            </Helmet>
+            <App />
+          </HelmetProvider>
         </ThemeProvider>
       </I18nextProvider>
     </React.StrictMode>

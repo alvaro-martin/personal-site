@@ -10,13 +10,12 @@ import {
     Awards,
     Journey
 } from "components/03.organisms";
+import { ScrollToTop } from "components/02.molecules";
 import { HomeWrapper } from "./Home.styles";
-import ScrollToTop from "react-scroll-to-top";
-
 const Home = () => {
     return (
         <HomeWrapper>
-            <ScrollToTop smooth={true} />
+            <ScrollToTop />
             <Hero />
             <About />
             <Journey />
