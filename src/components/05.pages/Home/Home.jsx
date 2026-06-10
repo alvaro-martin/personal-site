@@ -1,11 +1,11 @@
-import { 
-    About, 
-    ContactMe, 
-    Hero, 
-    Portfolio, 
-    Services, 
-    NewProject, 
-    Skills, 
+import {
+    About,
+    ContactMe,
+    Hero,
+    Portfolio,
+    Services,
+    NewProject,
+    Skills,
     Research,
     Awards,
     Journey
@@ -30,4 +30,4 @@ const Home = () => {
     )
 };
 
-export {Home};
+export { Home };

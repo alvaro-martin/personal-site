@@ -21,14 +21,17 @@ describe('Header', () => {
 
   it('renders flag images', () => {
     renderWithProviders(<Header />);
-    const flags = screen.getAllByAltText(/flag/i);
-    expect(flags.length).toBe(2);
+    const esFlag = screen.getByAltText('Spanish');
+    const enFlag = screen.getByAltText('English');
+    expect(esFlag).toBeInTheDocument();
+    expect(enFlag).toBeInTheDocument();
   });
 
   it('toggles mobile menu on hamburger click', () => {
     renderWithProviders(<Header />);
-    const menuButton = document.querySelector('.hidden.max-\\[1200px\\]\\:flex');
+    const menuButton = screen.getByLabelText('Open menu');
     expect(menuButton).toBeTruthy();
     fireEvent.click(menuButton);
+    expect(screen.getByLabelText('Close menu')).toBeInTheDocument();
   });
 });

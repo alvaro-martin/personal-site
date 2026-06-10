@@ -3,82 +3,676 @@
 @import '@fontsource/radio-canada/500.css';
 @import '@fontsource/radio-canada/700.css';
 
+/* ============================================================
+   DESIGN SYSTEM — @theme tokens
+   ============================================================ */
 @theme {
-  /* Background tokens */
-  --color-background1: white;
+  /* ── Color Palette ── */
+
+  /* Primary */
+  --color-primary: #6865C3;
+  --color-primary-light: #8580D1;
+  --color-primary-dark: #4E4A9E;
+
+  /* Secondary */
+  --color-secondary: #5A5499;
+  --color-secondary-light: #7B76B3;
+  --color-secondary-dark: #3D3875;
+
+  /* Accent */
+  --color-accent: #FE9F4B;
+  --color-accent-light: #FDBA74;
+  --color-accent-dark: #E08530;
+
+  /* Background — light mode */
+  --color-background: #FFFFFF;
+  --color-background-secondary: #EFEFFE;
+  --color-background-tertiary: #F8F7FF;
+
+  /* Surface — cards, panels, modals */
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #F8F7FF;
+  --color-surface-overlay: rgba(0, 0, 0, 0.6);
+
+  /* Text — light mode */
+  --color-text: #1A1525;
+  --color-text-secondary: #4A4458;
+  --color-text-muted: #7C7891;
+  --color-text-inverse: #FFFFFF;
+  --color-text-accent: #6865C3;
+  --color-text-highlight: #FE9F4B;
+
+  /* Border */
+  --color-border: #E2E0EB;
+  --color-border-strong: #C8C5D6;
+  --color-border-focus: #6865C3;
+
+  /* Semantic */
+  --color-error: #DC3545;
+  --color-success: #28A745;
+  --color-warning: #F0AD4E;
+  --color-info: #6865C3;
+
+  /* ── Legacy tokens (backward compatibility) ── */
+  --color-background1: #FFFFFF;
   --color-background2: #6865C3;
   --color-background3: #EFEFFE;
-  --color-background4: white;
+  --color-background4: #FFFFFF;
   --color-background5: #6865C3;
-  --color-background6: white;
-
-  /* Font color tokens */
-  --color-fontColor1: black;
-  --color-fontColor2: white;
-  --color-fontColor3: gray;
+  --color-background6: #FFFFFF;
+  --color-fontColor1: #1A1525;
+  --color-fontColor2: #FFFFFF;
+  --color-fontColor3: #7C7891;
   --color-fontColor4: #6865C3;
   --color-fontColor5: #FE9F4B;
 
-  /* Semantic color aliases */
-  --color-primary: #6865C3;
-  --color-accent: #FE9F4B;
-  --color-bg-light: white;
-  --color-bg-dark: #1A1525;
-  --color-text-light: black;
-  --color-text-dark: white;
-  --color-text-muted: gray;
+  /* ── Typography ── */
+
+  --font-sans: 'Radio Canada', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  --font-mono: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+
+  /* Type scale — xs to 5xl */
+  --text-xs: 1.2rem;
+  --text-sm: 1.4rem;
+  --text-base: 1.6rem;
+  --text-lg: 1.8rem;
+  --text-xl: 2rem;
+  --text-2xl: 2.5rem;
+  --text-3xl: 3rem;
+  --text-4xl: 3.5rem;
+  --text-5xl: 4rem;
+
+  /* Font weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+
+  /* Line heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* ── Spacing scale (4px base) ── */
+  --spacing-0: 0;
+  --spacing-px: 1px;
+  --spacing-0_5: 0.2rem;
+  --spacing-1: 0.4rem;
+  --spacing-1_5: 0.6rem;
+  --spacing-2: 0.8rem;
+  --spacing-3: 1.2rem;
+  --spacing-4: 1.6rem;
+  --spacing-5: 2rem;
+  --spacing-6: 2.4rem;
+  --spacing-8: 3.2rem;
+  --spacing-10: 4rem;
+  --spacing-12: 4.8rem;
+  --spacing-16: 6.4rem;
+  --spacing-20: 8rem;
+  --spacing-24: 9.6rem;
+
+  /* ── Border radius ── */
+  --radius-none: 0;
+  --radius-sm: 0.4rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1.2rem;
+  --radius-xl: 1.6rem;
+  --radius-2xl: 2.4rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+
+  /* ── Transitions ── */
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-index scale ── */
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 50;
+  --z-modal-backdrop: 60;
+  --z-modal: 70;
+  --z-tooltip: 80;
 }
 
-/* Dark theme overrides using data-theme attribute */
+/* ============================================================
+   DARK MODE — complete override
+   ============================================================ */
 [data-theme="dark"] {
-  --color-background1: #1A1525;
-  --color-background5: black;
-  --color-background6: black;
-  --color-fontColor1: white;
+  /* Primary — slightly brighter for dark bg contrast */
+  --color-primary: #8580D1;
+  --color-primary-light: #A39FDE;
+  --color-primary-dark: #6865C3;
+
+  /* Secondary */
+  --color-secondary: #7B76B3;
+  --color-secondary-light: #9B97CC;
+  --color-secondary-dark: #5A5499;
+
+  /* Accent — slightly desaturated for dark bg */
+  --color-accent: #FDBA74;
+  --color-accent-light: #FECFA0;
+  --color-accent-dark: #FE9F4B;
+
+  /* Background — dark mode */
+  --color-background: #0F0A1A;
+  --color-background-secondary: #1A1330;
+  --color-background-tertiary: #231C3A;
+
+  /* Surface — dark mode */
+  --color-surface: #1A1330;
+  --color-surface-raised: #231C3A;
+  --color-surface-overlay: rgba(0, 0, 0, 0.75);
+
+  /* Text — dark mode */
+  --color-text: #F0EEF6;
+  --color-text-secondary: #C8C5D6;
+  --color-text-muted: #9490A8;
+  --color-text-inverse: #1A1525;
+  --color-text-accent: #A39FDE;
+  --color-text-highlight: #FDBA74;
+
+  /* Border — dark mode */
+  --color-border: #2E2745;
+  --color-border-strong: #4A4458;
+  --color-border-focus: #8580D1;
+
+  /* Semantic — dark mode */
+  --color-error: #F87171;
+  --color-success: #4ADE80;
+  --color-warning: #FBBF24;
+  --color-info: #8580D1;
+
+  /* Legacy tokens — dark mode */
+  --color-background1: #0F0A1A;
+  --color-background2: #6865C3;
+  --color-background3: #1A1330;
+  --color-background4: #1A1330;
+  --color-background5: #0A0612;
+  --color-background6: #13101E;
+  --color-fontColor1: #F0EEF6;
+  --color-fontColor2: #FFFFFF;
+  --color-fontColor3: #9490A8;
+  --color-fontColor4: #A39FDE;
+  --color-fontColor5: #FDBA74;
+
+  /* Shadows — darker for dark mode */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.35), 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.45), 0 10px 10px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 0 10px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* Hero clipImage animation */
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
 @keyframes clipImage {
-  0% { clip-path: circle(45% at 50% 50%); }
-  50% { clip-path: circle(50% at 50% 50%); }
+  0%   { clip-path: circle(45% at 50% 50%); }
+  50%  { clip-path: circle(50% at 50% 50%); }
   100% { clip-path: circle(45% at 50% 50%); }
 }
 
-/* CSS Reset from GlobalStyle */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-html {
-  font-size: 62.5%; /* 10px */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(2rem); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 778px) {
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-1rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ============================================================
+   @layer base — resets and document defaults
+   ============================================================ */
+@layer base {
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   html {
-    font-size: 50%;
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  @media (max-width: 778px) {
+    html {
+      font-size: 50%; /* 1rem = 8px on mobile */
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: color var(--duration-slow) var(--ease-default),
+                background-color var(--duration-slow) var(--ease-default);
+  }
+
+  /* Smooth scroll offset for fixed header */
+  html {
+    scroll-padding-top: 10rem;
+  }
+
+  /* Focus-visible — accessible keyboard focus ring */
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Text selection */
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  ::-moz-selection {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-background-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    border-radius: var(--radius-full);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-muted);
+  }
+
+  /* Code blocks */
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
+    background: var(--color-background-secondary);
+    border-radius: var(--radius-sm);
+  }
+
+  /* Images */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Form elements reset */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* Button reset */
+  button {
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  /* Anchor reset */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-body {
-  background: var(--color-background1);
-  min-height: 100vh;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-fontColor1);
-  font-family: 'Radio Canada', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ============================================================
+   @layer components — reusable patterns
+   ============================================================ */
+@layer components {
+  /* ── Section wrapper ── */
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .section-wrapper + .section-wrapper {
+    margin-top: var(--spacing-4);
+  }
+
+  /* ── Section heading ── */
+  .section-heading {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: var(--spacing-2);
+  }
+
+  /* ── Section subtitle ── */
+  .section-subtitle {
+    font-size: var(--text-base);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-bottom: var(--spacing-8);
+  }
+
+  /* ── Primary button ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-none);
+    padding: var(--spacing-4) var(--spacing-8);
+    min-width: 17rem;
+    min-height: 6rem;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--duration-normal) var(--ease-default),
+                transform var(--duration-fast) var(--ease-default),
+                box-shadow var(--duration-normal) var(--ease-default);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+
+  /* ── Secondary button (ghost) ── */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    background-color: transparent;
+    color: var(--color-primary);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-none);
+    padding: var(--spacing-4) var(--spacing-8);
+    min-height: 6rem;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--duration-normal) var(--ease-default),
+                color var(--duration-normal) var(--ease-default);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+
+  /* ── Card ── */
+  .card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--spacing-8);
+    transition: box-shadow var(--duration-normal) var(--ease-default),
+                transform var(--duration-normal) var(--ease-default);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  /* ── Card flat (no shadow) ── */
+  .card-flat {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-8);
+  }
+
+  /* ── Input field ── */
+  .input-field {
+    width: 50rem;
+    max-width: calc(100vw - 4rem);
+    background-color: var(--color-background-secondary);
+    color: var(--color-text);
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+    padding: var(--spacing-4);
+    border: 2px solid transparent;
+    border-radius: var(--radius-xl);
+    transition: border-color var(--duration-normal) var(--ease-default),
+                box-shadow var(--duration-normal) var(--ease-default);
+  }
+
+  @media (max-width: 768px) {
+    .input-field {
+      width: 100%;
+    }
+  }
+
+  .input-field::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 3px rgba(104, 101, 195, 0.15);
+  }
+
+  .input-field:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* ── Nav link ── */
+  .nav-link {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-text);
+    padding: var(--spacing-3) var(--spacing-4);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color var(--duration-normal) var(--ease-default);
+  }
+
+  .nav-link:hover {
+    color: var(--color-text-accent);
+  }
+
+  /* ── Icon button (interactive div → accessible) ── */
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-accent);
+    transition: color var(--duration-normal) var(--ease-default),
+                transform var(--duration-fast) var(--ease-default);
+  }
+
+  .icon-btn:hover {
+    color: var(--color-primary-dark);
+    transform: scale(1.1);
+  }
+
+  /* ── Carousel arrow ── */
+  .carousel-arrow {
+    width: var(--spacing-10);
+    height: var(--spacing-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text);
+    background: none;
+    border: none;
+    border-radius: var(--radius-full);
+    transition: color var(--duration-normal) var(--ease-default),
+                background-color var(--duration-normal) var(--ease-default);
+  }
+
+  .carousel-arrow:hover {
+    color: var(--color-primary);
+    background-color: var(--color-background-secondary);
+  }
+
+  .carousel-arrow:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+
+  /* ── Visually hidden (screen reader only) ── */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ── Overlay backdrop ── */
+  .overlay-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-surface-overlay);
+    z-index: var(--z-modal-backdrop);
+  }
+
+  /* ── Modal / popup ── */
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-2xl);
+    z-index: var(--z-modal);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ============================================================
+   Reduced motion — disable all animations
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .card:hover,
+  .btn-primary:active,
+  .icon-btn:hover,
+  .carousel-arrow:hover {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Small screen overrides
+   ============================================================ */
+@media (max-width: 480px) {
+  .carousel-arrow {
+    width: var(--spacing-8);
+    height: var(--spacing-8);
+  }
 }

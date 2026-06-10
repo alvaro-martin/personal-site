@@ -26,14 +26,14 @@ describe('Portfolio', () => {
 
   it('navigates to next project on forward arrow click', () => {
     renderWithProviders(<Portfolio />);
-    const forwardBtn = document.querySelectorAll('.w-\\[4rem\\].cursor-pointer')[1];
+    const forwardBtn = screen.getByLabelText('Next project');
     fireEvent.click(forwardBtn);
     expect(screen.getByText(/Desarrollo de Plataforma IoT/)).toBeInTheDocument();
   });
 
   it('navigates to previous project on back arrow click', () => {
     renderWithProviders(<Portfolio />);
-    const backBtn = document.querySelectorAll('.w-\\[4rem\\].cursor-pointer')[0];
+    const backBtn = screen.getByLabelText('Previous project');
     fireEvent.click(backBtn);
     expect(screen.getByText(/Oxímetro Perú/)).toBeInTheDocument();
   });

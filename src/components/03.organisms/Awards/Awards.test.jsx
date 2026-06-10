@@ -26,7 +26,7 @@ describe('Awards', () => {
 
   it('navigates to next project on forward arrow click', () => {
     renderWithProviders(<Awards />);
-    const forwardBtn = document.querySelectorAll('.w-\\[4rem\\].cursor-pointer')[1];
+    const forwardBtn = screen.getByLabelText('Next award');
     fireEvent.click(forwardBtn);
     const matches = screen.getAllByText(/Monitoreo de Nivel de Tanques/);
     expect(matches.length).toBeGreaterThanOrEqual(1);
