@@ -26,7 +26,7 @@ describe('Skills', () => {
 
   it('expands a skill category and shows skills with percentages', () => {
     renderWithProviders(<Skills />);
-    const expandButtons = document.querySelectorAll('.cursor-pointer.text-\\[color\\:var\\(--color-fontColor4\\)\\]');
+    const expandButtons = screen.getAllByRole('button', { name: /Expand.*skills/i });
     fireEvent.click(expandButtons[0]);
     expect(screen.getByText('Planeamiento del Mantenimiento')).toBeInTheDocument();
     const percents = screen.getAllByText('40%');

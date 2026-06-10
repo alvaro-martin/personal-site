@@ -5,13 +5,13 @@ import App from './App';
 import { ThemeProvider } from 'styles/ThemeContext';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import favicon from 'assets/me.jpg';
-import {I18nextProvider} from 'react-i18next';
+import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import global_es from 'translations/es/global.json';
 import global_en from 'translations/en/global.json';
 
 i18next.init({
-  interpolation: {escapeValue: false},
+  interpolation: { escapeValue: false },
   lng: "es",
   resources: {
     es: {
@@ -32,8 +32,18 @@ const Index = () => {
         <ThemeProvider>
           <HelmetProvider>
             <Helmet>
-              <link rel='shortcut icon' href={favicon} type='image/x-icon' />
-              <title>Alvaro Martin</title>
+              <link rel="shortcut icon" href={favicon} type="image/x-icon" />
+              <title>Alvaro Martin | IoT & Full-Stack Developer</title>
+              <meta name="description" content="Portafolio de Alvaro Martin — Desarrollador IoT, Full-Stack y Mecatrónico. Proyectos de domótica, hidroponía inteligente y más." />
+              <meta name="robots" content="index, follow" />
+              <meta property="og:type" content="website" />
+              <meta property="og:title" content="Alvaro Martin | IoT & Full-Stack Developer" />
+              <meta property="og:description" content="Portafolio de Alvaro Martin — Desarrollador IoT, Full-Stack y Mecatrónico." />
+              <meta property="og:image" content={favicon} />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:title" content="Alvaro Martin | IoT & Full-Stack Developer" />
+              <meta name="twitter:description" content="Portafolio de Alvaro Martin — Desarrollador IoT, Full-Stack y Mecatrónico." />
+              <meta name="twitter:image" content={favicon} />
             </Helmet>
             <App />
           </HelmetProvider>

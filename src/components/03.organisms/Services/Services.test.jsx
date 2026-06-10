@@ -40,7 +40,7 @@ describe('Services', () => {
     renderWithProviders(<Services />);
     const viewMoreButtons = screen.getAllByText('Ver más');
     fireEvent.click(viewMoreButtons[0]);
-    const closeButton = document.querySelector('.text-\\[color\\:var\\(--color-fontColor4\\)\\].cursor-pointer.relative');
+    const closeButton = screen.getByLabelText('Close dialog');
     expect(closeButton).toBeTruthy();
   });
 });

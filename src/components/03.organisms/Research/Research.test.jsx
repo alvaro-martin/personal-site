@@ -26,7 +26,7 @@ describe('Research', () => {
 
   it('navigates to next project on forward arrow click', () => {
     renderWithProviders(<Research />);
-    const forwardBtn = document.querySelectorAll('.w-\\[4rem\\].cursor-pointer')[1];
+    const forwardBtn = screen.getByLabelText('Next research');
     fireEvent.click(forwardBtn);
     expect(screen.getByText(/San Marcos Ciudad Inteligente/)).toBeInTheDocument();
   });

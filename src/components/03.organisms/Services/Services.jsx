@@ -5,25 +5,60 @@ import { TiWeatherCloudy } from 'react-icons/ti';
 import { RiBusWifiLine } from 'react-icons/ri';
 import { FaRobot, FaRegCheckCircle } from 'react-icons/fa';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
-const ServicePopup = ({ title, items, onClose }) => (
-    <>
-        <div className="w-[50rem] h-[40rem] rounded-[5rem] bg-[color:var(--color-background1)] fixed top-1/2 left-1/2 mt-[-20rem] ml-[-25rem] z-[2] flex flex-col max-[450px]:w-[300px] max-[450px]:ml-[-150px]">
-            <p className="text-[color:var(--color-fontColor1)] font-bold text-[2.6rem] text-justify m-[2.5rem_0_2rem_2rem] h-[5.8rem] w-[30rem]">{title}</p>
-            <div className="relative left-[44rem] bottom-[9rem] text-[color:var(--color-fontColor4)] cursor-pointer max-[450px]:left-[32rem]" onClick={onClose}>
-                <IoMdCloseCircleOutline size={40} />
-            </div>
-            {items.map((item, idx) => (
-                <div key={idx} className="flex flex-row items-center text-[color:var(--color-fontColor4)] my-4 mx-4">
-                    <FaRegCheckCircle size={20} />
-                    <p className="text-[color:var(--color-fontColor3)] text-[1.6rem] ml-4">{item}</p>
+const ServicePopup = ({ title, items, onClose }) => {
+    const handleKeyDown = useCallback((e) => {
+        if (e.key === 'Escape') onClose();
+    }, [onClose]);
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyDown);
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = '';
+        };
+    }, [handleKeyDown]);
+
+    return (
+        <>
+            <div
+                className="overlay-backdrop"
+                onClick={onClose}
+                aria-hidden="true"
+            />
+            <div
+                role="dialog"
+                aria-modal="true"
+                aria-label={title}
+                className="modal-content w-full max-w-[50rem] p-8 mx-4"
+            >
+                <div className="flex flex-row items-start justify-between mb-6">
+                    <h3 className="text-text text-2xl font-bold leading-tight pr-4">
+                        {title}
+                    </h3>
+                    <button
+                        type="button"
+                        onClick={onClose}
+                        aria-label="Close dialog"
+                        className="icon-btn shrink-0"
+                    >
+                        <IoMdCloseCircleOutline size={40} />
+                    </button>
                 </div>
-            ))}
-        </div>
-        <div className="w-full h-screen bg-[rgba(0,0,0,0.7)] z-[1] fixed bottom-0 right-0" />
-    </>
-);
+                <ul className="list-none">
+                    {items.map((item, idx) => (
+                        <li key={idx} className="flex flex-row items-center my-4 gap-3">
+                            <FaRegCheckCircle size={20} className="text-text-accent shrink-0" aria-hidden="true" />
+                            <p className="text-text-muted text-lg">{item}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </>
+    );
+};
 
 const Services = () => {
     const [t] = useTranslation('global');
@@ -39,9 +74,13 @@ const Services = () => {
     ];
 
     return (
-        <section id='services' className="flex flex-col items-center my-16 pt-[9rem]">
-            <h1 className="text-[color:var(--color-fontColor1)] font-bold text-[3rem]">{t("services.title")}</h1>
-            <p className="text-[color:var(--color-fontColor3)] text-[1.5rem] my-4">{t("services.subtitle")}</p>
+        <section id="services" aria-labelledby="services-heading" className="section-wrapper py-16">
+            <h1 id="services-heading" className="section-heading">
+                {t("services.title")}
+            </h1>
+            <p className="section-subtitle">
+                {t("services.subtitle")}
+            </p>
 
             {openService !== null && (
                 <ServicePopup
@@ -51,16 +90,25 @@ const Services = () => {
                 />
             )}
 
-            <div className="flex flex-row items-center justify-center flex-wrap my-16 mb-8">
+            <div className="flex flex-row items-center justify-center flex-wrap my-16 gap-8">
                 {services.map((service, idx) => (
-                    <div key={idx} className="flex flex-col justify-center text-[color:var(--color-fontColor4)] mx-8 mb-16 w-[20rem] h-[30rem] p-8 rounded-[1rem] shadow-[0px_0px_10px_1px_rgba(0,0,0,0.75)] max-[650px]:w-[15rem]">
-                        <service.icon size={70} />
-                        <p className="text-[color:var(--color-fontColor1)] font-bold text-[2.6rem] text-justify my-6 h-[5.8rem] max-[650px]:text-[1.5rem]">{service.title}</p>
-                        <div className="flex flex-row items-center mt-12 cursor-pointer" onClick={() => setOpenService(idx)}>
-                            <p className="text-[color:var(--color-fontColor4)] text-[1.5rem]">{t("services.viewMore")}</p>
-                            <BsArrowRightShort size={20} />
-                        </div>
-                    </div>
+                    <article
+                        key={idx}
+                        className="card flex flex-col justify-center text-text-accent w-full max-w-[20rem] min-h-[30rem]"
+                    >
+                        <service.icon size={70} aria-hidden="true" />
+                        <h2 className="text-text text-2xl font-bold leading-snug my-6 min-h-[5.8rem]">
+                            {service.title}
+                        </h2>
+                        <button
+                            type="button"
+                            onClick={() => setOpenService(idx)}
+                            className="flex flex-row items-center mt-auto cursor-pointer text-text-accent text-base transition-colors duration-normal hover:text-primary-dark focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2"
+                        >
+                            {t("services.viewMore")}
+                            <BsArrowRightShort size={20} aria-hidden="true" />
+                        </button>
+                    </article>
                 ))}
             </div>
         </section>

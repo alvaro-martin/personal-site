@@ -1,13 +1,15 @@
 import { Header, Footer } from "components/03.organisms";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
     return (
-        <div className="flex flex-col w-full h-screen">
+        <div className="flex flex-col w-full min-h-screen">
             <Header />
-            {children}
+            <main id="main-content" className="flex-1">
+                {children}
+            </main>
             <Footer />
         </div>
-    )
+    );
 };
 
-export {Layout};
+export { Layout };

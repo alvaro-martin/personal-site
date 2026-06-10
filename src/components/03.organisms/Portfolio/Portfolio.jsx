@@ -1,6 +1,6 @@
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import { useState } from "react";
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
 
 import Hydroponic from 'assets/hydroponic.jpg';
@@ -29,49 +29,79 @@ const Portfolio = () => {
     const [project, setProject] = useState(1);
     const numberProjects = projects.length;
 
-    const DecreaseIndex = () => {
-        if(project === 1){
-            setProject(project + numberProjects - 1);
-        } else {
-            setProject(project - 1);
-        }
+    const decreaseIndex = () => {
+        setProject(prev => prev === 1 ? numberProjects : prev - 1);
     };
 
-    const IncreaseIndex = () => {
-        if(project === numberProjects){
-            setProject(project - numberProjects +1);
-        } else {
-            setProject(project + 1);
-        }
-    }
+    const increaseIndex = () => {
+        setProject(prev => prev === numberProjects ? 1 : prev + 1);
+    };
 
     const current = projects[project - 1];
 
     return (
-        <section id='portfolio' className="flex flex-col items-center my-16 pt-[9rem]">
-            <h1 className="text-[color:var(--color-fontColor1)] font-bold text-[3rem]">{t("portfolio.title")}</h1>
-            <p className="text-[color:var(--color-fontColor3)] text-[1.5rem] my-4">{t("portfolio.subtitle")}</p>
-            <div className="flex flex-row items-center justify-between">
-                <div className="w-[4rem] h-[4rem] cursor-pointer" onClick={DecreaseIndex}>
+        <section id="portfolio" aria-labelledby="portfolio-heading" className="section-wrapper">
+            <h1 id="portfolio-heading" className="section-heading">
+                {t("portfolio.title")}
+            </h1>
+            <p className="section-subtitle">
+                {t("portfolio.subtitle")}
+            </p>
+            <div
+                role="region"
+                aria-label="Portfolio carousel"
+                aria-live="polite"
+                className="flex flex-row items-center justify-between gap-4 px-4"
+            >
+                <button
+                    type="button"
+                    onClick={decreaseIndex}
+                    aria-label="Previous project"
+                    className="carousel-arrow"
+                >
                     <IoIosArrowBack size={30} />
-                </div>
-                <div className="flex flex-row items-center justify-center mx-8 max-[1000px]:flex-col">
-                    <div className="w-[500px] h-[350px] m-4 [&>img]:rounded-xl max-[650px]:w-[200px] max-[650px]:h-[220px] max-[650px]:m-4 max-[650px]:mx-0">
-                        <img src={current.img} alt={current.alt} width='100%' height='100%' />
+                </button>
+
+                <div className="flex flex-row items-center justify-center gap-8 md:flex-col">
+                    <div className="w-full max-w-[500px] h-[350px] m-4 rounded-xl overflow-hidden shrink-0 md:max-w-[200px] md:h-[220px]">
+                        <img
+                            src={current.img}
+                            alt={current.alt}
+                            width="100%"
+                            height="100%"
+                            loading="lazy"
+                            decoding="async"
+                            className="object-cover w-full h-full"
+                        />
                     </div>
-                    <div className="flex flex-col ml-8">
-                        <p className="text-[color:var(--color-fontColor1)] font-bold text-[2rem] w-[30rem] mb-8 max-[650px]:w-[20rem]">{t(current.titleKey)}</p>
-                        <p className="text-[color:var(--color-fontColor3)] text-[1.5rem] w-[30rem] mb-8 max-[650px]:w-[20rem]">{t(current.subtitleKey)}</p>
+                    <div className="flex flex-col max-w-[30rem] md:max-w-[20rem]">
+                        <h2 className="text-text text-xl font-bold mb-6 leading-snug">
+                            {t(current.titleKey)}
+                        </h2>
+                        <p className="text-text-muted text-base mb-6 leading-relaxed max-w-[65ch]">
+                            {t(current.subtitleKey)}
+                        </p>
                         {current.linkKey && (
-                            <a href={t(current.linkKey)} target='_blank' className="bg-[color:var(--color-background2)] text-[color:var(--color-fontColor2)] font-bold text-[2rem] rounded-[0.5rem] border-none w-[19rem] h-[6rem] flex flex-row items-center justify-center no-underline cursor-pointer">
+                            <a
+                                href={t(current.linkKey)}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-primary w-full md:w-[19rem]"
+                            >
                                 {t(current.buttonKey)}
                             </a>
                         )}
                     </div>
                 </div>
-                <div className="w-[4rem] h-[4rem] cursor-pointer" onClick={IncreaseIndex}>
+
+                <button
+                    type="button"
+                    onClick={increaseIndex}
+                    aria-label="Next project"
+                    className="carousel-arrow"
+                >
                     <IoIosArrowForward size={30} />
-                </div>
+                </button>
             </div>
         </section>
     );
