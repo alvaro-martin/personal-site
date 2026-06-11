@@ -574,8 +574,27 @@
     transition: color var(--duration-normal) var(--ease-default);
   }
 
+  .nav-link span {
+    position: relative;
+  }
+
+  .nav-link span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-text-accent);
+    transition: width var(--duration-normal) var(--ease-default);
+  }
+
   .nav-link:hover {
     color: var(--color-text-accent);
+  }
+
+  .nav-link:hover span::after {
+    width: 100%;
   }
 
   /* ── Icon button (interactive div → accessible) ── */
