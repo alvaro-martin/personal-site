@@ -68,12 +68,12 @@ const Carousel = ({ items, ariaLabel }) => {
             className="flex flex-col items-center w-full"
         >
             {/* Carousel content */}
-            <div className="flex flex-row items-center justify-between gap-4 px-4 w-full">
+            <div className="flex flex-row items-center justify-between gap-4 px-4 w-full max-sm:justify-center max-sm:gap-0">
                 <button
                     type="button"
                     onClick={goPrev}
                     aria-label="Previous"
-                    className="carousel-arrow"
+                    className="carousel-arrow max-sm:hidden"
                 >
                     <IoIosArrowBack size={30} />
                 </button>
@@ -84,7 +84,7 @@ const Carousel = ({ items, ariaLabel }) => {
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <div className="w-[500px] h-[350px] m-4 rounded-xl overflow-hidden shrink-0 bg-background5 max-md:w-full max-md:h-auto max-md:aspect-[7/5]">
+                    <div className="w-[500px] h-[350px] m-4 rounded-xl overflow-hidden shrink-0 bg-background5 max-md:w-full max-md:h-auto max-md:aspect-[7/5] max-sm:aspect-[4/3] max-sm:m-2">
                         <img
                             src={item.img}
                             alt={item.alt}
@@ -93,7 +93,7 @@ const Carousel = ({ items, ariaLabel }) => {
                             className="object-contain w-full h-full transition-transform duration-normal ease-default hover:scale-105"
                         />
                     </div>
-                    <div className="flex flex-col min-w-0 max-md:w-full max-md:px-4">
+                    <div className="flex flex-col min-w-0 max-md:w-full">
                         <h2 className="text-text text-xl font-bold mb-4 leading-snug">
                             {item.title}
                         </h2>
@@ -129,7 +129,7 @@ const Carousel = ({ items, ariaLabel }) => {
                     type="button"
                     onClick={goNext}
                     aria-label="Next"
-                    className="carousel-arrow"
+                    className="carousel-arrow max-sm:hidden"
                 >
                     <IoIosArrowForward size={30} />
                 </button>
