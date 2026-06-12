@@ -1,11 +1,18 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 const Carousel = ({ items, ariaLabel }) => {
+    const [t] = useTranslation("global");
     const [current, setCurrent] = useState(0);
+    const [expanded, setExpanded] = useState(false);
     const total = items.length;
     const touchStart = useRef(null);
     const touchDelta = useRef(0);
+
+    useEffect(() => {
+        setExpanded(false);
+    }, [current]);
 
     const goTo = useCallback((index) => {
         setCurrent(index);
@@ -89,12 +96,24 @@ const Carousel = ({ items, ariaLabel }) => {
                         />
                     </div>
                     <div className="flex flex-col max-w-[30rem] md:max-w-[20rem]">
-                        <h2 className="text-text text-xl font-bold mb-6 leading-snug">
+                        <h2 className="text-text text-xl font-bold mb-4 leading-snug">
                             {item.title}
                         </h2>
-                        <p className="text-text-muted text-base mb-6 leading-relaxed max-w-[65ch]">
-                            {item.subtitle}
-                        </p>
+                        <div
+                            className="overflow-hidden transition-[max-height] duration-300 ease-default"
+                            style={{ maxHeight: expanded ? '600px' : '4.5rem' }}
+                        >
+                            <p className="text-text-muted text-base mb-2 leading-relaxed max-w-[65ch]">
+                                {item.subtitle}
+                            </p>
+                        </div>
+                        <button
+                            type="button"
+                            onClick={() => setExpanded(prev => !prev)}
+                            className="text-text-accent text-sm font-medium mb-4 cursor-pointer bg-transparent border-none p-0 hover:underline text-left w-fit"
+                        >
+                            {expanded ? t("carousel.readLess") : t("carousel.readMore")}
+                        </button>
                         {item.link && (
                             <a
                                 href={item.link}

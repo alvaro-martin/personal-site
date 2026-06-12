@@ -308,5 +308,9 @@
             "company": "Universidad Nacional de Ingeniería",
             "date": "2011 - 2015"
         }
+    },
+    "carousel": {
+        "readMore": "Leer más",
+        "readLess": "Leer menos"
     }
 }
