@@ -79,12 +79,12 @@ const Carousel = ({ items, ariaLabel }) => {
                 </button>
 
                 <div
-                    className="flex flex-row items-center justify-center gap-8 md:flex-col flex-1 min-w-0"
+                    className="flex flex-row items-center justify-center gap-8 max-md:flex-col flex-1 min-w-0"
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <div className="w-full max-w-[500px] h-[350px] m-4 rounded-xl overflow-hidden shrink-0 md:max-w-[200px] md:h-[220px]">
+                    <div className="w-full max-w-[500px] h-[350px] m-4 rounded-xl overflow-hidden shrink-0 max-md:max-w-[350px] max-md:h-[250px]">
                         <img
                             src={item.img}
                             alt={item.alt}
@@ -95,7 +95,7 @@ const Carousel = ({ items, ariaLabel }) => {
                             className="object-cover w-full h-full transition-transform duration-normal ease-default hover:scale-105"
                         />
                     </div>
-                    <div className="flex flex-col max-w-[30rem] md:max-w-[20rem]">
+                    <div className="flex flex-col max-w-[30rem] max-md:max-w-[20rem]">
                         <h2 className="text-text text-xl font-bold mb-4 leading-snug">
                             {item.title}
                         </h2>
