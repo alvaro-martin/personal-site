@@ -1,21 +1,13 @@
-import {
-    BsLinkedin,
-    BsTwitter,
-    BsYoutube,
-    BsWhatsapp
-} from 'react-icons/bs';
-import { BiWorld } from 'react-icons/bi';
+import { BsLinkedin } from 'react-icons/bs';
+import { FaGithub } from 'react-icons/fa';
 import { useTranslation } from "react-i18next";
 import content from 'data/content.json';
 
-const socialLabels = ['LinkedIn', 'Twitter', 'YouTube', 'WhatsApp', 'Website'];
+const socialLabels = ['LinkedIn', 'GitHub'];
 
 const socialIcons = [
     { icon: BsLinkedin, url: content.social.linkedin },
-    { icon: BsTwitter, url: content.social.twitter },
-    { icon: BsYoutube, url: content.social.youtube },
-    { icon: BsWhatsapp, url: content.social.whatsapp },
-    { icon: BiWorld, url: content.social.website },
+    { icon: FaGithub, url: content.social.github },
 ];
 
 const Footer = () => {

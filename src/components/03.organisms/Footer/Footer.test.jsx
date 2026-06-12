@@ -47,6 +47,6 @@ describe('Footer', () => {
   it('renders social media links from content.json', () => {
     renderWithProviders(<Footer />);
     const socialLinks = document.querySelectorAll('footer a[target="_blank"]');
-    expect(socialLinks.length).toBe(5);
+    expect(socialLinks.length).toBe(2);
   });
 });

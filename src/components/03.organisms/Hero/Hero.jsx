@@ -1,22 +1,14 @@
 import { useTranslation } from "react-i18next";
 import content from 'data/content.json';
 import { TiArrowRightOutline } from 'react-icons/ti';
-import {
-    BsLinkedin,
-    BsTwitter,
-    BsYoutube,
-    BsWhatsapp
-} from 'react-icons/bs';
-import { BiWorld } from 'react-icons/bi';
+import { BsLinkedin } from 'react-icons/bs';
+import { FaGithub } from 'react-icons/fa';
 
 import Photo from 'assets/me2.png';
 
 const socialLinks = [
     { icon: BsLinkedin, url: content.social.linkedin, label: "LinkedIn" },
-    { icon: BsTwitter, url: content.social.twitter, label: "Twitter" },
-    { icon: BsYoutube, url: content.social.youtube, label: "YouTube" },
-    { icon: BsWhatsapp, url: content.social.whatsapp, label: "WhatsApp" },
-    { icon: BiWorld, url: content.social.website, label: "Website" },
+    { icon: FaGithub, url: content.social.github, label: "GitHub" },
 ];
 
 const Hero = () => {
