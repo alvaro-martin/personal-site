@@ -85,7 +85,7 @@ const Header = () => {
                                 type="button"
                                 onClick={() => handleLanguageChange("es")}
                                 aria-label="Switch to Spanish"
-                                className="h-[30px] w-[53px] mx-1 cursor-pointer rounded focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
+                                className="h-[30px] w-[53px] mx-1 cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
                             >
                                 <img src={ESflag} alt="Spanish" height="100%" width="100%" className="object-cover rounded" />
                             </button>
@@ -93,7 +93,7 @@ const Header = () => {
                                 type="button"
                                 onClick={() => handleLanguageChange("en")}
                                 aria-label="Switch to English"
-                                className="h-[30px] w-[53px] mx-1 cursor-pointer rounded focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
+                                className="h-[30px] w-[53px] mx-1 cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
                             >
                                 <img src={USflag} alt="English" height="100%" width="100%" className="object-cover rounded" />
                             </button>
@@ -154,7 +154,7 @@ const Header = () => {
                                     type="button"
                                     onClick={() => handleLanguageChange("es")}
                                     aria-label="Switch to Spanish"
-                                    className="h-[30px] w-[53px] cursor-pointer rounded focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
+                                    className="h-[30px] w-[53px] cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
                                 >
                                     <img src={ESflag} alt="Spanish" height="100%" width="100%" className="object-cover rounded" />
                                 </button>
@@ -162,7 +162,7 @@ const Header = () => {
                                     type="button"
                                     onClick={() => handleLanguageChange("en")}
                                     aria-label="Switch to English"
-                                    className="h-[30px] w-[53px] cursor-pointer rounded focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
+                                    className="h-[30px] w-[53px] cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
                                 >
                                     <img src={USflag} alt="English" height="100%" width="100%" className="object-cover rounded" />
                                 </button>
