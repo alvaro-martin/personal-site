@@ -18,11 +18,12 @@ describe('Journey', () => {
     renderWithProviders(<Journey />);
     expect(screen.getByText('CEO & Fundador')).toBeInTheDocument();
     expect(screen.getByText('Aubo')).toBeInTheDocument();
-    expect(screen.getByText('2019 - Actualidad')).toBeInTheDocument();
+    expect(screen.getByText('2019 - 2023')).toBeInTheDocument();
   });
 
-  it('renders all 8 experience entries', () => {
+  it('renders all 9 experience entries', () => {
     renderWithProviders(<Journey />);
+    expect(screen.getByText('Maestría en Ciencias de Computación')).toBeInTheDocument();
     expect(screen.getByText('CEO & Fundador')).toBeInTheDocument();
     expect(screen.getByText('Coordinador & Co-Fundador')).toBeInTheDocument();
     expect(screen.getByText('Profesor Cloud + IA + Blockchain')).toBeInTheDocument();

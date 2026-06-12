@@ -264,10 +264,15 @@
     "experience": {
         "title": "Professional Experience",
         "subtitle": "My personal journey",
+        "maestria": {
+            "title": "MSc in Computer Science",
+            "company": "IC-UNICAMP",
+            "date": "2023 - 2026"
+        },
         "aubo": {
             "title": "CEO & Founder",
             "company": "Aubo",
-            "date": "2019 - Present"
+            "date": "2019 - 2023"
         },
         "iotperu": {
             "title": "Coordinator & Co-Founder",
@@ -282,7 +287,7 @@
         "iotunmsm": {
             "title": "IoT Researcher",
             "company": "UNMSM IoT Research Group",
-            "date": "2018 - Present"
+            "date": "2018 - 2023"
         },
         "priconsa": {
             "title": "High and Medium Voltage Project Design Engineer",

@@ -263,10 +263,15 @@
     "experience": {
         "title": "Experiencia Profesional",
         "subtitle": "Mi jornada personal",
+        "maestria": {
+            "title": "Maestría en Ciencias de Computación",
+            "company": "IC-UNICAMP",
+            "date": "2023 - 2026"
+        },
         "aubo": {
             "title": "CEO & Fundador",
             "company": "Aubo",
-            "date": "2019 - Actualidad"
+            "date": "2019 - 2023"
         },
         "iotperu": {
             "title": "Coordinador & Co-Fundador",
@@ -281,7 +286,7 @@
         "iotunmsm": {
             "title": "Investigador IoT",
             "company": "Grupo de Investigación de IoT de la UNMSM",
-            "date": "2018 - Actualidad"
+            "date": "2018 - 2023"
         },
         "priconsa": {
             "title": "Ingeniero de Diseño de Proyectos de Alta y Media Tensión",

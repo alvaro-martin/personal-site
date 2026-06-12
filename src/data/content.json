@@ -136,14 +136,15 @@
   },
   "journey": {
     "entries": [
-      { "titleKey": "experience.aubo.title", "companyKey": "experience.aubo.company", "dateKey": "experience.aubo.date", "gcs": 1, "gce": 2, "grs": 1, "gre": 2, "decoratorGrs": 1, "decoratorGre": 2 },
-      { "titleKey": "experience.iotperu.title", "companyKey": "experience.iotperu.company", "dateKey": "experience.iotperu.date", "gcs": 3, "gce": 4, "grs": 2, "gre": 3, "decoratorGrs": 2, "decoratorGre": 3 },
-      { "titleKey": "experience.bigdata.title", "companyKey": "experience.bigdata.company", "dateKey": "experience.bigdata.date", "gcs": 1, "gce": 2, "grs": 3, "gre": 4, "decoratorGrs": 3, "decoratorGre": 4 },
-      { "titleKey": "experience.iotunmsm.title", "companyKey": "experience.iotunmsm.company", "dateKey": "experience.iotunmsm.date", "gcs": 3, "gce": 4, "grs": 4, "gre": 5, "decoratorGrs": 4, "decoratorGre": 5 },
-      { "titleKey": "experience.priconsa.title", "companyKey": "experience.priconsa.company", "dateKey": "experience.priconsa.date", "gcs": 1, "gce": 2, "grs": 5, "gre": 6, "decoratorGrs": 5, "decoratorGre": 6 },
-      { "titleKey": "experience.agp.title", "companyKey": "experience.agp.company", "dateKey": "experience.agp.date", "gcs": 3, "gce": 4, "grs": 6, "gre": 7, "decoratorGrs": 6, "decoratorGre": 7 },
-      { "titleKey": "experience.milpo.title", "companyKey": "experience.milpo.company", "dateKey": "experience.milpo.date", "gcs": 1, "gce": 2, "grs": 7, "gre": 8, "decoratorGrs": 7, "decoratorGre": 8 },
-      { "titleKey": "experience.uni.title", "companyKey": "experience.uni.company", "dateKey": "experience.uni.date", "gcs": 3, "gce": 4, "grs": 8, "gre": 9, "decoratorGrs": 8, "decoratorGre": 9 }
+      { "titleKey": "experience.maestria.title", "companyKey": "experience.maestria.company", "dateKey": "experience.maestria.date", "gcs": 1, "gce": 2, "grs": 1, "gre": 2, "decoratorGrs": 1, "decoratorGre": 2 },
+      { "titleKey": "experience.aubo.title", "companyKey": "experience.aubo.company", "dateKey": "experience.aubo.date", "gcs": 3, "gce": 4, "grs": 2, "gre": 3, "decoratorGrs": 2, "decoratorGre": 3 },
+      { "titleKey": "experience.iotperu.title", "companyKey": "experience.iotperu.company", "dateKey": "experience.iotperu.date", "gcs": 1, "gce": 2, "grs": 3, "gre": 4, "decoratorGrs": 3, "decoratorGre": 4 },
+      { "titleKey": "experience.bigdata.title", "companyKey": "experience.bigdata.company", "dateKey": "experience.bigdata.date", "gcs": 3, "gce": 4, "grs": 4, "gre": 5, "decoratorGrs": 4, "decoratorGre": 5 },
+      { "titleKey": "experience.iotunmsm.title", "companyKey": "experience.iotunmsm.company", "dateKey": "experience.iotunmsm.date", "gcs": 1, "gce": 2, "grs": 5, "gre": 6, "decoratorGrs": 5, "decoratorGre": 6 },
+      { "titleKey": "experience.priconsa.title", "companyKey": "experience.priconsa.company", "dateKey": "experience.priconsa.date", "gcs": 3, "gce": 4, "grs": 6, "gre": 7, "decoratorGrs": 6, "decoratorGre": 7 },
+      { "titleKey": "experience.agp.title", "companyKey": "experience.agp.company", "dateKey": "experience.agp.date", "gcs": 1, "gce": 2, "grs": 7, "gre": 8, "decoratorGrs": 7, "decoratorGre": 8 },
+      { "titleKey": "experience.milpo.title", "companyKey": "experience.milpo.company", "dateKey": "experience.milpo.date", "gcs": 3, "gce": 4, "grs": 8, "gre": 9, "decoratorGrs": 8, "decoratorGre": 9 },
+      { "titleKey": "experience.uni.title", "companyKey": "experience.uni.company", "dateKey": "experience.uni.date", "gcs": 1, "gce": 2, "grs": 9, "gre": 10, "decoratorGrs": 9, "decoratorGre": 10 }
     ]
   },
   "footer": {
