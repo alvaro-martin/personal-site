@@ -26,14 +26,14 @@ describe('Portfolio', () => {
 
   it('navigates to next project on forward arrow click', () => {
     renderWithProviders(<Portfolio />);
-    const forwardBtn = screen.getByLabelText('Next project');
+    const forwardBtn = screen.getByLabelText('Next');
     fireEvent.click(forwardBtn);
     expect(screen.getByText(/Desarrollo de Plataforma IoT/)).toBeInTheDocument();
   });
 
   it('navigates to previous project on back arrow click', () => {
     renderWithProviders(<Portfolio />);
-    const backBtn = screen.getByLabelText('Previous project');
+    const backBtn = screen.getByLabelText('Previous');
     fireEvent.click(backBtn);
     expect(screen.getByText(/Oxímetro Perú/)).toBeInTheDocument();
   });

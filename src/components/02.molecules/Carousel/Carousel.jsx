@@ -1,0 +1,144 @@
+import { useState, useRef, useCallback } from "react";
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+
+const Carousel = ({ items, ariaLabel }) => {
+    const [current, setCurrent] = useState(0);
+    const total = items.length;
+    const touchStart = useRef(null);
+    const touchDelta = useRef(0);
+
+    const goTo = useCallback((index) => {
+        setCurrent(index);
+    }, []);
+
+    const goPrev = useCallback(() => {
+        setCurrent(prev => prev === 0 ? total - 1 : prev - 1);
+    }, [total]);
+
+    const goNext = useCallback(() => {
+        setCurrent(prev => prev === total - 1 ? 0 : prev + 1);
+    }, [total]);
+
+    const handleTouchStart = (e) => {
+        touchStart.current = e.touches[0].clientX;
+        touchDelta.current = 0;
+    };
+
+    const handleTouchMove = (e) => {
+        if (touchStart.current === null) return;
+        touchDelta.current = e.touches[0].clientX - touchStart.current;
+    };
+
+    const handleTouchEnd = () => {
+        const threshold = 50;
+        if (touchDelta.current > threshold) {
+            goPrev();
+        } else if (touchDelta.current < -threshold) {
+            goNext();
+        }
+        touchStart.current = null;
+        touchDelta.current = 0;
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            goPrev();
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            goNext();
+        }
+    };
+
+    const item = items[current];
+
+    return (
+        <div
+            role="region"
+            aria-label={ariaLabel}
+            aria-live="polite"
+            onKeyDown={handleKeyDown}
+            className="flex flex-col items-center w-full"
+        >
+            {/* Carousel content */}
+            <div className="flex flex-row items-center justify-between gap-4 px-4 w-full">
+                <button
+                    type="button"
+                    onClick={goPrev}
+                    aria-label="Previous"
+                    className="carousel-arrow"
+                >
+                    <IoIosArrowBack size={30} />
+                </button>
+
+                <div
+                    className="flex flex-row items-center justify-center gap-8 md:flex-col flex-1 min-w-0"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    <div className="w-full max-w-[500px] h-[350px] m-4 rounded-xl overflow-hidden shrink-0 md:max-w-[200px] md:h-[220px]">
+                        <img
+                            src={item.img}
+                            alt={item.alt}
+                            width="100%"
+                            height="100%"
+                            loading="lazy"
+                            decoding="async"
+                            className="object-cover w-full h-full transition-transform duration-normal ease-default hover:scale-105"
+                        />
+                    </div>
+                    <div className="flex flex-col max-w-[30rem] md:max-w-[20rem]">
+                        <h2 className="text-text text-xl font-bold mb-6 leading-snug">
+                            {item.title}
+                        </h2>
+                        <p className="text-text-muted text-base mb-6 leading-relaxed max-w-[65ch]">
+                            {item.subtitle}
+                        </p>
+                        {item.link && (
+                            <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-primary w-full md:w-[19rem]"
+                            >
+                                {item.button}
+                            </a>
+                        )}
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    onClick={goNext}
+                    aria-label="Next"
+                    className="carousel-arrow"
+                >
+                    <IoIosArrowForward size={30} />
+                </button>
+            </div>
+
+            {/* Dots + counter */}
+            <div className="flex flex-row items-center justify-center gap-3 mt-4">
+                {items.map((_, idx) => (
+                    <button
+                        key={idx}
+                        type="button"
+                        onClick={() => goTo(idx)}
+                        aria-label={`Go to item ${idx + 1}`}
+                        className={`w-2.5 h-2.5 rounded-full transition-all duration-normal ease-default cursor-pointer border-none p-0 ${
+                            idx === current
+                                ? 'bg-text-accent scale-125'
+                                : 'bg-border hover:bg-text-muted'
+                        }`}
+                    />
+                ))}
+                <span className="text-text-muted text-sm ml-2">
+                    {current + 1} / {total}
+                </span>
+            </div>
+        </div>
+    );
+};
+
+export { Carousel };
