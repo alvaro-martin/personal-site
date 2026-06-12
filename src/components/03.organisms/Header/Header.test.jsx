@@ -3,6 +3,32 @@ import { renderWithProviders } from 'test/test-utils';
 import content from 'data/content.json';
 import { Header } from './Header';
 
+beforeEach(() => {
+  window.matchMedia = (query) => ({
+    matches: true,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => false,
+  });
+});
+
+afterEach(() => {
+  window.matchMedia = (query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => false,
+  });
+});
+
 describe('Header', () => {
   it('renders brand name from content.json', () => {
     renderWithProviders(<Header />);
@@ -28,6 +54,16 @@ describe('Header', () => {
   });
 
   it('toggles mobile menu on hamburger click', () => {
+    window.matchMedia = (query) => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addListener: () => {},
+      removeListener: () => {},
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      dispatchEvent: () => false,
+    });
     renderWithProviders(<Header />);
     const menuButton = screen.getByLabelText('Open menu');
     expect(menuButton).toBeTruthy();
