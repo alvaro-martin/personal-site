@@ -117,7 +117,7 @@ const Header = () => {
             </header>
 
             {/* Full-viewport separator — always visible below header */}
-            <div className="fixed top-20 left-0 w-screen h-px bg-border z-50" aria-hidden="true" />
+            <div className="fixed top-20 left-0 right-0 h-px bg-border z-50" aria-hidden="true" />
 
             {/* Mobile menu overlay */}
             {!isDesktop && isOpen && (
