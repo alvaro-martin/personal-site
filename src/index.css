@@ -290,9 +290,6 @@
     min-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
