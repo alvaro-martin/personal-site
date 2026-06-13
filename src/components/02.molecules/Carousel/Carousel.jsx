@@ -93,7 +93,7 @@ const Carousel = ({ items, ariaLabel }) => {
                             className="object-contain w-full h-full transition-transform duration-normal ease-default hover:scale-105"
                         />
                     </div>
-                    <div className="flex flex-col min-w-0 max-w-[500px] max-md:w-full">
+                    <div className="flex flex-col min-w-0 w-[min(500px,45vw)] max-md:w-full">
                         <h2 className="text-text text-xl font-bold mb-4 leading-snug">
                             {item.title}
                         </h2>
