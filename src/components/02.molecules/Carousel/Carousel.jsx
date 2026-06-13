@@ -84,7 +84,7 @@ const Carousel = ({ items, ariaLabel }) => {
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <div className="max-w-[500px] w-full m-4 rounded-xl overflow-hidden bg-background5 aspect-[3/2] max-sm:aspect-[4/3] max-sm:m-2">
+                    <div className="w-[min(500px,45vw)] m-4 rounded-xl overflow-hidden bg-background5 aspect-[3/2] max-md:w-full max-sm:aspect-[4/3] max-sm:m-2">
                         <img
                             src={item.img}
                             alt={item.alt}
