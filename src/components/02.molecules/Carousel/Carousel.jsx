@@ -73,7 +73,7 @@ const Carousel = ({ items, ariaLabel }) => {
                     type="button"
                     onClick={goPrev}
                     aria-label="Previous"
-                    className="carousel-arrow max-sm:hidden"
+                    className="carousel-arrow max-md:hidden"
                 >
                     <IoIosArrowBack size={30} />
                 </button>
@@ -129,7 +129,7 @@ const Carousel = ({ items, ariaLabel }) => {
                     type="button"
                     onClick={goNext}
                     aria-label="Next"
-                    className="carousel-arrow max-sm:hidden"
+                    className="carousel-arrow max-md:hidden"
                 >
                     <IoIosArrowForward size={30} />
                 </button>
