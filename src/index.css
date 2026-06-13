@@ -526,8 +526,7 @@
 
   /* ── Input field ── */
   .input-field {
-    width: 50rem;
-    max-width: calc(100vw - 4rem);
+    width: min(50rem, calc(100% - 4rem));
     background-color: var(--color-background-secondary);
     color: var(--color-text);
     font-size: var(--text-lg);

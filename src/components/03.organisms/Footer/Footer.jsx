@@ -14,7 +14,7 @@ const Footer = () => {
     const [t] = useTranslation("global");
 
     return (
-        <footer aria-label={t("footer.title")} className="bg-background5 flex flex-col items-center py-12 px-16 pt-4 md:px-4">
+        <footer aria-label={t("footer.title")} className="bg-background5 flex flex-col items-center py-12 px-6 pt-4 md:px-16">
             <div className="flex flex-row justify-between mb-16 w-full md:flex-col md:items-center">
                 <div className="flex flex-col justify-center my-0 mb-8 md:items-center">
                     <p className="text-text text-3xl font-bold mb-2">{t("footer.title")}</p>
