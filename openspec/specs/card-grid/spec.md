@@ -61,6 +61,30 @@ The CardGrid SHALL accept `{ items, ariaLabel }` props with the same shape as th
 - **WHEN** an organism passes the same `items` array and `ariaLabel` that was used with Carousel
 - **THEN** CardGrid renders all items without requiring data transformation
 
+#### Scenario: All items visible in grid
+- **WHEN** a test renders a component using CardGrid
+- **THEN** all items are rendered simultaneously in the DOM (no navigation required)
+- **THEN** each item's title and image are accessible via `screen.getByText` and `screen.getByAltText`
+
+### Requirement: Test coverage for grid rendering
+Tests for organisms using CardGrid SHALL verify that all items render in the grid, not that items navigate one at a time.
+
+#### Scenario: All project titles render
+- **WHEN** a test renders Awards, Portfolio, or Research
+- **THEN** all project titles from `content.json` are present in the document
+
+#### Scenario: All project images render
+- **WHEN** a test renders Awards, Portfolio, or Research
+- **THEN** all project images with correct alt text are present in the document
+
+#### Scenario: No navigation buttons
+- **WHEN** a test renders Awards, Portfolio, or Research
+- **THEN** no elements with `aria-label="Next"` or `aria-label="Previous"` exist
+
+#### Scenario: Section heading and subtitle render
+- **WHEN** a test renders Awards, Portfolio, or Research
+- **THEN** the section title and subtitle from i18n are present in the document
+
 ### Requirement: Stop using Carousel in organisms
 The three organisms (Research, Portfolio, Awards) SHALL import and use CardGrid instead of Carousel. The Carousel component itself remains in the codebase.
 

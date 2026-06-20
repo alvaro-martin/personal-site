@@ -6,6 +6,15 @@ import { HelmetProvider } from 'react-helmet-async';
 import global_es from 'translations/es/global.json';
 import global_en from 'translations/en/global.json';
 
+class MockIntersectionObserver {
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+
+global.IntersectionObserver = MockIntersectionObserver;
+
 i18next.init({
   interpolation: { escapeValue: false },
   lng: 'es',

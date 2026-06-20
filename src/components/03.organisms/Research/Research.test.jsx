@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { renderWithProviders } from 'test/test-utils';
 import content from 'data/content.json';
 import { Research } from './Research';
@@ -14,21 +14,22 @@ describe('Research', () => {
     expect(screen.getByText('Trabajos de Investigación')).toBeInTheDocument();
   });
 
-  it('renders first project title from i18n', () => {
+  it('renders all project titles from i18n', () => {
     renderWithProviders(<Research />);
-    expect(screen.getByText(/Diseño de un prototipo de IoT/)).toBeInTheDocument();
+    expect(screen.getAllByText(/Diseño de un prototipo de IoT/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/San Marcos Ciudad Inteligente/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Estudio de Planeamiento/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Desarrollo de un sistema y aplicativo web/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Reconocimiento de los movimientos/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Aplicación móvil COVID-19/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Sistema de Guiado Smart Campus/).length).toBeGreaterThanOrEqual(1);
   });
 
-  it('renders project image with alt from content.json', () => {
+  it('renders all project images with alt from content.json', () => {
     renderWithProviders(<Research />);
-    expect(screen.getByAltText(content.research.projects[0].alt)).toBeInTheDocument();
-  });
-
-  it('navigates to next project on forward arrow click', () => {
-    renderWithProviders(<Research />);
-    const forwardBtn = screen.getByLabelText('Next');
-    fireEvent.click(forwardBtn);
-    expect(screen.getByText(/San Marcos Ciudad Inteligente/)).toBeInTheDocument();
+    content.research.projects.forEach(project => {
+      expect(screen.getByAltText(project.alt)).toBeInTheDocument();
+    });
   });
 
   it('renders correct total project count from content.json', () => {

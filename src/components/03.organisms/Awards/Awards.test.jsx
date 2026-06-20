@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { renderWithProviders } from 'test/test-utils';
 import content from 'data/content.json';
 import { Awards } from './Awards';
@@ -14,22 +14,19 @@ describe('Awards', () => {
     expect(screen.getByText('y Premios')).toBeInTheDocument();
   });
 
-  it('renders first project title from i18n', () => {
+  it('renders all project titles from i18n', () => {
     renderWithProviders(<Awards />);
-    expect(screen.getByText(/Distinción a la Innovación/)).toBeInTheDocument();
+    expect(screen.getAllByText(/Distinción a la Innovación/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Monitoreo de Nivel de Tanques/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Sistema de monitoreo en tiempo real/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Hackster Bounty Winner/).length).toBeGreaterThanOrEqual(1);
   });
 
-  it('renders project image with alt from content.json', () => {
+  it('renders all project images with alt from content.json', () => {
     renderWithProviders(<Awards />);
-    expect(screen.getByAltText(content.awards.projects[0].alt)).toBeInTheDocument();
-  });
-
-  it('navigates to next project on forward arrow click', () => {
-    renderWithProviders(<Awards />);
-    const forwardBtn = screen.getByLabelText('Next');
-    fireEvent.click(forwardBtn);
-    const matches = screen.getAllByText(/Monitoreo de Nivel de Tanques/);
-    expect(matches.length).toBeGreaterThanOrEqual(1);
+    content.awards.projects.forEach(project => {
+      expect(screen.getByAltText(project.alt)).toBeInTheDocument();
+    });
   });
 
   it('renders correct total project count from content.json', () => {
