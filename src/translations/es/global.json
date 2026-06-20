@@ -23,7 +23,7 @@
         "subnumber2": "Artículos publicados",
         "subnumber3": "Proyectos realizados",
         "cv": "Descargar CV",
-        "cvLink": "https://certificados-almartin.s3.amazonaws.com/CV+-+ES+-+Alvaro+Aspilcueta.pdf"
+        "cvLink": "/personal-site/cv/CV-ES-Alvaro-Aspilcueta.pdf"
     },
     "services": {
         "title": "Servicios",
