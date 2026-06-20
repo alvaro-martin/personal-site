@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
-import { Carousel } from 'components/02.molecules';
+import { CardGrid } from 'components/02.molecules';
 
 import SanMarcos from 'assets/sanmarcos.png';
 import SmartCampus from 'assets/smartcampus.png';
@@ -40,7 +40,7 @@ const Research = () => {
             <p className="section-subtitle">
                 {t("research.subtitle")}
             </p>
-            <Carousel items={items} ariaLabel="Research carousel" />
+            <CardGrid items={items} ariaLabel="Research projects" />
         </section>
     );
 };

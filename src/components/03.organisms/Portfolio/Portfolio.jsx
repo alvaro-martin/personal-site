@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
-import { Carousel } from 'components/02.molecules';
+import { CardGrid } from 'components/02.molecules';
 
 import Hydroponic from 'assets/hydroponic.jpg';
 import AuboPlatform from 'assets/auboplatform.png';
@@ -38,7 +38,7 @@ const Portfolio = () => {
             <p className="section-subtitle">
                 {t("portfolio.subtitle")}
             </p>
-            <Carousel items={items} ariaLabel="Portfolio carousel" />
+            <CardGrid items={items} ariaLabel="Portfolio projects" />
         </section>
     );
 };

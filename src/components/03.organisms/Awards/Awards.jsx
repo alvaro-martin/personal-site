@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
-import { Carousel } from 'components/02.molecules';
+import { CardGrid } from 'components/02.molecules';
 
 import Democracia from 'assets/democracia.png';
 import Nahui from 'assets/nahui.png';
@@ -38,7 +38,7 @@ const Awards = () => {
             <p className="section-subtitle">
                 {t("acknowledgments.subtitle")}
             </p>
-            <Carousel items={items} ariaLabel="Awards carousel" />
+            <CardGrid items={items} ariaLabel="Awards and recognition" />
         </section>
     );
 };

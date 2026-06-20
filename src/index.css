@@ -472,6 +472,14 @@
     outline-offset: 2px;
   }
 
+  /* ── Primary button (small, for cards) ── */
+  .btn-primary-sm {
+    min-width: 0;
+    min-height: 0;
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: var(--text-base);
+  }
+
   /* ── Secondary button (ghost) ── */
   .btn-secondary {
     display: inline-flex;
@@ -523,6 +531,16 @@
     background-color: var(--color-surface);
     border-radius: var(--radius-lg);
     padding: var(--spacing-8);
+  }
+
+  /* ── Card scroll reveal animation ── */
+  .card-reveal {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  .card-reveal.is-visible {
+    animation: slideUp 600ms var(--ease-default) forwards;
   }
 
   /* ── Input field ── */
@@ -610,32 +628,6 @@
     transform: scale(1.1);
   }
 
-  /* ── Carousel arrow ── */
-  .carousel-arrow {
-    width: var(--spacing-10);
-    height: var(--spacing-10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: var(--color-text);
-    background: none;
-    border: none;
-    border-radius: var(--radius-full);
-    transition: color var(--duration-normal) var(--ease-default),
-                background-color var(--duration-normal) var(--ease-default);
-  }
-
-  .carousel-arrow:hover {
-    color: var(--color-primary);
-    background-color: var(--color-background-secondary);
-  }
-
-  .carousel-arrow:focus-visible {
-    outline: 2px solid var(--color-border-focus);
-    outline-offset: 2px;
-  }
-
   /* ── Visually hidden (screen reader only) ── */
   .sr-only {
     position: absolute;
@@ -677,18 +669,8 @@
 @media (prefers-reduced-motion: reduce) {
   .card:hover,
   .btn-primary:active,
-  .icon-btn:hover,
-  .carousel-arrow:hover {
+  .icon-btn:hover {
     transform: none;
   }
 }
 
-/* ============================================================
-   Small screen overrides
-   ============================================================ */
-@media (max-width: 480px) {
-  .carousel-arrow {
-    width: var(--spacing-8);
-    height: var(--spacing-8);
-  }
-}

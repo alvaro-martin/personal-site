@@ -14,6 +14,7 @@ export default defineConfig({
       translations: path.resolve(__dirname, 'src/translations'),
       assets: path.resolve(__dirname, 'src/assets'),
       data: path.resolve(__dirname, 'src/data'),
+      hooks: path.resolve(__dirname, 'src/hooks'),
       test: path.resolve(__dirname, 'src/test'),
     }
   },
