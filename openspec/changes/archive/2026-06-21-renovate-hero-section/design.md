@@ -128,6 +128,57 @@ The project uses:
 4. Test responsive design across viewports
 5. Verify accessibility (screen reader, reduced motion)
 
+## Implementation Findings (chrome-devtools verified)
+
+### Typewriter Animation Issues & Solutions
+
+**Issue 1: Text clipping with width animation**
+- `width: 100%` resolves to parent container width, which may be constrained
+- `max-width` with flex layouts causes parent container to shrink
+- **Solution**: Use `clip-path: inset()` instead of width/max-width
+- `clip-path` doesn't affect layout, only visual clipping
+
+**Issue 2: Steps count must match character count**
+- Original: `steps(20)` for "Hola, soy Alvaro Martín" (24 chars) - didn't work
+- Fixed: `steps(14)` for "Alvaro Martín!" (14 chars) - works correctly
+- Steps must match the animated text length exactly
+
+**Issue 3: Cursor position**
+- Initial: Cursor on parent h1 element - appeared between text and photo
+- Fixed: Cursor only on `.hero-name-line2` - appears only on second line
+
+### Layout Findings
+
+**Two-line greeting structure:**
+- Split "Hola, soy Alvaro Martín" into "Hola, yo soy" + "Alvaro Martín!"
+- First line fades in immediately (400ms)
+- Second line types out after first line completes
+
+**Flex layout optimization:**
+- `w-fit` on text container ensures it only takes width needed for content
+- `flex-shrink-0` on photo prevents compression
+- `gap-6` (24px) provides consistent spacing
+
+**Responsive behavior (verified at 320px, 375px, 768px, 1024px, 1440px):**
+- Mobile: flex-col, centered, text above photo
+- Desktop: flex-row, text left, photo right
+- Photo maintains circular shape with flex-shrink-0
+
+### Reduced Motion Support
+
+Added comprehensive reduced motion handling:
+```css
+@media (prefers-reduced-motion: reduce) {
+  .hero-name-line1,
+  .hero-name-line2 {
+    animation: none;
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    border-right: none;
+  }
+}
+```
+
 ## Open Questions
 
 - Should we add a subtle background gradient to the Hero section?

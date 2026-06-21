@@ -19,7 +19,7 @@ const Hero = () => {
             aria-labelledby="hero-heading"
             className="w-full flex flex-col items-center mt-20 pt-20 md:flex-row md:justify-center md:items-center gap-6 md:gap-6"
         >
-            <div className="flex flex-col w-full md:w-1/2 px-6 md:px-4">
+            <div className="flex flex-col w-fit px-6 md:px-4">
                 <h1
                     id="hero-heading"
                     className="text-text text-3xl md:text-5xl font-bold mb-4 leading-tight"

@@ -37,6 +37,17 @@ The system SHALL display the photo at different sizes based on viewport width.
 - **WHEN** the viewport is 768px or wider
 - **THEN** the photo container SHALL be 280px x 280px
 
+### Requirement: Photo maintains circular shape in flex layout
+The system SHALL prevent the photo from being compressed in flex layouts.
+
+#### Scenario: Photo has flex-shrink-0
+- **WHEN** the photo container renders in a flex layout
+- **THEN** it SHALL have `flex-shrink-0` to maintain its dimensions
+
+#### Scenario: Photo does not become oval
+- **WHEN** the text container takes up space in flex-row
+- **THEN** the photo SHALL maintain `border-radius: 50%` circular appearance
+
 ### Requirement: Photo replaces clipImage animation
 The system SHALL replace the existing `clipImage` animation with the new gradient border rotation.
 
@@ -47,3 +58,24 @@ The system SHALL replace the existing `clipImage` animation with the new gradien
 #### Scenario: New animation applied
 - **WHEN** the photo container renders
 - **THEN** it SHALL use the `rotateGradient` keyframe animation
+
+### Technical Notes
+
+**Implementation:**
+```jsx
+<div
+  className="photo-container flex-shrink-0 w-[200px] h-[200px] md:w-[280px] md:h-[280px] photo-float"
+  aria-hidden="true"
+  style={{ animationDelay: '3400ms' }}
+>
+  <div className="photo-inner w-full h-full flex justify-center items-center">
+    <img src={Photo} alt={content.hero.photoAlt} width="85%" height="85%" />
+  </div>
+</div>
+```
+
+**Key Points:**
+- `flex-shrink-0` prevents photo from being compressed by adjacent text container
+- `animationDelay: '3400ms'` delays float animation until after typewriter completes
+- Photo uses `width="85%"` and `height="85%"` for inner padding effect
+- `aria-hidden="true"` because photo is decorative

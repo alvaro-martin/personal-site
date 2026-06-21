@@ -48,13 +48,48 @@ The system SHALL create clear visual hierarchy between name, degree, and titles.
 - **WHEN** the hero section renders
 - **THEN** the title text SHALL be the smallest of the three hierarchy levels
 
-### Requirement: Hero maintains consistent layout on mobile and desktop
-The system SHALL display social links below the titles on both mobile and desktop viewports.
-
-#### Scenario: Mobile layout
-- **WHEN** the viewport is less than 768px wide
-- **THEN** social links SHALL appear below the titles and above the photo
+### Requirement: Hero uses flex layout with content-fitting text container
+The system SHALL use a flex layout where the text container fits its content width.
 
 #### Scenario: Desktop layout
 - **WHEN** the viewport is 768px or wider
-- **THEN** social links SHALL appear below the titles and to the left of the photo
+- **THEN** the hero section SHALL use `flex-row` with text container using `w-fit` to fit content
+
+#### Scenario: Mobile layout
+- **WHEN** the viewport is less than 768px wide
+- **THEN** the hero section SHALL use `flex-col` with centered alignment
+
+#### Scenario: Horizontal gap between text and photo
+- **WHEN** the viewport is 768px or wider
+- **THEN** the gap between text and photo SHALL be 24px (`gap-6`)
+
+### Requirement: Hero greeting is split into two lines
+The system SHALL display the hero greeting as two separate lines.
+
+#### Scenario: Spanish greeting structure
+- **WHEN** the language is Spanish
+- **THEN** the greeting SHALL display as "Hola, yo soy" on line 1 and "Alvaro Martín!" on line 2
+
+#### Scenario: English greeting structure
+- **WHEN** the language is English
+- **THEN** the greeting SHALL display as "Hello, I'm" on line 1 and "Alvaro Martín!" on line 2
+
+### Technical Notes
+
+**Layout Implementation:**
+```jsx
+<section className="w-full flex flex-col items-center mt-20 pt-20 md:flex-row md:justify-center md:items-center gap-6 md:gap-6">
+  <div className="flex flex-col w-fit px-6 md:px-4">
+    {/* Text content */}
+  </div>
+  <div className="photo-container flex-shrink-0 ...">
+    {/* Photo */}
+  </div>
+</section>
+```
+
+**Key Points:**
+- `w-fit` on text container ensures it only takes width needed for content
+- `flex-shrink-0` on photo prevents it from being compressed
+- `gap-6` (24px) provides consistent spacing between text and photo
+- On mobile, `flex-col` stacks elements vertically with centered alignment
