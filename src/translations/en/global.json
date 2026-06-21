@@ -3,6 +3,7 @@
         "home": "Home",
         "about": "About",
         "skills": "Skills",
+        "languages": "Languages",
         "services": "Services",
         "portfolio": "Portfolio",
         "contactme": "Contact me"
@@ -80,8 +81,9 @@
         "subtitle3": "IoT Researcher",
         "link1": "About me",
         "link2": "Skills",
-        "link3": "Services",
-        "link4": "Portfolio",
+        "link3": "Languages",
+        "link4": "Services",
+        "link5": "Portfolio",
         "madeBy": "Made with ❤️ by 🙋🏽‍♂️",
         "copyright": "All rights reserved."
     },
@@ -152,6 +154,14 @@
             "writing": "Writing",
             "speaking": "Speaking"
         }
+    },
+    "languages": {
+        "title": "Languages",
+        "subtitle": "My languages",
+        "spanish": "Spanish",
+        "english": "English",
+        "portuguese": "Portuguese",
+        "german": "German"
     },
     "portfolio": {
         "title": "Portfolio",

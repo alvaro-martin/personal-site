@@ -131,6 +131,12 @@
       { "imageKey": "hackster", "alt": "hackster", "titleKey": "acknowledgments.project6.title", "subtitleKey": "acknowledgments.project6.subtitle", "linkKey": "acknowledgments.project6.link", "buttonKey": "acknowledgments.project6.button" }
     ]
   },
+  "languages": [
+    { "flag": "\ud83c\uddea\ud83c\uddf8", "nameKey": "languages.spanish", "level": "Native", "percent": "100%" },
+    { "flag": "\ud83c\uddfa\ud83c\uddf8", "nameKey": "languages.english", "level": "C1", "percent": "85%", "certification": "TOEFL", "certLink": "/personal-site/language-certificates/TOEFL-Alvaro-Aspilcueta.pdf" },
+    { "flag": "\ud83c\udde7\ud83c\uddf7", "nameKey": "languages.portuguese", "level": "C1", "percent": "85%" },
+    { "flag": "\ud83c\udde9\ud83c\uddea", "nameKey": "languages.german", "level": "A2 \u2192 B1", "percent": "50%" }
+  ],
   "journey": {
     "entries": [
       { "titleKey": "experience.maestria.title", "companyKey": "experience.maestria.company", "dateKey": "experience.maestria.date", "gcs": 1, "gce": 2, "grs": 1, "gre": 2, "decoratorGrs": 1, "decoratorGre": 2 },
@@ -148,8 +154,9 @@
     "anchors": [
       { "href": "#aboutme", "labelKey": "footer.link1" },
       { "href": "#skills", "labelKey": "footer.link2" },
-      { "href": "#services", "labelKey": "footer.link3" },
-      { "href": "#portfolio", "labelKey": "footer.link4" }
+      { "href": "#languages", "labelKey": "footer.link3" },
+      { "href": "#services", "labelKey": "footer.link4" },
+      { "href": "#portfolio", "labelKey": "footer.link5" }
     ],
     "copyrightYear": "2022"
   },

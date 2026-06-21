@@ -255,6 +255,21 @@
   to   { opacity: 1; transform: scale(1); }
 }
 
+@keyframes fillBar {
+  from { width: 0; }
+  to   { width: var(--target-width); }
+}
+
+@keyframes badgePopIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shine {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
 /* ============================================================
    @layer base — resets and document defaults
    ============================================================ */
@@ -541,6 +556,53 @@
 
   .card-reveal.is-visible {
     animation: slideUp 600ms var(--ease-default) forwards;
+  }
+
+  /* ── Language row animation ── */
+  .language-row {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  .language-row.is-visible {
+    animation: slideUp 500ms var(--ease-default) forwards;
+  }
+
+  /* ── Progress bar animation ── */
+  .language-row.is-visible .progress-bar {
+    animation: fillBar 800ms var(--ease-out) forwards;
+  }
+
+  /* ── Level badge animation ── */
+  .language-row.is-visible .level-badge {
+    animation: badgePopIn 400ms var(--ease-bounce) forwards;
+  }
+
+  /* ── TOEFL badge shine ── */
+  .cert-badge {
+    background-size: 200% 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cert-badge::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-default);
+  }
+
+  .cert-badge:hover::after {
+    opacity: 1;
+    animation: shine 1s var(--ease-default);
   }
 
   /* ── Input field ── */

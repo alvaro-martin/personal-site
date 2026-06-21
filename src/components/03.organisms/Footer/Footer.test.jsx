@@ -27,11 +27,12 @@ describe('Footer', () => {
   it('renders anchor hrefs from content.json', () => {
     renderWithProviders(<Footer />);
     const navLinks = document.querySelectorAll('footer a[href^="#"]');
-    expect(navLinks.length).toBe(4);
+    expect(navLinks.length).toBe(5);
     expect(navLinks[0]).toHaveAttribute('href', '#aboutme');
     expect(navLinks[1]).toHaveAttribute('href', '#skills');
-    expect(navLinks[2]).toHaveAttribute('href', '#services');
-    expect(navLinks[3]).toHaveAttribute('href', '#portfolio');
+    expect(navLinks[2]).toHaveAttribute('href', '#languages');
+    expect(navLinks[3]).toHaveAttribute('href', '#services');
+    expect(navLinks[4]).toHaveAttribute('href', '#portfolio');
   });
 
   it('renders copyright year from content.json', () => {

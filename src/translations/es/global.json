@@ -3,6 +3,7 @@
         "home": "Inicio",
         "about": "Sobre mi",
         "skills": "Habilidades",
+        "languages": "Idiomas",
         "services": "Servicios",
         "portfolio": "Portafolio",
         "contactme": "Contacto"
@@ -80,8 +81,9 @@
         "subtitle3": "Investigador IoT",
         "link1": "Sobre mi",
         "link2": "Habilidades",
-        "link3": "Servicios",
-        "link4": "Portafolio",
+        "link3": "Idiomas",
+        "link4": "Servicios",
+        "link5": "Portafolio",
         "madeBy": "Hecho con ❤️ por mi 🙋🏽‍♂️",
         "copyright": "Todos los derechos reservados."
     },
@@ -151,6 +153,14 @@
             "writing": "Escritura",
             "speaking": "Conversación"
         }
+    },
+    "languages": {
+        "title": "Idiomas",
+        "subtitle": "Mis idiomas",
+        "spanish": "Español",
+        "english": "Inglés",
+        "portuguese": "Portugués",
+        "german": "Alemán"
     },
     "portfolio": {
         "title": "Portafolio",
