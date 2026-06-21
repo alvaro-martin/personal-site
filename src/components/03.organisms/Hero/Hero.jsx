@@ -17,12 +17,12 @@ const Hero = () => {
         <section
             id="home"
             aria-labelledby="hero-heading"
-            className="w-full flex flex-col items-center mt-20 pt-20 md:flex-row md:justify-center md:items-center"
+            className="w-full flex flex-col items-center mt-20 pt-20 md:flex-row md:justify-center md:items-center gap-8 md:gap-12"
         >
-            <div className="flex flex-col w-full min-w-0 px-6 md:px-4">
+            <div className="flex flex-col w-full md:w-1/2 px-6 md:px-4">
                 <h1
                     id="hero-heading"
-                    className="hero-name text-text text-3xl md:text-5xl font-bold mb-4 leading-tight"
+                    className="text-text text-3xl md:text-5xl font-bold mb-4 leading-tight"
                 >
                     <span className="hero-name-line1">{t("hero.hello1")}</span>
                     <br />
@@ -60,7 +60,7 @@ const Hero = () => {
             </div>
 
             <div
-                className="photo-container flex-shrink-0 w-[200px] h-[200px] m-8 md:w-[280px] md:h-[280px] photo-float"
+                className="photo-container flex-shrink-0 w-[200px] h-[200px] md:w-[280px] md:h-[280px] photo-float"
                 aria-hidden="true"
                 style={{ animationDelay: '3400ms' }}
             >
