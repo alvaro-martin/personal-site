@@ -1,12 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { BsCalendar3 } from 'react-icons/bs';
 import content from 'data/content.json';
+import { useScrollReveal } from 'hooks/useScrollReveal';
 
 const Journey = () => {
     const [t] = useTranslation("global");
+    const ref = useScrollReveal();
 
     return (
-        <section aria-labelledby="journey-heading" className="section-wrapper py-16">
+        <section ref={ref} aria-labelledby="journey-heading" className="section-wrapper py-16">
             <h1 id="journey-heading" className="section-heading">
                 {t("experience.title")}
             </h1>
@@ -19,9 +21,10 @@ const Journey = () => {
                         key={idx}
                         style={{
                             gridColumn: `${exp.gcs} / ${exp.gce}`,
-                            gridRow: `${exp.grs} / ${exp.gre}`
+                            gridRow: `${exp.grs} / ${exp.gre}`,
+                            animationDelay: `${idx * 150}ms`
                         }}
-                        className="flex flex-col h-[10rem]"
+                        className={`card-reveal journey-entry flex flex-col h-[10rem] ${exp.gcs === 1 ? 'journey-entry-left' : 'journey-entry-right'}`}
                     >
                         <h2 className="text-text text-xl font-bold leading-snug md:text-base">
                             {t(exp.titleKey)}
@@ -42,13 +45,14 @@ const Journey = () => {
                         key={`dec-${idx}`}
                         style={{
                             gridColumn: '2 / 3',
-                            gridRow: `${exp.decoratorGrs} / ${exp.decoratorGre}`
+                            gridRow: `${exp.decoratorGrs} / ${exp.decoratorGre}`,
+                            animationDelay: `${idx * 100}ms`
                         }}
-                        className="flex flex-col items-center"
+                        className="card-reveal journey-decorator flex flex-col items-center"
                         aria-hidden="true"
                     >
-                        <div className="w-[2.3rem] h-[2.3rem] rounded-full bg-primary" />
-                        <div className="bg-primary w-[0.2rem] flex-1" />
+                        <div className="journey-dot w-[2.3rem] h-[2.3rem] rounded-full bg-primary" />
+                        <div className="journey-line bg-primary w-[0.2rem] flex-1" />
                     </div>
                 ))}
             </div>
