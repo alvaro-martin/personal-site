@@ -8,9 +8,10 @@
         "portfolio": "Portafolio",
         "contactme": "Contacto"
     },
-    "hero": {
-        "hello": "Hola, soy Alvaro Martín",
-        "title1": "Msc. Ciencias de la Computación",
+"hero": {
+    "hello1": "Hola, yo soy",
+    "hello2": "Alvaro Martín!",
+    "title1": "Msc. Ciencias de la Computación",
         "title2": "Ingeniero Mecánico Eléctrico",
         "title3": "AI Engineer",
         "title4": "Investigador IoT"

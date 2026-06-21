@@ -640,14 +640,21 @@
     animation: shine 1s var(--ease-default);
   }
 
-/* ── Hero typewriter animation ── */
-.hero-name {
-  white-space: nowrap;
-  border-right: 2px solid var(--color-text);
-  clip-path: inset(0 100% 0 0);
-  animation: typing 2s steps(24) forwards,
-             blink 0.5s step-end infinite;
-}
+  /* ── Hero typewriter animation ── */
+  .hero-name {
+    border-right: 2px solid var(--color-text);
+  }
+
+  .hero-name-line1 {
+    animation: fadeIn 400ms var(--ease-out) forwards;
+  }
+
+  .hero-name-line2 {
+    clip-path: inset(0 100% 0 0);
+    animation: typing 2s steps(14) forwards,
+               blink 0.5s step-end infinite;
+    animation-delay: 400ms;
+  }
 
   /* ── Hero title fade-in ── */
   .hero-title {
@@ -884,9 +891,14 @@
 
   /* Hero animations */
   .hero-name {
-    animation: none;
-    clip-path: inset(0 0 0 0);
     border-right: none;
+  }
+
+  .hero-name-line1,
+  .hero-name-line2 {
+    animation: none;
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
   }
 
   .hero-title,

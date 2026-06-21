@@ -5,7 +5,7 @@ import { Home } from './Home';
 describe('Home', () => {
   it('renders all section components', () => {
     renderWithProviders(<Home />);
-    expect(screen.getByText('Hola, soy Alvaro Martín')).toBeInTheDocument();
+    expect(screen.getByText('Hola, yo soy')).toBeInTheDocument();
     expect(screen.getByText('Sobre mi')).toBeInTheDocument();
     expect(screen.getByText('Experiencia Profesional')).toBeInTheDocument();
     expect(screen.getByText('¿Tienes un nuevo proyecto?')).toBeInTheDocument();

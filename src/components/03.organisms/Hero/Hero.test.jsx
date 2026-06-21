@@ -7,7 +7,7 @@ describe('Hero', () => {
   it('renders name with typewriter class', () => {
     renderWithProviders(<Hero />);
     const nameEl = screen.getByText(/Alvaro Martín/i);
-    expect(nameEl).toHaveClass('hero-name');
+    expect(nameEl).toHaveClass('hero-name-line2');
   });
 
   it('renders degree title', () => {
