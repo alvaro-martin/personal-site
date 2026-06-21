@@ -10,11 +10,10 @@
     },
     "hero": {
         "hello": "Hola, soy Alvaro Martín",
-        "title1": "Ingeniero Mecánico Eléctrico",
-        "title2": "Desarrollador de Software Full-Stack",
-        "title3": "Investigador IoT",
-        "description": "Fundador y CEO de Aubo: Soluciones orientadas al sector eléctrico e industrial con IoT + Cloud + IA.",
-        "button": "Contáctame"
+        "title1": "Msc. Ciencias de la Computación",
+        "title2": "Ingeniero Mecánico Eléctrico",
+        "title3": "AI Engineer",
+        "title4": "Investigador IoT"
     },
     "about": {
         "title": "Sobre mi",

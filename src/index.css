@@ -286,6 +286,25 @@
   100% { transform: scale(1); box-shadow: 0 0 0 0 transparent; }
 }
 
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes rotateGradient {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
 /* ============================================================
    @layer base — resets and document defaults
    ============================================================ */
@@ -621,6 +640,58 @@
     animation: shine 1s var(--ease-default);
   }
 
+  /* ── Hero typewriter animation ── */
+  .hero-name {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--color-text);
+    width: 0;
+    animation: typing 2s steps(20) forwards,
+               blink 0.5s step-end infinite;
+  }
+
+  /* ── Hero title fade-in ── */
+  .hero-title {
+    opacity: 0;
+    animation: fadeIn 600ms var(--ease-out) forwards;
+  }
+
+  .hero-title:nth-child(2) { animation-delay: 2200ms; }
+  .hero-title:nth-child(3) { animation-delay: 2400ms; }
+  .hero-title:nth-child(4) { animation-delay: 2600ms; }
+  .hero-title:nth-child(5) { animation-delay: 2800ms; }
+
+  /* ── Hero social links ── */
+  .hero-social {
+    opacity: 0;
+    animation: fadeIn 400ms var(--ease-out) forwards;
+    animation-delay: 3200ms;
+  }
+
+  /* ── Photo gradient border ── */
+  .photo-container {
+    position: relative;
+    border-radius: 50%;
+    padding: 4px;
+    background: conic-gradient(
+      from 0deg,
+      var(--color-primary),
+      var(--color-accent),
+      var(--color-primary)
+    );
+    animation: rotateGradient 3s linear infinite;
+  }
+
+  .photo-inner {
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--color-surface);
+  }
+
+  .photo-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
   /* ── Journey timeline line ── */
   .journey-line {
     height: 0%;
@@ -810,6 +881,45 @@
   .btn-primary:active,
   .icon-btn:hover {
     transform: none;
+  }
+
+  /* Hero animations */
+  .hero-name {
+    animation: none;
+    width: 100%;
+    border-right: none;
+    overflow: visible;
+  }
+
+  .hero-title,
+  .hero-social {
+    animation: none;
+    opacity: 1;
+  }
+
+  .photo-container {
+    animation: none;
+  }
+
+  .photo-float {
+    animation: none;
+  }
+
+  /* Journey animations */
+  .journey-line {
+    height: 100% !important;
+    transition: none;
+  }
+
+  .journey-entry-left,
+  .journey-entry-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none;
+  }
+
+  .journey-dot {
+    animation: none;
   }
 }
 

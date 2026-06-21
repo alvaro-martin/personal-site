@@ -4,35 +4,33 @@ import content from 'data/content.json';
 import { Hero } from './Hero';
 
 describe('Hero', () => {
-  it('renders Spanish greeting from i18n', () => {
+  it('renders name with typewriter class', () => {
     renderWithProviders(<Hero />);
-    expect(screen.getByText('Hola, soy Alvaro Martín')).toBeInTheDocument();
+    const nameEl = screen.getByText(/Alvaro Martín/i);
+    expect(nameEl).toHaveClass('hero-name');
   });
 
-  it('renders all three title lines', () => {
+  it('renders degree title', () => {
+    renderWithProviders(<Hero />);
+    expect(screen.getByText('Msc. Ciencias de la Computación')).toBeInTheDocument();
+  });
+
+  it('renders all title lines', () => {
     renderWithProviders(<Hero />);
     expect(screen.getByText('Ingeniero Mecánico Eléctrico')).toBeInTheDocument();
-    expect(screen.getByText('Desarrollador de Software Full-Stack')).toBeInTheDocument();
+    expect(screen.getByText('AI Engineer')).toBeInTheDocument();
     expect(screen.getByText('Investigador IoT')).toBeInTheDocument();
   });
 
-  it('renders description text', () => {
+  it('renders photo with gradient border', () => {
     renderWithProviders(<Hero />);
-    expect(screen.getByText(/Fundador y CEO de Aubo/)).toBeInTheDocument();
+    const photo = screen.getByAltText(content.hero.photoAlt);
+    expect(photo.closest('.photo-container')).toBeInTheDocument();
   });
 
-  it('renders CTA button with Spanish text', () => {
+  it('renders social links', () => {
     renderWithProviders(<Hero />);
-    expect(screen.getByText('Contáctame')).toBeInTheDocument();
-  });
-
-  it('renders photo with alt from content.json', () => {
-    renderWithProviders(<Hero />);
-    expect(screen.getByAltText(content.hero.photoAlt)).toBeInTheDocument();
-  });
-
-  it('renders CTA link to portfolio section', () => {
-    renderWithProviders(<Hero />);
-    expect(screen.getByText('Contáctame').closest('a')).toHaveAttribute('href', '#portfolio');
+    expect(screen.getByLabelText(/github/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/linkedin/i)).toBeInTheDocument();
   });
 });
