@@ -1,6 +1,5 @@
 import {
     About,
-    ContactMe,
     Hero,
     Portfolio,
     Services,
@@ -23,7 +22,6 @@ const Home = () => {
             <Portfolio />
             <Research />
             <Awards />
-            <ContactMe />
         </div>
     )
 };

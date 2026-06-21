@@ -20,7 +20,7 @@ const NewProject = () => {
                     {t("newProject.subtitle")}
                 </p>
                 <a
-                    href="#contactme"
+                    href="#portfolio"
                     className="inline-flex items-center justify-center gap-2 bg-background4 text-text-accent font-bold text-xl rounded-md border-none w-full md:w-[17rem] h-16 no-underline cursor-pointer transition-all duration-normal ease-default hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2"
                 >
                     {t("newProject.button")}

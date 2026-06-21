@@ -1,5 +1,4 @@
 export * from 'components/03.organisms/About/About';
-export * from 'components/03.organisms/ContactMe/ContactMe';
 export * from 'components/03.organisms/Footer/Footer';
 export * from 'components/03.organisms/Header/Header';
 export * from 'components/03.organisms/Hero/Hero';

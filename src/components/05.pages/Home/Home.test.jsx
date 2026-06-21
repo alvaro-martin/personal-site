@@ -12,6 +12,5 @@ describe('Home', () => {
     expect(screen.getByText('Portafolio')).toBeInTheDocument();
     expect(screen.getAllByText('Investigación').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText('Reconocimientos')).toBeInTheDocument();
-    expect(screen.getAllByText('Contáctame').length).toBeGreaterThanOrEqual(1);
   });
 });

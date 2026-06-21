@@ -28,7 +28,6 @@ const navLinks = [
     { key: "header.skills", href: "#skills" },
     { key: "header.services", href: "#services" },
     { key: "header.portfolio", href: "#portfolio" },
-    { key: "header.contactme", href: "#contactme" },
 ];
 
 const Header = () => {

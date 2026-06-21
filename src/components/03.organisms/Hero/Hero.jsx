@@ -40,7 +40,7 @@ const Hero = () => {
                     {t("hero.description")}
                 </p>
                 <a
-                    href="#contactme"
+                    href="#portfolio"
                     className="btn-primary w-full md:w-auto"
                 >
                     {t("hero.button")}

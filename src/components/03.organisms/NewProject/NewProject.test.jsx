@@ -13,9 +13,9 @@ describe('NewProject', () => {
     expect(screen.getByText('Contáctame ahora y saquemos adelante tu proyecto!')).toBeInTheDocument();
   });
 
-  it('renders CTA button with link to contact section', () => {
+  it('renders CTA button with link to portfolio section', () => {
     renderWithProviders(<NewProject />);
     const link = screen.getByText('Contáctame').closest('a');
-    expect(link).toHaveAttribute('href', '#contactme');
+    expect(link).toHaveAttribute('href', '#portfolio');
   });
 });

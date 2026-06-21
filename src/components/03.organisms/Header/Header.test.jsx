@@ -42,7 +42,6 @@ describe('Header', () => {
     expect(screen.getByText('Habilidades')).toBeInTheDocument();
     expect(screen.getByText('Servicios')).toBeInTheDocument();
     expect(screen.getByText('Portafolio')).toBeInTheDocument();
-    expect(screen.getByText('Contacto')).toBeInTheDocument();
   });
 
   it('renders flag images', () => {

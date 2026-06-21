@@ -31,8 +31,8 @@ describe('Hero', () => {
     expect(screen.getByAltText(content.hero.photoAlt)).toBeInTheDocument();
   });
 
-  it('renders all social media links from content.json', () => {
+  it('renders CTA link to portfolio section', () => {
     renderWithProviders(<Hero />);
-    expect(screen.getByText('Contáctame').closest('a')).toHaveAttribute('href', '#contactme');
+    expect(screen.getByText('Contáctame').closest('a')).toHaveAttribute('href', '#portfolio');
   });
 });
