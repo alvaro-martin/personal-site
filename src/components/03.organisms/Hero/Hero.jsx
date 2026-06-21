@@ -17,7 +17,7 @@ const Hero = () => {
         <section
             id="home"
             aria-labelledby="hero-heading"
-            className="w-full flex flex-col items-center mt-20 pt-20 md:flex-row md:justify-center md:items-center gap-8 md:gap-12"
+            className="w-full flex flex-col items-center mt-20 pt-20 md:flex-row md:justify-center md:items-center gap-8 md:gap-8"
         >
             <div className="flex flex-col w-full md:w-1/2 px-6 md:px-4">
                 <h1
