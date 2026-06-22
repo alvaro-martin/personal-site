@@ -998,6 +998,13 @@
                codeBlinkSlow 2.5s step-end infinite;
     animation-delay: 1.6s, 3.4s;
   }
+
+  /* Smaller code symbol on tiny screens */
+  @media (max-width: 400px) {
+    .code-symbol-wrap {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 /* ============================================================

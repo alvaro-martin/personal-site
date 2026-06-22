@@ -86,14 +86,12 @@ const Header = () => {
                 <div className="flex items-center">
                     <H5>{content.header.brandName}</H5>
 
-                    {/* Code symbol animation — only on desktop where there's space */}
-                    {isDesktop && (
-                        <span className="code-symbol-wrap" aria-hidden="true">
-                            <span className="code-char code-lt">{"<"}</span>
-                            <span className="code-char code-slash">{"/"}</span>
-                            <span className="code-char code-gt">{">"}</span>
-                        </span>
-                    )}
+                    {/* Code symbol animation */}
+                    <span className="code-symbol-wrap" aria-hidden="true">
+                        <span className="code-char code-lt">{"<"}</span>
+                        <span className="code-char code-slash">{"/"}</span>
+                        <span className="code-char code-gt">{">"}</span>
+                    </span>
                 </div>
 
                 {/* Desktop nav */}
