@@ -9,12 +9,7 @@
   },
   "about": {
     "photo": "assets/intercon.png",
-    "photoAlt": "Alvaro Martín at Intercon",
-    "stats": [
-      { "value": "03+", "labelKey": "about.subnumber1" },
-      { "value": "04+", "labelKey": "about.subnumber2" },
-      { "value": "11+", "labelKey": "about.subnumber3" }
-    ]
+    "photoAlt": "Alvaro Martín at Intercon"
   },
   "skills": {
     "categories": [

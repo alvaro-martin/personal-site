@@ -19,20 +19,6 @@ describe('About', () => {
     expect(screen.getByText(/paranoico constructivo/)).toBeInTheDocument();
   });
 
-  it('renders all three stats from content.json', () => {
-    renderWithProviders(<About />);
-    content.about.stats.forEach(stat => {
-      expect(screen.getByText(stat.value)).toBeInTheDocument();
-    });
-  });
-
-  it('renders stat labels from i18n', () => {
-    renderWithProviders(<About />);
-    expect(screen.getByText('Años de Experiencia')).toBeInTheDocument();
-    expect(screen.getByText('Artículos publicados')).toBeInTheDocument();
-    expect(screen.getByText('Proyectos realizados')).toBeInTheDocument();
-  });
-
   it('renders CV download button', () => {
     renderWithProviders(<About />);
     expect(screen.getByText('Descargar CV')).toBeInTheDocument();

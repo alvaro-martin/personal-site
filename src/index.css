@@ -367,6 +367,11 @@
   50% { opacity: 0.2; }
 }
 
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
 /* ============================================================
    @layer base — resets and document defaults
    ============================================================ */
@@ -590,6 +595,12 @@
     min-height: 0;
     padding: var(--spacing-3) var(--spacing-6);
     font-size: var(--text-base);
+  }
+
+  /* ── Download icon bounce ── */
+  .download-icon {
+    display: inline-flex;
+    animation: bounceDown 1.5s ease-in-out infinite;
   }
 
   /* ── Secondary button (ghost) ── */
@@ -1070,6 +1081,11 @@
   .code-char {
     animation: none;
     opacity: 1;
+  }
+
+  /* Download icon */
+  .download-icon {
+    animation: none;
   }
 }
 
