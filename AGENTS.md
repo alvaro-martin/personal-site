@@ -1,46 +1,63 @@
 # AGENTS.md
 
 ## Stack
-- Create React App (react-scripts 5.0.1) — NOT Vite
-- React 18.1.0, styled-components 5.3.5
+- Vite 6.4.3 + React 19.2.7, Tailwind CSS v4 (CSS-first config)
 - i18next (Spanish default) with `useTranslation("global")` in every organism
-- Absolute imports from `src/` via jsconfig.json `baseUrl: "src"`
+- Absolute imports from `src/` via `vite.config.js` aliases + `jsconfig.json` `baseUrl: "src"`
 
 ## Commands
-- `npm start` — dev server (CRA)
-- `npm run build` — production build
-- `npm test` — runs jest (no tests exist yet)
-- `npm run eject` — CRA eject (avoid)
+- `npm run dev` — Vite dev server (port 3000)
+- `npm run build` — production build to `dist/`
+- `npm test` — vitest run (single pass)
+- `npm run test:watch` — vitest watch mode
+- `npm run test:coverage` — coverage report (v8)
+- CI runs: `npm audit && npm run build && npm test` (Node 24)
 
 ## Component Architecture (Atomic Design)
 ```
 src/components/
 ├── 01.atoms/       → H5
-├── 02.molecules/   → Toggle
+├── 02.molecules/   → CardGrid, Carousel, ScrollToTop, Toggle
 ├── 03.organisms/   → 12 components (Header, Hero, About, Skills, Services,
 │                     NewProject, Portfolio, Research, Awards, ContactMe,
-│                     Journey, Footer)
+│                     Journey, Languages, Footer)
 ├── 04.layout/      → Layout (wraps Header + Footer)
 └── 05.pages/       → Home (composes all organisms)
 ```
 
 ## Key Conventions
 - Named exports everywhere: `export { ComponentName }`
-- Each component = `ComponentName.js` + `ComponentName.styles.js` (styled-components)
-- Barrel exports via `index.js` at each atomic design level
-- All 158 styled components access theme via `${p => p.theme.propertyName}`
-- Theme: `src/styles/themes/light.js` and `dark.js` (properties: `background1`–`6`, `fontColor1`–`5`, `id`)
+- Each component = `ComponentName.jsx` + barrel `index.js`
+- Styling via Tailwind utility classes exclusively — no styled-components in use
+- All CSS tokens/animations in `src/index.css` (Tailwind `@theme`, `@layer components`, `@keyframes`)
+- Dark mode via `data-theme="dark"` on `<html>`, toggled by `src/styles/ThemeContext.jsx`
+- Structured content in `src/data/content.json` — components never hardcode text
 - All user-facing text via i18n keys in `src/translations/{es,en}/global.json`
 
-## Gotchas
-- No `.gitignore` — must create one before any work
-- No tests, no CI, no GitHub Actions — everything is greenfield
-- `react-helmet` is deprecated — replace with `react-helmet-async` on upgrade
-- `emailjs-com` v3 is deprecated — replace with `@emailjs/browser` v4
-- EmailJS creds via `process.env.REACT_APP_*` — must convert to `import.meta.env.VITE_*` on Vite migration
-- CRA-specific: `public/index.html` uses `%PUBLIC_URL%` template vars
+## Testing
+- Vitest 4.1.8 + jsdom + @testing-library/react 16
+- Test utilities: `src/test/test-utils.jsx` (`renderWithProviders` wraps i18n + ThemeProvider + HelmetProvider)
+- Test setup: `src/test/setup.js` (jest-dom matchers, localStorage/matchMedia mocks)
+- Run a single test: `npm test -- --testNamePattern="pattern"` or `npx vitest run path/to/file.test.jsx`
+- 16 test files exist across all atomic design levels
 
-## Migration In Progress
-- PLAN.md exists with full React 18→19 + CRA→Vite + styled-components→Tailwind migration plan
-- Feature branch: `feature/react-19-migration` (not yet created)
-- Plan has 9 phases: 1-2 (git/security), 3a (CRA→Vite), 3b (React 18→19), 4 (Tailwind install), 5 (component migration), 6 (content decoupling), 7 (testing), 8 (CI/CD), 9 (deploy + SPA routing)
+## Deployment
+- GitHub Pages via `.github/workflows/deploy.yml` (push to `main` triggers build + deploy)
+- Base path: `/personal-site/` — all internal links must account for this
+- `public/404.html` handles SPA routing on GitHub Pages
+
+## Workflow
+- This repo uses **OpenSpec** for spec-driven development
+- Specs live in `openspec/` (active specs + archived changes)
+- OpenSpec skills are in `.opencode/skills/` (opsx-apply, opsx-archive, opsx-explore, opsx-propose, opsx-sync)
+
+## Agent Rules
+- **Do not commit** unless explicitly asked by the user
+- **Do not execute** `/opsx` commands or OpenSpec skills unless explicitly asked by the user
+
+## Gotchas
+- `styled-components@6.4.2` and `react-helmet@^6.1.0` are dead dependencies in `package.json` — unused, safe to remove
+- `ContactMe` component exists but is not rendered in `Home.jsx` (removed, orphaned)
+- No ESLint or Prettier configured — no lint/format commands available
+- `useMediaQuery` hook is inlined in `Header.jsx`, not shared
+- EmailJS env vars use `import.meta.env.VITE_*` (Vite convention, not `process.env`)

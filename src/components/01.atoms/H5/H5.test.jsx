@@ -3,8 +3,8 @@ import { H5 } from './H5';
 
 describe('H5', () => {
   it('renders children text', () => {
-    render(<H5>Alvaro Martin</H5>);
-    expect(screen.getByText('Alvaro Martin')).toBeInTheDocument();
+    render(<H5>Alvaro Martín</H5>);
+    expect(screen.getByText('Alvaro Martín')).toBeInTheDocument();
   });
 
   it('renders as an h5 element', () => {

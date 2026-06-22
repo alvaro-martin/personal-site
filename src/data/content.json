@@ -5,11 +5,11 @@
   },
   "hero": {
     "photo": "assets/me2.png",
-    "photoAlt": "Alvaro Martin"
+    "photoAlt": "Alvaro Martín"
   },
   "about": {
     "photo": "assets/intercon.png",
-    "photoAlt": "Alvaro Martin at Intercon",
+    "photoAlt": "Alvaro Martín at Intercon",
     "stats": [
       { "value": "03+", "labelKey": "about.subnumber1" },
       { "value": "04+", "labelKey": "about.subnumber2" },
@@ -161,7 +161,7 @@
     "copyrightYear": "2022"
   },
   "header": {
-    "brandName": "Alvaro Martin",
+    "brandName": "Alvaro Martín",
     "flags": {
       "es": "assets/ES-flag.png",
       "en": "assets/US-flag.png"

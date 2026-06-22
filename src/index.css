@@ -305,6 +305,68 @@
   50%      { transform: translateY(-5px); }
 }
 
+@keyframes matrixFall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes codeSlideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes codeDropSpin {
+  0% {
+    opacity: 0;
+    transform: translateY(-12px) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) rotate(360deg);
+  }
+  70% {
+    transform: translateY(-3px) rotate(380deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes codeSlideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes codeBlinkSlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
 /* ============================================================
    @layer base — resets and document defaults
    ============================================================ */
@@ -874,6 +936,68 @@
     max-height: 90vh;
     overflow-y: auto;
   }
+
+  /* ── Matrix rain (header background) ── */
+  .matrix-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  .matrix-column {
+    position: absolute;
+    top: 0;
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: var(--color-primary-dark);
+    white-space: pre;
+    writing-mode: vertical-lr;
+    animation: matrixFall linear infinite;
+    opacity: 0;
+  }
+
+  /* ── Code symbol (header decoration) ── */
+  .code-symbol-wrap {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: var(--font-bold);
+    color: var(--color-primary);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .code-char {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .code-lt {
+    animation: codeSlideFromLeft 0.5s var(--ease-out) forwards,
+               codeBlinkSlow 2.5s step-end infinite;
+    animation-delay: 0.4s, 2.2s;
+  }
+
+  .code-slash {
+    animation: codeDropSpin 0.7s var(--ease-bounce) forwards,
+               codeBlinkSlow 2.5s step-end infinite;
+    animation-delay: 1.0s, 2.8s;
+  }
+
+  .code-gt {
+    animation: codeSlideFromRight 0.5s var(--ease-out) forwards,
+               codeBlinkSlow 2.5s step-end infinite;
+    animation-delay: 1.6s, 3.4s;
+  }
 }
 
 /* ============================================================
@@ -924,6 +1048,21 @@
 
   .journey-dot {
     animation: none;
+  }
+
+  /* Matrix rain */
+  .matrix-rain {
+    display: none;
+  }
+
+  /* Code symbol */
+  .code-symbol-wrap {
+    opacity: 1;
+  }
+
+  .code-char {
+    animation: none;
+    opacity: 1;
   }
 }
 

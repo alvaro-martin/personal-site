@@ -39,9 +39,10 @@ describe('Header', () => {
     renderWithProviders(<Header />);
     expect(screen.getByText('Inicio')).toBeInTheDocument();
     expect(screen.getByText('Sobre mi')).toBeInTheDocument();
-    expect(screen.getByText('Habilidades')).toBeInTheDocument();
-    expect(screen.getByText('Servicios')).toBeInTheDocument();
+    expect(screen.getByText('Idiomas')).toBeInTheDocument();
     expect(screen.getByText('Portafolio')).toBeInTheDocument();
+    expect(screen.getByText('Investigación')).toBeInTheDocument();
+    expect(screen.getByText('Reconocimientos')).toBeInTheDocument();
   });
 
   it('renders flag images', () => {

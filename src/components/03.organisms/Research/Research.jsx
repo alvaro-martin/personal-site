@@ -33,7 +33,7 @@ const Research = () => {
     }));
 
     return (
-        <section aria-labelledby="research-heading" className="section-wrapper">
+        <section id="research" aria-labelledby="research-heading" className="section-wrapper">
             <h1 id="research-heading" className="section-heading">
                 {t("research.title")}
             </h1>

@@ -25,17 +25,17 @@ const useMediaQuery = (query) => {
 const navLinks = [
     { key: "header.home", href: "#home" },
     { key: "header.about", href: "#aboutme" },
-    { key: "header.skills", href: "#skills" },
     { key: "header.languages", href: "#languages" },
-    { key: "header.services", href: "#services" },
     { key: "header.portfolio", href: "#portfolio" },
+    { key: "header.research", href: "#research" },
+    { key: "header.awards", href: "#awards" },
 ];
 
 const Header = () => {
     const [t, i18n] = useTranslation("global");
     const { id, setTheme, language, setLanguage } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
-    const isDesktop = useMediaQuery('(min-width: 1260px)');
+    const isDesktop = useMediaQuery('(min-width: 1400px)');
 
     useEffect(() => {
         if (language && i18n.language !== language) {
@@ -58,8 +58,43 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-background6 flex flex-row items-center justify-between h-20 w-full px-4 fixed left-0 right-0 top-0 z-50">
-                <H5>{content.header.brandName}</H5>
+            <header className="bg-background6 flex flex-row items-center justify-between h-20 w-full px-4 fixed left-0 right-0 top-0 z-50 overflow-hidden">
+                {/* Matrix rain background */}
+                <div className="matrix-rain" aria-hidden="true">
+                    <div className="matrix-column" style={{ left: '1%', animationDuration: '4.5s', animationDelay: '0s' }}>01010</div>
+                    <div className="matrix-column" style={{ left: '5%', animationDuration: '5.5s', animationDelay: '1.2s' }}>10ai10</div>
+                    <div className="matrix-column" style={{ left: '9%', animationDuration: '3.8s', animationDelay: '0.5s' }}>ai01ai</div>
+                    <div className="matrix-column" style={{ left: '13%', animationDuration: '5.0s', animationDelay: '2.1s' }}>0ai10a</div>
+                    <div className="matrix-column" style={{ left: '17%', animationDuration: '4.2s', animationDelay: '0.8s' }}>10010</div>
+                    <div className="matrix-column" style={{ left: '22%', animationDuration: '5.8s', animationDelay: '1.8s' }}>ai1001</div>
+                    <div className="matrix-column" style={{ left: '27%', animationDuration: '3.5s', animationDelay: '0.3s' }}>010ai1</div>
+                    <div className="matrix-column" style={{ left: '32%', animationDuration: '4.8s', animationDelay: '2.5s' }}>1010a</div>
+                    <div className="matrix-column" style={{ left: '37%', animationDuration: '5.2s', animationDelay: '1.0s' }}>ai0101</div>
+                    <div className="matrix-column" style={{ left: '42%', animationDuration: '3.6s', animationDelay: '1.5s' }}>0110a</div>
+                    <div className="matrix-column" style={{ left: '47%', animationDuration: '5.0s', animationDelay: '0.7s' }}>10ai01</div>
+                    <div className="matrix-column" style={{ left: '52%', animationDuration: '4.0s', animationDelay: '2.0s' }}>0ai101</div>
+                    <div className="matrix-column" style={{ left: '57%', animationDuration: '5.5s', animationDelay: '0.4s' }}>ai1010</div>
+                    <div className="matrix-column" style={{ left: '62%', animationDuration: '3.9s', animationDelay: '1.3s' }}>0101a</div>
+                    <div className="matrix-column" style={{ left: '67%', animationDuration: '4.6s', animationDelay: '2.3s' }}>100ai1</div>
+                    <div className="matrix-column" style={{ left: '73%', animationDuration: '5.3s', animationDelay: '0.6s' }}>01ai01</div>
+                    <div className="matrix-column" style={{ left: '79%', animationDuration: '3.7s', animationDelay: '1.7s' }}>ai0110</div>
+                    <div className="matrix-column" style={{ left: '85%', animationDuration: '4.9s', animationDelay: '0.9s' }}>10101</div>
+                    <div className="matrix-column" style={{ left: '91%', animationDuration: '5.1s', animationDelay: '2.2s' }}>010ai0</div>
+                    <div className="matrix-column" style={{ left: '96%', animationDuration: '4.3s', animationDelay: '1.4s' }}>ai1001</div>
+                </div>
+
+                <div className="flex items-center">
+                    <H5>{content.header.brandName}</H5>
+
+                    {/* Code symbol animation — only on desktop where there's space */}
+                    {isDesktop && (
+                        <span className="code-symbol-wrap" aria-hidden="true">
+                            <span className="code-char code-lt">{"<"}</span>
+                            <span className="code-char code-slash">{"/"}</span>
+                            <span className="code-char code-gt">{">"}</span>
+                        </span>
+                    )}
+                </div>
 
                 {/* Desktop nav */}
                 {isDesktop && (

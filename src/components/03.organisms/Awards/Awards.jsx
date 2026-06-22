@@ -31,7 +31,7 @@ const Awards = () => {
     }));
 
     return (
-        <section aria-labelledby="awards-heading" className="section-wrapper">
+        <section id="awards" aria-labelledby="awards-heading" className="section-wrapper">
             <h1 id="awards-heading" className="section-heading">
                 {t("acknowledgments.title")}
             </h1>
