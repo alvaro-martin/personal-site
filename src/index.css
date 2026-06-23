@@ -974,6 +974,119 @@
     opacity: 0;
   }
 
+  /* ── Footer dino animation ── */
+  .dino-track {
+    position: absolute;
+    top: 12px;
+    z-index: 1;
+    pointer-events: none;
+    animation: dino-move 10s ease-in-out infinite;
+  }
+
+  .dino-jumper {
+    animation: dino-jump 0.6s ease-in-out infinite;
+  }
+
+  .dino-sprite {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    animation: dino-flip 10s ease-in-out infinite;
+  }
+
+  .dino-frame-1,
+  .dino-frame-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .dino-frame-1 {
+    animation: dino-legs 0.25s steps(1) infinite;
+  }
+
+  .dino-frame-2 {
+    animation: dino-legs 0.25s steps(1) infinite reverse;
+  }
+
+  @keyframes dino-move {
+    0%, 100% {
+      left: calc(100% + 20px);
+    }
+    50% {
+      left: -80px;
+    }
+  }
+
+  @keyframes dino-jump {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-16px);
+    }
+  }
+
+  @keyframes dino-flip {
+    0%, 49.9% {
+      transform: scaleX(-1);
+    }
+    50%, 100% {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes dino-legs {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .dino-obstacle {
+    position: absolute;
+    bottom: calc(100% - 65px);
+    z-index: 0;
+  }
+
+  /* ── Footer background ── */
+  .site-footer {
+    background-color: var(--color-background5);
+  }
+
+  [data-theme="dark"] .site-footer {
+    background-color: var(--color-surface);
+  }
+
+  /* ── Footer dark mode text ── */
+  .footer-text {
+    color: var(--color-text-inverse);
+  }
+
+  .footer-text-muted {
+    color: var(--color-text-inverse);
+    opacity: 0.8;
+  }
+
+  .footer-text-hover:hover {
+    color: var(--color-text-inverse);
+  }
+
+  [data-theme="dark"] .footer-text {
+    color: var(--color-text);
+  }
+
+  [data-theme="dark"] .footer-text-muted {
+    color: var(--color-text);
+    opacity: 0.8;
+  }
+
+  [data-theme="dark"] .footer-text-hover:hover {
+    color: var(--color-text);
+  }
+
   /* ── Code symbol (header decoration) ── */
   .code-symbol-wrap {
     display: inline-flex;
@@ -1085,6 +1198,14 @@
 
   /* Download icon */
   .download-icon {
+    animation: none;
+  }
+
+  /* Footer dino */
+  .dino-track,
+  .dino-jumper,
+  .dino-frame-1,
+  .dino-frame-2 {
     animation: none;
   }
 }

@@ -147,13 +147,13 @@
   },
   "footer": {
     "anchors": [
-      { "href": "#aboutme", "labelKey": "footer.link1" },
-      { "href": "#skills", "labelKey": "footer.link2" },
+      { "href": "#home", "labelKey": "footer.link1" },
+      { "href": "#aboutme", "labelKey": "footer.link2" },
       { "href": "#languages", "labelKey": "footer.link3" },
-      { "href": "#services", "labelKey": "footer.link4" },
-      { "href": "#portfolio", "labelKey": "footer.link5" }
-    ],
-    "copyrightYear": "2022"
+      { "href": "#portfolio", "labelKey": "footer.link4" },
+      { "href": "#research", "labelKey": "footer.link5" },
+      { "href": "#awards", "labelKey": "footer.link6" }
+    ]
   },
   "header": {
     "brandName": "Alvaro Martín",
