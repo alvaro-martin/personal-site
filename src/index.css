@@ -1148,27 +1148,27 @@
     }
   }
 
-  /* ── Paintings masonry grid ── */
-  .paintings-masonry {
+  /* ── Hobbies masonry grid ── */
+  .hobbies-masonry {
     column-count: 3;
     column-gap: 1.6rem;
     width: 100%;
   }
 
   @media (max-width: 1024px) {
-    .paintings-masonry {
+    .hobbies-masonry {
       column-count: 2;
     }
   }
 
   @media (max-width: 640px) {
-    .paintings-masonry {
+    .hobbies-masonry {
       column-count: 1;
     }
   }
 
-  /* ── Painting card ── */
-  .painting-card {
+  /* ── Hobbies card ── */
+  .hobbies-card {
     break-inside: avoid;
     margin-bottom: 1.6rem;
     border-radius: var(--radius-lg);
@@ -1185,18 +1185,18 @@
     );
   }
 
-  .painting-card.is-visible {
+  .hobbies-card.is-visible {
     animation: brushReveal 800ms var(--ease-out) forwards;
   }
 
-  .painting-card:hover {
+  .hobbies-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
     transition: box-shadow var(--duration-normal) var(--ease-default),
                 transform var(--duration-normal) var(--ease-default);
   }
 
-  .painting-date {
+  .hobbies-date {
     font-size: var(--text-base);
     font-weight: var(--font-medium);
     color: var(--color-text-accent);
@@ -1284,8 +1284,8 @@
     animation: none;
   }
 
-  /* Paintings */
-  .painting-card {
+  /* Hobbies */
+  .hobbies-card {
     animation: none;
     opacity: 1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);

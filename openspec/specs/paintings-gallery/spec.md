@@ -45,7 +45,7 @@ The Paintings component SHALL parse the `date` field (format `yyyy-mm-dd`) to ex
 - **THEN** it uses static month name arrays (not i18n keys) for month lookup
 
 ### Requirement: Masonry grid layout
-The Paintings component SHALL render paintings in a CSS columns masonry layout with responsive column counts.
+The Paintings component SHALL render paintings in a CSS columns masonry layout with responsive column counts, using generic `hobbies-*` CSS classes shared across all Hobbies subsections.
 
 #### Scenario: Desktop 3-column layout
 - **WHEN** the viewport width is 1024px or wider
@@ -61,10 +61,10 @@ The Paintings component SHALL render paintings in a CSS columns masonry layout w
 
 #### Scenario: Cards avoid column breaks
 - **WHEN** a painting card renders
-- **THEN** it uses `break-inside: avoid` and `margin-bottom: 1.6rem` to prevent splitting across columns
+- **THEN** it uses `hobbies-card` class with `break-inside: avoid` and `margin-bottom: 1.6rem` to prevent splitting across columns
 
 ### Requirement: Painting card content structure
-Each painting card SHALL display the image and a date label below it.
+Each painting card SHALL display the image and a date label below it, using generic `hobbies-card` and `hobbies-date` CSS classes.
 
 #### Scenario: Image displays in natural orientation
 - **WHEN** a painting card renders
@@ -73,7 +73,7 @@ Each painting card SHALL display the image and a date label below it.
 
 #### Scenario: Date label below image
 - **WHEN** a painting card renders
-- **THEN** a text element below the image displays the localized month-year label
+- **THEN** a text element below the image displays the localized month-year label using `hobbies-date` class
 - **THEN** the date label uses the brand accent color (`text-text-accent`)
 
 #### Scenario: Image lazy loading

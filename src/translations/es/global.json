@@ -321,6 +321,7 @@
     "hobbies": {
         "title": "Pasatiempos",
         "subtitle": "Lo que hago fuera del trabajo",
-        "paintings": "Pinturas"
+        "paintings": "Pinturas",
+        "marathons": "Maratones"
     }
 }

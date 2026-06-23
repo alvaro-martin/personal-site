@@ -70,12 +70,20 @@ The Hobbies component SHALL be exported from `src/components/03.organisms/index.
 - **THEN** the import resolves successfully
 
 ### Requirement: Placeholder for future subsections
-The Hobbies section SHALL render a `<Paintings />` component and provide comment-based placeholders for Marathons, Books, and Stories.
+The Hobbies section SHALL render `<Paintings />` and `<Marathons />` components, with comment-based placeholders for Books and Stories.
 
 #### Scenario: Paintings rendered
 - **WHEN** the Hobbies section renders
 - **THEN** the Paintings subsection is visible
 
+#### Scenario: Marathons rendered
+- **WHEN** the Hobbies section renders
+- **THEN** the Marathons subsection is visible below Paintings
+
+#### Scenario: Spacing between subsections
+- **WHEN** the Hobbies section renders multiple subsections
+- **THEN** each subsection after the first has `mt-16` (4rem) top margin to prevent overlap
+
 #### Scenario: Future subsections commented
 - **WHEN** viewing the Hobbies.jsx source
-- **THEN** commented lines for Marathons, Books, and Stories components exist below Paintings
+- **THEN** commented lines for Books and Stories components exist below Marathons

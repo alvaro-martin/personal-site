@@ -74,11 +74,11 @@ const Paintings = () => {
             <h2 className="text-text-accent text-xl font-bold text-center mb-6">
                 {t("hobbies.paintings")}
             </h2>
-            <div className="paintings-masonry px-4 sm:px-6 lg:px-8">
+            <div className="hobbies-masonry px-4 sm:px-6 lg:px-8">
                 {paintings.map((painting, idx) => (
                     <div
                         key={painting.date}
-                        className="painting-card card-reveal"
+                        className="hobbies-card card-reveal"
                         style={{ animationDelay: `${idx * 80}ms` }}
                     >
                         <img
@@ -88,7 +88,7 @@ const Paintings = () => {
                             decoding="async"
                             className="w-full h-auto object-cover"
                         />
-                        <p className="painting-date">{formatDate(painting.date)}</p>
+                        <p className="hobbies-date">{formatDate(painting.date)}</p>
                     </div>
                 ))}
             </div>

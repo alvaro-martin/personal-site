@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Paintings } from './Paintings/Paintings';
+import { Marathons } from './Marathons/Marathons';
 
 const Hobbies = () => {
     const [t] = useTranslation("global");
@@ -13,7 +14,10 @@ const Hobbies = () => {
                 {t("hobbies.subtitle")}
             </p>
             <Paintings />
-            {/* Future: <Marathons />, <Books />, <Stories /> */}
+            <div className="mt-16">
+                <Marathons />
+            </div>
+            {/* Future: <Books />, <Stories /> */}
         </section>
     );
 };
