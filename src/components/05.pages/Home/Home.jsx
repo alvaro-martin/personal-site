@@ -7,6 +7,7 @@ import {
     Skills,
     Research,
     Awards,
+    Hobbies,
     Journey,
     Languages
 } from "components/03.organisms";
@@ -24,6 +25,7 @@ const Home = () => {
             <Portfolio />
             <Research />
             <Awards />
+            <Hobbies />
         </div>
     )
 };

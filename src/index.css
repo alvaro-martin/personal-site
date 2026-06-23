@@ -372,6 +372,24 @@
   50% { transform: translateY(4px); }
 }
 
+@keyframes brushReveal {
+  from {
+    clip-path: polygon(
+      0% 0%, 3% 2%, 8% 0%, 14% 3%, 20% 0%, 26% 2%, 32% 0%, 38% 3%,
+      44% 0%, 50% 2%, 56% 0%, 62% 3%, 68% 0%, 74% 2%, 80% 0%, 86% 3%,
+      92% 0%, 97% 2%, 100% 0%,
+      100% 100%, 97% 98%, 92% 100%, 86% 97%, 80% 100%, 74% 98%,
+      68% 100%, 62% 97%, 56% 100%, 50% 98%, 44% 100%, 38% 97%,
+      32% 100%, 26% 98%, 20% 100%, 14% 97%, 8% 100%, 3% 98%, 0% 100%
+    );
+    opacity: 0;
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
 /* ============================================================
    @layer base — resets and document defaults
    ============================================================ */
@@ -1129,6 +1147,63 @@
       font-size: 1.2rem;
     }
   }
+
+  /* ── Paintings masonry grid ── */
+  .paintings-masonry {
+    column-count: 3;
+    column-gap: 1.6rem;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .paintings-masonry {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .paintings-masonry {
+      column-count: 1;
+    }
+  }
+
+  /* ── Painting card ── */
+  .painting-card {
+    break-inside: avoid;
+    margin-bottom: 1.6rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    opacity: 0;
+    clip-path: polygon(
+      0% 0%, 3% 2%, 8% 0%, 14% 3%, 20% 0%, 26% 2%, 32% 0%, 38% 3%,
+      44% 0%, 50% 2%, 56% 0%, 62% 3%, 68% 0%, 74% 2%, 80% 0%, 86% 3%,
+      92% 0%, 97% 2%, 100% 0%,
+      100% 100%, 97% 98%, 92% 100%, 86% 97%, 80% 100%, 74% 98%,
+      68% 100%, 62% 97%, 56% 100%, 50% 98%, 44% 100%, 38% 97%,
+      32% 100%, 26% 98%, 20% 100%, 14% 97%, 8% 100%, 3% 98%, 0% 100%
+    );
+  }
+
+  .painting-card.is-visible {
+    animation: brushReveal 800ms var(--ease-out) forwards;
+  }
+
+  .painting-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    transition: box-shadow var(--duration-normal) var(--ease-default),
+                transform var(--duration-normal) var(--ease-default);
+  }
+
+  .painting-date {
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    color: var(--color-text-accent);
+    text-align: center;
+    padding: var(--spacing-3) var(--spacing-4);
+    background-color: var(--color-surface);
+  }
 }
 
 /* ============================================================
@@ -1207,6 +1282,13 @@
   .dino-frame-1,
   .dino-frame-2 {
     animation: none;
+  }
+
+  /* Paintings */
+  .painting-card {
+    animation: none;
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 

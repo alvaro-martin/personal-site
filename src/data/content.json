@@ -152,9 +152,11 @@
       { "href": "#languages", "labelKey": "footer.link3" },
       { "href": "#portfolio", "labelKey": "footer.link4" },
       { "href": "#research", "labelKey": "footer.link5" },
-      { "href": "#awards", "labelKey": "footer.link6" }
+      { "href": "#awards", "labelKey": "footer.link6" },
+      { "href": "#hobbies", "labelKey": "footer.link7" }
     ]
   },
+  "hobbies": {},
   "header": {
     "brandName": "Alvaro Martín",
     "flags": {

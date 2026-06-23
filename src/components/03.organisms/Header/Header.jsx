@@ -29,6 +29,7 @@ const navLinks = [
     { key: "header.portfolio", href: "#portfolio" },
     { key: "header.research", href: "#research" },
     { key: "header.awards", href: "#awards" },
+    { key: "header.hobbies", href: "#hobbies" },
 ];
 
 const Header = () => {

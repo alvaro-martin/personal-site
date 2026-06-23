@@ -8,6 +8,7 @@
         "portfolio": "Portafolio",
         "research": "Investigación",
         "awards": "Reconocimientos",
+        "hobbies": "Pasatiempos",
         "contactme": "Contacto"
     },
 "hero": {
@@ -81,6 +82,7 @@
         "link4": "Portafolio",
         "link5": "Investigación",
         "link6": "Reconocimientos",
+        "link7": "Pasatiempos",
         "madeBy": "Hecho con ❤️ por mi 🙋🏽‍♂️",
         "copyright": "Todos los derechos reservados."
     },
@@ -315,5 +317,10 @@
             "company": "Universidad Nacional de Ingeniería",
             "date": "2011 - 2015"
         }
+    },
+    "hobbies": {
+        "title": "Pasatiempos",
+        "subtitle": "Lo que hago fuera del trabajo",
+        "paintings": "Pinturas"
     }
 }

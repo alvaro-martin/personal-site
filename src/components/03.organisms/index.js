@@ -2,6 +2,7 @@ export * from 'components/03.organisms/About/About';
 export * from 'components/03.organisms/Footer/Footer';
 export * from 'components/03.organisms/Header/Header';
 export * from 'components/03.organisms/Hero/Hero';
+export * from 'components/03.organisms/Hobbies/Hobbies';
 export * from 'components/03.organisms/Languages/Languages';
 export * from 'components/03.organisms/Portfolio/Portfolio';
 export * from 'components/03.organisms/Services/Services';

@@ -30,13 +30,14 @@ describe('Footer', () => {
   it('renders anchor hrefs from content.json', () => {
     renderWithProviders(<Footer />);
     const navLinks = document.querySelectorAll('footer a[href^="#"]');
-    expect(navLinks.length).toBe(6);
+    expect(navLinks.length).toBe(7);
     expect(navLinks[0]).toHaveAttribute('href', '#home');
     expect(navLinks[1]).toHaveAttribute('href', '#aboutme');
     expect(navLinks[2]).toHaveAttribute('href', '#languages');
     expect(navLinks[3]).toHaveAttribute('href', '#portfolio');
     expect(navLinks[4]).toHaveAttribute('href', '#research');
     expect(navLinks[5]).toHaveAttribute('href', '#awards');
+    expect(navLinks[6]).toHaveAttribute('href', '#hobbies');
   });
 
   it('renders current copyright year', () => {

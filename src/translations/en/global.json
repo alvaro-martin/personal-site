@@ -8,6 +8,7 @@
         "portfolio": "Portfolio",
         "research": "Research",
         "awards": "Awards",
+        "hobbies": "Hobbies",
         "contactme": "Contact me"
     },
 "hero": {
@@ -81,6 +82,7 @@
         "link4": "Portfolio",
         "link5": "Research",
         "link6": "Awards",
+        "link7": "Hobbies",
         "madeBy": "Made with ❤️ by 🙋🏽‍♂️",
         "copyright": "All rights reserved."
     },
@@ -316,5 +318,10 @@
             "company": "National University of Engineering",
             "date": "2011 - 2015"
         }
+    },
+    "hobbies": {
+        "title": "Hobbies",
+        "subtitle": "What I do outside of work",
+        "paintings": "Paintings"
     }
 }
