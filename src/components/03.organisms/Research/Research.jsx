@@ -2,13 +2,13 @@ import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
 import { CardGrid } from 'components/02.molecules';
 
-import SanMarcos from 'assets/sanmarcos.png';
-import SmartCampus from 'assets/smartcampus.png';
-import LoRaWAN from 'assets/lorawan.png';
-import Gesture from 'assets/covid.png';
-import RSSI from 'assets/rssi.png';
-import Bayes from 'assets/bayes.png';
-import Piscigranja from 'assets/piscigranja.png';
+import SanMarcos from 'assets/sanmarcos.webp';
+import SmartCampus from 'assets/smartcampus.webp';
+import LoRaWAN from 'assets/lorawan.webp';
+import Gesture from 'assets/covid.webp';
+import RSSI from 'assets/rssi.webp';
+import Bayes from 'assets/bayes.webp';
+import Piscigranja from 'assets/piscigranja.webp';
 
 const imageMap = {
     piscigranja: Piscigranja,

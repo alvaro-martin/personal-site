@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { ThemeProvider } from 'styles/ThemeContext';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import favicon from 'assets/me.jpg';
+import favicon from 'assets/me.webp';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import global_es from 'translations/es/global.json';

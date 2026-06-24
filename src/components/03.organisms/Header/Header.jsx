@@ -6,8 +6,8 @@ import { H5 } from "components/01.atoms";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useTheme } from "styles/ThemeContext";
 
-import USflag from 'assets/US-flag.png';
-import ESflag from 'assets/ES-flag.png';
+import USflag from 'assets/US-flag.webp';
+import ESflag from 'assets/ES-flag.webp';
 
 const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(

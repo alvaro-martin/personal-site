@@ -2,12 +2,12 @@ import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
 import { CardGrid } from 'components/02.molecules';
 
-import Democracia from 'assets/democracia.png';
-import Nahui from 'assets/nahui.png';
-import CIP from 'assets/cip.png';
-import Sigfox1 from 'assets/sigfox1.png';
-import Sigfox2 from 'assets/sigfox2.png';
-import Hackster from 'assets/hackster.png';
+import Democracia from 'assets/democracia.webp';
+import Nahui from 'assets/nahui.webp';
+import CIP from 'assets/cip.webp';
+import Sigfox1 from 'assets/sigfox1.webp';
+import Sigfox2 from 'assets/sigfox2.webp';
+import Hackster from 'assets/hackster.webp';
 
 const imageMap = {
     democracia: Democracia,

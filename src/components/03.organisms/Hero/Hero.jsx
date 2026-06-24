@@ -3,7 +3,7 @@ import content from 'data/content.json';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
 
-import Photo from 'assets/me2.png';
+import Photo from 'assets/me2.webp';
 
 const socialLinks = [
     { icon: BsLinkedin, url: content.social.linkedin, label: "LinkedIn" },

@@ -2,12 +2,12 @@ import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
 import { CardGrid } from 'components/02.molecules';
 
-import Hydroponic from 'assets/hydroponic.jpg';
-import AuboPlatform from 'assets/auboplatform.png';
-import OPCUA from 'assets/opcua.png';
-import UNAMAD from 'assets/unamad.jpg';
-import Olla from 'assets/olla.jpg';
-import Oximetro from 'assets/oximetro.png';
+import Hydroponic from 'assets/hydroponic.webp';
+import AuboPlatform from 'assets/auboplatform.webp';
+import OPCUA from 'assets/opcua.webp';
+import UNAMAD from 'assets/unamad.webp';
+import Olla from 'assets/olla.webp';
+import Oximetro from 'assets/oximetro.webp';
 
 const imageMap = {
     hydroponic: Hydroponic,

@@ -3,7 +3,7 @@ import content from 'data/content.json';
 import { HiDownload } from 'react-icons/hi';
 import { useScrollReveal } from 'hooks/useScrollReveal';
 
-import Intercon from 'assets/intercon.png';
+import Intercon from 'assets/intercon.webp';
 
 const About = () => {
     const [t] = useTranslation("global");
