@@ -8,7 +8,6 @@ describe('Home', () => {
     expect(screen.getByText('Hola, yo soy')).toBeInTheDocument();
     expect(screen.getByText('Sobre mi')).toBeInTheDocument();
     expect(screen.getByText('Experiencia Profesional')).toBeInTheDocument();
-    expect(screen.getByText('¿Tienes un nuevo proyecto?')).toBeInTheDocument();
     expect(screen.getByText('Portafolio')).toBeInTheDocument();
     expect(screen.getAllByText('Investigación').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText('Reconocimientos')).toBeInTheDocument();

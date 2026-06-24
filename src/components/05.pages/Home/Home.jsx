@@ -3,7 +3,6 @@ import {
     Hero,
     Portfolio,
     Services,
-    NewProject,
     Skills,
     Research,
     Awards,
@@ -21,7 +20,6 @@ const Home = () => {
             <About />
             <Journey />
             <Languages />
-            <NewProject />
             <Portfolio />
             <Research />
             <Awards />
