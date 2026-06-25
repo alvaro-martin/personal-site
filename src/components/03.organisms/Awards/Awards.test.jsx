@@ -30,6 +30,6 @@ describe('Awards', () => {
   });
 
   it('renders correct total project count from content.json', () => {
-    expect(content.awards.projects.length).toBe(6);
+    expect(content.awards.projects.length).toBe(4);
   });
 });

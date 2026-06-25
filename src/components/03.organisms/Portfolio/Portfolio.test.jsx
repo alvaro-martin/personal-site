@@ -22,6 +22,8 @@ describe('Portfolio', () => {
     expect(screen.getAllByText(/Capacitación Universidad/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/ParaLaOlla/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Oxímetro Perú/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Monitoreo de Nivel de Tanques/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Sistema de monitoreo en tiempo real/).length).toBeGreaterThanOrEqual(1);
   });
 
   it('renders all project images with alt from content.json', () => {
@@ -32,6 +34,6 @@ describe('Portfolio', () => {
   });
 
   it('renders correct total project count from content.json', () => {
-    expect(content.portfolio.projects.length).toBe(6);
+    expect(content.portfolio.projects.length).toBe(8);
   });
 });

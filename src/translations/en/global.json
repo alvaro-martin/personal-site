@@ -190,6 +190,16 @@
             "subtitle": "It's a social initiative led by professionals in the technological field. Its purpose is to provide access to vulnerable people with limited economic resources so that the level of Oxygen Saturation (SpO2) can be measured in critical places in Peru where the pandemic has affected it to a greater extent. To this end, measurement equipment (pulse oximeters) is being provided to volunteers and people interested in operating the service at certain measurement points.",
             "button": "Demo",
             "link": "https://oximetroperu.web.app/"
+        },
+        "project7": {
+            "title": "Oxygen Tank Level Monitoring for Covid-19 patients",
+            "subtitle": "Oxygen Tank Level Monitoring for Covid-19 patients using computer vision, cloud computing and Telegram.",
+            "button": "Explanation",
+            "link": "https://www.facebook.com/watch/?v=438908840774804"
+        },
+        "project8": {
+            "title": "Real-time monitoring system based on IoT for efficient management of the irrigation and maintenance service of a park in the district of San Isidro using Sigfox and Machine Learning technologies",
+            "subtitle": "A prototype was developed and implemented with LPWAN Sigfox technology to send data such as soil moisture (%), relative humidity (%) and ambient temperature (°C); the FIWARE cloud was used to receive and display the data in a dashboard; Finally, soil moisture was forecast 3 days in advance using Machine Learning."
         }
     },
     "research": {
@@ -243,33 +253,21 @@
         "project1": {
             "title": "Distinction for Innovation in the National Digital Democracy Award 2021 to the IoT Community Peru",
             "subtitle": "8th edition of the National Digital Democracy Award",
-            "button": "See",
+            "button": "See publication",
             "link": "https://democraciadigital.pe/blogs/nota-prensa-22-iniciativas-digitales-premiadas-8va-edicion-premio-nacional-democracia-digital"
         },
-        "project2": {
-            "title": "Oxygen Tank Level Monitoring for Covid-19 patients",
-            "subtitle": "Oxygen Tank Level Monitoring for Covid-19 patients using computer vision, cloud computing and Telegram.",
-            "button": "Presentation",
-            "link": "https://www.facebook.com/watch/?v=438908840774804"
-        },
         "project3": {
-            "title":"Oxygen Tank Level Monitoring for Covid-19 patients",
-            "subtitle": "Oxygen Tank Level Monitoring for Covid-19 patients using computer vision, cloud computing and Telegram.",
-            "button": "Presentation",
-            "link": "https://www.facebook.com/watch/?v=438908840774804"
-        },
-        "project4": {
-            "title": "Real-time monitoring system based on IoT for efficient management of the irrigation and maintenance service of a park in the district of San Isidro using Sigfox and Machine Learning technologies",
-            "subtitle": "A prototype was developed and implemented with LPWAN Sigfox technology to send data such as soil moisture (%), relative humidity (%) and ambient temperature (°C); the FIWARE cloud was used to receive and display the data in a dashboard; Finally, soil moisture was forecast 3 days in advance using Machine Learning."
+            "title": "Oxygen Tank Level Monitoring for COVID-19 patients",
+            "subtitle": "Fifth Place in the 'Technological Works and Projects Competition' organized by the College of Engineers of Peru."
         },
         "project5": {
             "title": "Real-time monitoring system based on IoT for efficient management of the irrigation and maintenance service of a park in the district of San Isidro using Sigfox and Machine Learning technologies",
-            "subtitle": "Applied Technological Development Award at the IEEE INTERCON 2019 technology fair together with the UNMSM IoT Research Group."
+            "subtitle": "Applied Technological Development Award at the IEEE INTERCON 2019 technology fair."
         },
         "project6": {
             "title": "Hackster Bounty Winner: Smart Shower Gadget Using Amazon Alexa and Arduino",
-            "subtitle": "Control the temperature of your shower water with your voice using Amazon Alexa and Arduino. You start by giving Amazon Alexa the order to turn on the shower, then it asks you for the temperature of the water at which you would like to bathe, you give it to it and based on this temperature collected by Arduino through the cloud, it controls the temperature using a PID controller, then whenever you want you can tell it to stop and terminate the process.",
-            "button": "See",
+            "subtitle": "Control the temperature of your shower water with your voice using Amazon Alexa and Arduino.",
+            "button": "See publication",
             "link": "https://www.hackster.io/pipo-automation/smart-shower-gadget-c97f8e"
         }
     },

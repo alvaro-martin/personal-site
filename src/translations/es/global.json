@@ -189,6 +189,16 @@
             "subtitle": "Iniciativa de carácter social liderada por profesionales del campo tecnológico. Tiene por finalidad brindar acceso a personas vulnerables y de escasos recursos económicos a que puedan medirse el nivel de Saturación de Oxígeno (SpO2) en lugares críticos del Perú donde la pandemia ha afectado en mayor medida. Para ello se está facilitando equipos de medición (pulsioxímetros) a voluntarios y personas interesadas en operar el servicio en determinados puntos de medición.",
             "button": "Demo",
             "link": "https://oximetroperu.web.app/"
+        },
+        "project7": {
+            "title": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes Covid-19",
+            "subtitle": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes Covid-19 utilizando visión computacional, computación en la nube y Telegram.",
+            "button": "Explicación",
+            "link": "https://www.facebook.com/watch/?v=438908840774804"
+        },
+        "project8": {
+            "title": "Sistema de monitoreo en tiempo real basado en IoT para una gestión eficiente del servicio de riego y mantenimiento de un parque del distrito de San Isidro usando las tecnologías Sigfox y Machine Learning",
+            "subtitle": "Se desarrolló e implementó un prototipo con la tecnología LPWAN Sigfox para enviar datos como la humedad del suelo (%), humedad relativa (%) y temperatura ambiente (°C); se utilizó la nube FIWARE para recepcionar y mostrar los datos en un dashboard; finalmente se pronosticó la humedad del suelo con 3 días de anticipación usando Machine Learning."
         }
     },
     "research": {
@@ -242,33 +252,21 @@
         "project1": {
             "title": "Distinción a la Innovación en Premio Nacional Democracia Digital 2021 a la Comunidad IoT Perú",
             "subtitle": "8va edición del Premio Nacional Democracia Digital",
-            "button": "Ver",
+            "button": "Ver publicación",
             "link": "https://democraciadigital.pe/blogs/nota-prensa-22-iniciativas-digitales-premiadas-8va-edicion-premio-nacional-democracia-digital"
         },
-        "project2": {
-            "title": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes Covid-19",
-            "subtitle": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes Covid-19 utlizando visión computacional, computación en la nube y Telegram.",
-            "button": "Explicación",
-            "link": "https://www.facebook.com/watch/?v=438908840774804"
-        },
         "project3": {
-            "title": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes Covid-19",
-            "subtitle": "Quinto Puesto: Concurso de Trabajos y Proyectos Tecnológicos Congreso Bicentenario 'La Ingeniería Peruana a 200 Años de la República'. Expedida por Colegio de Ingenieros del Perú CD Lima",
-            "button": "Explicación",
-            "link": "https://www.facebook.com/watch/?v=438908840774804"
-        },
-        "project4": {
-            "title": "Sistema de monitoreo en tiempo real basado en IoT para una gestión eficiente del servicio de riego y mantenimiento de un parque del distrito de San Isidro usando las tecnologías Sigfox y Machine Learning",
-            "subtitle": "Se desarrollo e implementó un prototipo con la tecnología LPWAN Sigfox para enviar datos como la humedad del suelo (%), humedad relativa (%) y temperatura ambiente (°C); se utilizó la nube FIWARE para recepcionar y mostrar los datos en un dashboard; finalmente se pronóstico la humedad del suelo con 3 días de anticipación usando Machine Learning."
+            "title": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes COVID-19",
+            "subtitle": "Quinto Puesto en el Concurso de Trabajos y Proyectos Tecnológicos organizado por el Colegio de Ingenieros del Perú."
         },
         "project5": {
             "title": "Sistema de monitoreo en tiempo real basado en IoT para una gestión eficiente del servicio de riego y mantenimiento de un parque del distrito de San Isidro usando las tecnologías Sigfox y Machine Learning",
-            "subtitle": "Premio al Desarrollo Tecnológico Aplicado en la feria tecnológica del IEEE INTERCON 2019 junto con el Grupo de Investigación de IoT de la UNMSM."
+            "subtitle": "Premio al Desarrollo Tecnológico Aplicado en la feria tecnológica IEEE INTERCON 2019."
         },
         "project6": {
             "title": "Hackster Bounty Winner: Smart Shower Gadget utilizando Amazon Alexa y Arduino",
-            "subtitle": "Controla la temperatura del agua de tu ducha con tu voz utilizando Amazon Alexa y Arduino. Inicias dándole al Amazon Alexa la orden de que encienda la ducha, luego te pregunta por la temperatura del agua a la que te gustaría bañarte, se la das y en base a esta temperatura recolectada por Arduino a través de la nube, controla la temperatura utilizando un controlador PID, luego cuando quieras se le puede ordenar que se detenga y termina el proceso.",
-            "button": "Ver",
+            "subtitle": "Controla la temperatura del agua de tu ducha con tu voz utilizando Amazon Alexa y Arduino.",
+            "button": "Ver publicación",
             "link": "https://www.hackster.io/pipo-automation/smart-shower-gadget-c97f8e"
         }
     },

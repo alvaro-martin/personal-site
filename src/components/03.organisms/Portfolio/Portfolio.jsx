@@ -8,6 +8,8 @@ import OPCUA from 'assets/opcua.webp';
 import UNAMAD from 'assets/unamad.webp';
 import Olla from 'assets/olla.webp';
 import Oximetro from 'assets/oximetro.webp';
+import Nahui from 'assets/nahui.webp';
+import Sigfox1 from 'assets/sigfox1.webp';
 
 const imageMap = {
     hydroponic: Hydroponic,
@@ -16,6 +18,8 @@ const imageMap = {
     unamad: UNAMAD,
     olla: Olla,
     oximetro: Oximetro,
+    nahui: Nahui,
+    sigfox1: Sigfox1,
 };
 
 const Portfolio = () => {
