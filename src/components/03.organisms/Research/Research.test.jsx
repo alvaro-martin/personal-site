@@ -16,10 +16,11 @@ describe('Research', () => {
 
   it('renders all project titles from i18n', () => {
     renderWithProviders(<Research />);
-    expect(screen.getAllByText(/Diseño de un prototipo de IoT/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Propuesta y Evaluación de una Arquitectura/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Spot-Wise Smart Parking/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/San Marcos Ciudad Inteligente/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Estudio de Planeamiento/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Desarrollo de un sistema y aplicativo web/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Sistema IoT de rastreo del bus/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Reconocimiento de los movimientos/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Aplicación móvil COVID-19/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Sistema de Guiado Smart Campus/).length).toBeGreaterThanOrEqual(1);
@@ -33,6 +34,6 @@ describe('Research', () => {
   });
 
   it('renders correct total project count from content.json', () => {
-    expect(content.research.projects.length).toBe(7);
+    expect(content.research.projects.length).toBe(8);
   });
 });

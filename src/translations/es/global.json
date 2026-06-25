@@ -195,42 +195,45 @@
         "title": "Investigación",
         "subtitle": "Trabajos de Investigación",
         "project1": {
-            "title": "Diseño de un prototipo de IoT de bajo costo para el monitoreo de los parámetros de calidad de agua de una piscigranja en Madre de Dios, Perú",
-            "subtitle": "Asesoría en redacción de artículo de investigación a profesor de la UNAMAD (Universidad Nacional Amazónica Madre de Dios)."
+            "title": "Propuesta y Evaluación de una Arquitectura de Software para un Gemelo Digital de Campus Inteligente",
+            "subtitle": "Tesis de Maestría",
+            "button": "Descargar tesis",
+            "link": "/personal-site/master-thesis/thesis.pdf"
         },
         "project2": {
-            "title": "San Marcos Ciudad Inteligente: Una propuesta de marco de trabajo para el desarrollo de Servicios de Ciudades Inteligentes basado en la ISO 37120:2018",
-            "subtitle": "Artículo científico publicado en Springer."
+            "title": "Spot-Wise Smart Parking: Una Arquitectura Habilitada por Edge con YOLOv11 hacia un Gemelo Digital",
+            "button": "Ver paper",
+            "link": "https://journals-sol.sbc.org.br/index.php/jisa/article/view/6664"
         },
         "project3": {
-            "title": "Estudio de Planeamiento para el desarrollo del Smart Campus FIEE UNI",
-            "subtitle": "Artículo científico en proceso de publicación. Estudio de planeamiento donde se definieron diversos ejes, índices, indicadores y variables para la gestión de una biblioteca inteligente. Además se desarrolló una plataforma web de demostración e implementación de un sensor ambiental LoRaWAN para monitorear sus parámetros en tiempo real con la plataforma AWS. Financiado por el IIFIEE UNI.",
-            "button": "Demo",
-            "link": "https://smart-library-fiee-uni.web.app/variables.html"
+            "title": "San Marcos Ciudad Inteligente: Una propuesta de marco de trabajo para el desarrollo de Servicios de Ciudades Inteligentes basado en la ISO 37120:2018",
+            "button": "Ver paper",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-031-08815-5_5"
         },
         "project4": {
-            "title": "Desarrollo de un sistema y aplicativo web del Smart Campus FIEE para la visualización en tiempo real de la ubicación del Bus de la UNI utilizando tecnologías IoT LoRaWAN",
-            "subtitle": "LoRaWAN para tracking del bus de la UNI, se utilizó Vue.js, así como Firebase para el despliegue de la aplicación y para mostrar en tiempo real las coordenadas del bus en un mapa.",
-            "button": "Demo",
-            "link": "https://bustrackuni.web.app/"
+            "title": "Estudio de Planeamiento para el desarrollo del Smart Campus FIEE UNI",
+            "button": "Ver paper",
+            "link": "https://ieeexplore.ieee.org/document/9922077"
         },
         "project5": {
-            "title": "Reconocimiento de los movimientos de la mano al rostro para combatir el COVID-19 utilizando un sensor IMU y un modelo de aprendizaje profundo embebido en una SBC",
-            "subtitle": "Reconoce los movimientos al rostro utilizando un modelo de deep learning con redes convolucionales y recurrentes que es embebido en el raspberry utilizando TensorFlow Lite. Publicado en el Brazilian Technology Symposium 2020. Único autor.",
-            "button": "Presentación",
-            "link": "https://www.facebook.com/watch/live/?v=736446323572888&ref=search"
+            "title": "Sistema IoT de rastreo del bus en tiempo real y aplicación web del Smart Campus FIEE usando LoRaWAN",
+            "button": "Ver paper",
+            "link": "https://ieeexplore.ieee.org/document/9922172"
         },
         "project6": {
+            "title": "Reconocimiento de los movimientos de la mano al rostro para combatir el COVID-19 utilizando un sensor IMU y un modelo de aprendizaje profundo embebido en una SBC",
+            "button": "Ver paper",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-030-75680-2_97"
+        },
+        "project7": {
             "title": "Aplicación móvil COVID-19 basada en señales RSSI para cumplir con el distanciamiento social utilizando la señal de bluetooth de los smartphones",
-            "subtitle": " en base al nivel de intensidad de las señales RSSI del bluetooth de los smartphones se determina si se cumple o no el distanciamiento social de 1 metro, se utilizó una red neuronal sencilla con tensorflow para clasificar las señales en Android Studio. Publicado en Elsevier, Data Science for COVID-19 Paper 26.",
             "button": "Ver paper",
             "link": "https://www.elsevier.com/books/data-science-for-covid-19/kose/978-0-12-824536-1"
         },
-        "project7": {
+        "project8": {
             "title": "Sistema de Guiado Smart Campus para visitantes basado en Filtros Bayesianos",
-            "subtitle": "Proyecto basado en un raspberry pi, un magnetómetro y una carcasa en 3D, para que en base a la intensidad de las señales leídas por el dispositivo infiera la posición del usuario y lo guíe mediante un gráfico que indica la dirección a seguir en una pantalla táctil para llegar a su destino. Financiado por el IIFIEE UNI.",
             "button": "Ver paper",
-            "link": "https://link.springer.com/chapter/10.1007%2F978-3-030-57566-3_46"
+            "link": "https://link.springer.com/chapter/10.1007/978-3-030-57566-3_46"
         }
     },
     "acknowledgments": {

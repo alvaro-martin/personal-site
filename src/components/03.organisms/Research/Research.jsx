@@ -2,16 +2,18 @@ import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
 import { CardGrid } from 'components/02.molecules';
 
+import MastersThesis from 'assets/masters-thesis.webp';
+import SmartParking from 'assets/smartparking-paper.webp';
 import SanMarcos from 'assets/sanmarcos.webp';
 import SmartCampus from 'assets/smartcampus.webp';
 import LoRaWAN from 'assets/lorawan.webp';
 import Gesture from 'assets/covid.webp';
 import RSSI from 'assets/rssi.webp';
 import Bayes from 'assets/bayes.webp';
-import Piscigranja from 'assets/piscigranja.webp';
 
 const imageMap = {
-    piscigranja: Piscigranja,
+    masters: MastersThesis,
+    smartparking: SmartParking,
     sanmarcos: SanMarcos,
     smartcampus: SmartCampus,
     lorawan: LoRaWAN,

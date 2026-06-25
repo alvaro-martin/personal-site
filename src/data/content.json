@@ -107,13 +107,14 @@
   },
   "research": {
     "projects": [
-      { "imageKey": "piscigranja", "alt": "piscigranja", "titleKey": "research.project1.title", "subtitleKey": "research.project1.subtitle" },
-      { "imageKey": "sanmarcos", "alt": "sanmarcos", "titleKey": "research.project2.title", "subtitleKey": "research.project2.subtitle" },
-      { "imageKey": "smartcampus", "alt": "smartcampus", "titleKey": "research.project3.title", "subtitleKey": "research.project3.subtitle", "linkKey": "research.project3.link", "buttonKey": "research.project3.button" },
-      { "imageKey": "lorawan", "alt": "lorawan", "titleKey": "research.project4.title", "subtitleKey": "research.project4.subtitle", "linkKey": "research.project4.link", "buttonKey": "research.project4.button" },
-      { "imageKey": "covid", "alt": "gesture", "titleKey": "research.project5.title", "subtitleKey": "research.project5.subtitle", "linkKey": "research.project5.link", "buttonKey": "research.project5.button" },
-      { "imageKey": "rssi", "alt": "rssi", "titleKey": "research.project6.title", "subtitleKey": "research.project6.subtitle", "linkKey": "research.project6.link", "buttonKey": "research.project6.button" },
-      { "imageKey": "bayes", "alt": "bayes", "titleKey": "research.project7.title", "subtitleKey": "research.project7.subtitle", "linkKey": "research.project7.link", "buttonKey": "research.project7.button" }
+      { "imageKey": "masters", "alt": "masters-thesis", "titleKey": "research.project1.title", "subtitleKey": "research.project1.subtitle", "linkKey": "research.project1.link", "buttonKey": "research.project1.button" },
+      { "imageKey": "smartparking", "alt": "smartparking", "titleKey": "research.project2.title", "linkKey": "research.project2.link", "buttonKey": "research.project2.button" },
+      { "imageKey": "sanmarcos", "alt": "sanmarcos", "titleKey": "research.project3.title", "linkKey": "research.project3.link", "buttonKey": "research.project3.button" },
+      { "imageKey": "smartcampus", "alt": "smartcampus", "titleKey": "research.project4.title", "linkKey": "research.project4.link", "buttonKey": "research.project4.button" },
+      { "imageKey": "lorawan", "alt": "lorawan", "titleKey": "research.project5.title", "linkKey": "research.project5.link", "buttonKey": "research.project5.button" },
+      { "imageKey": "covid", "alt": "gesture", "titleKey": "research.project6.title", "linkKey": "research.project6.link", "buttonKey": "research.project6.button" },
+      { "imageKey": "rssi", "alt": "rssi", "titleKey": "research.project7.title", "linkKey": "research.project7.link", "buttonKey": "research.project7.button" },
+      { "imageKey": "bayes", "alt": "bayes", "titleKey": "research.project8.title", "linkKey": "research.project8.link", "buttonKey": "research.project8.button" }
     ]
   },
   "awards": {

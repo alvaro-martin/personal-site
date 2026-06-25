@@ -196,42 +196,45 @@
         "title": "Research",
         "subtitle": "Papers",
         "project1": {
-            "title": "Design of a low-cost IoT prototype for monitoring the water quality parameters of a fish farm in Madre de Dios, Peru",
-            "subtitle": "Advice on writing a research article for a professor at UNAMAD (Madre de Dios National Amazon University)."
+            "title": "Proposal and Evaluation of a Software Architecture for a Smart Campus Digital Twin",
+            "subtitle": "Master's thesis",
+            "button": "Download thesis",
+            "link": "/personal-site/master-thesis/thesis.pdf"
         },
         "project2": {
-            "title": "San Marcos Smart City: A framework proposal for the development of Smart City Services based on ISO 37120:2018",
-            "subtitle": "Scientific article published in Springer."
+            "title": "Spot-Wise Smart Parking: An Edge-Enabled Architecture with YOLOv11 Towards a Digital Twin",
+            "button": "See paper",
+            "link": "https://journals-sol.sbc.org.br/index.php/jisa/article/view/6664"
         },
         "project3": {
-            "title": "Planning study for the development of the Smart Campus FIEE UNI",
-            "subtitle": "Scientific article in publication process. Planning study where various axes, indices, indicators and variables were defined for the management of an intelligent library. In addition, a web platform for the demonstration and implementation of a LoRaWAN environmental sensor was developed to monitor its parameters in real time with the AWS platform. Financed by the IIFIEE UNI.",
-            "button": "Demo",
-            "link": "https://smart-library-fiee-uni.web.app/variables.html"
+            "title": "San Marcos Smart City: A framework proposal for the development of Smart City Services based on ISO 37120:2018",
+            "button": "See paper",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-031-08815-5_5"
         },
         "project4": {
-            "title": "Development of a system and web application of the Smart Campus FIEE for real-time visualization of the location of the UNI Bus using IoT LoRaWAN technologies",
-            "subtitle": "A prototype was developed with LoRaWAN technologies for tracking the UNI bus, the technology was used to develop graphical interfaces Vue.js, as well as Firebase for the deployment of the application and to display the bus coordinates in real time on a map.",
-            "button": "Demo",
-            "link": "https://bustrackuni.web.app/"
+            "title": "Planning study for the development of the Smart Campus FIEE UNI",
+            "button": "See paper",
+            "link": "https://ieeexplore.ieee.org/document/9922077"
         },
         "project5": {
-            "title": "Recognition of movements from the hand to the face to combat COVID-19 for a vulnerable population using an IMU sensor and a deep learning model embedded in an SBC",
-            "subtitle": "It recognizes facial movements using a deep learning model with convolutional and recurrent networks that is embedded in the raspberry using TensorFlow Lite. Published by the Brazilian Technology Symposium 2020 organized by UNICAMP and UPC in a Springer Nature journal. Sole author.",
-            "button": "Presentation",
-            "link": "https://www.facebook.com/watch/live/?v=736446323572888&ref=search"
+            "title": "FIEE Smart Campus IoT real-time bus tracking system and web app using LoRaWAN",
+            "button": "See paper",
+            "link": "https://ieeexplore.ieee.org/document/9922172"
         },
         "project6": {
+            "title": "Recognition of movements from the hand to the face to combat COVID-19 using an IMU sensor and a deep learning model embedded in an SBC",
+            "button": "See paper",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-030-75680-2_97"
+        },
+        "project7": {
             "title": "COVID-19 mobile application based on RSSI signals to comply with social distancing using the bluetooth signal of smartphones",
-            "subtitle": "Based on the level of intensity of the RSSI signals of the bluetooth of the smartphones, it is determined whether or not the social distancing of 1 meter is met, a simple neural network with tensorflow was used to classify the signals in Android Studio. Published in Elsevier, Data Science for COVID-19 Paper 26.",
             "button": "See paper",
             "link": "https://www.elsevier.com/books/data-science-for-covid-19/kose/978-0-12-824536-1"
         },
-        "project7": {
+        "project8": {
             "title": "Smart Campus Guidance System for visitors based on Bayesian Filters",
-            "subtitle": "Project based on a raspberry pi, a magnetometer and a 3D casing, so that based on the intensity of the signals read by the device, it infers the user's position and guides him through a graphic that indicates the direction to follow on a touch screen. to reach your destination. Financed by the IIFIEE UNI.",
             "button": "See paper",
-            "link": "https://link.springer.com/chapter/10.1007%2F978-3-030-57566-3_46"
+            "link": "https://link.springer.com/chapter/10.1007/978-3-030-57566-3_46"
         }
     },
     "acknowledgments": {
