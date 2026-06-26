@@ -97,14 +97,15 @@
   },
   "portfolio": {
     "projects": [
-      { "imageKey": "hydroponic", "alt": "hydroponic", "titleKey": "portfolio.project1.title", "subtitleKey": "portfolio.project1.subtitle" },
-      { "imageKey": "auboplatform", "alt": "aubo", "titleKey": "portfolio.project2.title", "subtitleKey": "portfolio.project2.subtitle" },
-      { "imageKey": "opcua", "alt": "OPCUA", "titleKey": "portfolio.project3.title", "subtitleKey": "portfolio.project3.subtitle" },
-      { "imageKey": "unamad", "alt": "UNAMAD", "titleKey": "portfolio.project4.title", "subtitleKey": "portfolio.project4.subtitle" },
-      { "imageKey": "olla", "alt": "olla", "titleKey": "portfolio.project5.title", "subtitleKey": "portfolio.project5.subtitle" },
-      { "imageKey": "oximetro", "alt": "Oximetro", "titleKey": "portfolio.project6.title", "subtitleKey": "portfolio.project6.subtitle", "linkKey": "portfolio.project6.link", "buttonKey": "portfolio.project6.button" },
-      { "imageKey": "nahui", "alt": "nahui", "titleKey": "portfolio.project7.title", "subtitleKey": "portfolio.project7.subtitle", "linkKey": "portfolio.project7.link", "buttonKey": "portfolio.project7.button" },
-      { "imageKey": "sigfox1", "alt": "sigfox1", "titleKey": "portfolio.project8.title", "subtitleKey": "portfolio.project8.subtitle" }
+      { "imageKey": "siemens", "alt": "siemens", "titleKey": "portfolio.project1.title", "subtitleKey": "portfolio.project1.subtitle", "linkKey": "portfolio.project1.link", "buttonKey": "portfolio.project1.button" },
+      { "imageKey": "comiotperu", "alt": "comiotperu", "titleKey": "portfolio.project2.title", "subtitleKey": "portfolio.project2.subtitle", "linkKey": "portfolio.project2.link", "buttonKey": "portfolio.project2.button" },
+      { "imageKey": "hydroponic", "alt": "hydroponic", "titleKey": "portfolio.project3.title", "subtitleKey": "portfolio.project3.subtitle" },
+      { "imageKey": "auboplatform", "alt": "aubo", "titleKey": "portfolio.project4.title", "subtitleKey": "portfolio.project4.subtitle" },
+      { "imageKey": "opcua", "alt": "OPCUA", "titleKey": "portfolio.project5.title", "subtitleKey": "portfolio.project5.subtitle" },
+      { "imageKey": "unamad", "alt": "UNAMAD", "titleKey": "portfolio.project6.title", "subtitleKey": "portfolio.project6.subtitle" },
+      { "imageKey": "oximetro", "alt": "Oximetro", "titleKey": "portfolio.project7.title", "subtitleKey": "portfolio.project7.subtitle", "linkKey": "portfolio.project7.link", "buttonKey": "portfolio.project7.button" },
+      { "imageKey": "nahui", "alt": "nahui", "titleKey": "portfolio.project8.title", "subtitleKey": "portfolio.project8.subtitle" },
+      { "imageKey": "sigfox1", "alt": "sigfox1", "titleKey": "portfolio.project9.title", "subtitleKey": "portfolio.project9.subtitle" }
     ]
   },
   "research": {

@@ -33,15 +33,15 @@ const Index = () => {
           <HelmetProvider>
             <Helmet>
               <link rel="shortcut icon" href={favicon} type="image/x-icon" />
-              <title>Alvaro Martín | IoT & Full-Stack Developer</title>
+              <title>Alvaro Martín | AI Engineer & IoT Researcher</title>
               <meta name="description" content="Portafolio de Alvaro Martín — Desarrollador IoT, Full-Stack y Mecatrónico. Proyectos de domótica, hidroponía inteligente y más." />
               <meta name="robots" content="index, follow" />
               <meta property="og:type" content="website" />
-              <meta property="og:title" content="Alvaro Martín | IoT & Full-Stack Developer" />
+              <meta property="og:title" content="Alvaro Martín | AI Engineer & IoT Researcher" />
               <meta property="og:description" content="Portafolio de Alvaro Martín — Desarrollador IoT, Full-Stack y Mecatrónico." />
               <meta property="og:image" content={favicon} />
               <meta name="twitter:card" content="summary_large_image" />
-              <meta name="twitter:title" content="Alvaro Martín | IoT & Full-Stack Developer" />
+              <meta name="twitter:title" content="Alvaro Martín | AI Engineer & IoT Researcher" />
               <meta name="twitter:description" content="Portafolio de Alvaro Martín — Desarrollador IoT, Full-Stack y Mecatrónico." />
               <meta name="twitter:image" content={favicon} />
             </Helmet>

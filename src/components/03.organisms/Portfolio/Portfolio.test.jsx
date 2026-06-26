@@ -16,11 +16,12 @@ describe('Portfolio', () => {
 
   it('renders all project titles from i18n', () => {
     renderWithProviders(<Portfolio />);
+    expect(screen.getAllByText(/Siemens Challenge/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Sistema de Monitoreo IoT Ambiental/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Construcción y Monitoreo/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Desarrollo de Plataforma IoT/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Plataforma de gestión logística/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Integración de Servidor Industrial/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Capacitación Universidad/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/ParaLaOlla/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Capacitación a docentes/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Oxímetro Perú/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Monitoreo de Nivel de Tanques/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Sistema de monitoreo en tiempo real/).length).toBeGreaterThanOrEqual(1);
@@ -34,6 +35,6 @@ describe('Portfolio', () => {
   });
 
   it('renders correct total project count from content.json', () => {
-    expect(content.portfolio.projects.length).toBe(8);
+    expect(content.portfolio.projects.length).toBe(9);
   });
 });

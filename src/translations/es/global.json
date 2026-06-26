@@ -165,40 +165,46 @@
         "title": "Portafolio",
         "subtitle": "Trabajo más reciente",
         "project1": {
-            "title": "Construcción y Monitoreo de Parámetros de Módulo Hidropónico NFT",
-            "subtitle": "Diseño, metrado y construcción de Módulo Hidropónico NFT (Nutrient Film Technique) y medición de parámetros de calidad de agua en tiempo real (en progreso)."
+            "title": "Siemens Challenge",
+            "subtitle": "Herramienta impulsada por IA para extraer, normalizar y comparar requerimientos de motores eléctricos a partir de datasheets PDF contra un catálogo usando LLMs y Docker.",
+            "button": "Ver proyecto",
+            "link": "https://github.com/alvaro-martin/siemens-challenge"
         },
         "project2": {
-            "title": "Desarrollo de Plataforma IoT para Tracking de camiones.",
-            "subtitle": "Plataforma IoT Aubo para monitoreo de parámetros en real time (en progreso)."
+            "title": "Sistema de Monitoreo IoT Ambiental",
+            "subtitle": "Sistema de monitoreo IoT ambiental containerizado para Raspberry Pi — MQTT + InfluxDB + Node-RED + Grafana",
+            "button": "Ver proyecto",
+            "link": "https://github.com/alvaro-martin/ComIoTPeru-RPIJAM"
         },
         "project3": {
-            "title": "Integración de Servidor Industrial OPC y monitoreo de variables en AWS",
-            "subtitle": "Se desarrolló un programa para extraer la data del Servidor Industrial OPC y se integró con AWS IoT Core para visualizarla en un dashboard."
+            "title": "Construcción y Monitoreo de Parámetros de Módulo Hidropónico NFT",
+            "subtitle": "Diseño, metrado y construcción de Módulo Hidropónico NFT (Nutrient Film Technique)"
         },
         "project4": {
-            "title": "Capacitación Universidad Nacional Amazónica Madre de Dios (UNAMAD)",
-            "subtitle": "LoRaWAN (tecnología IoT LPWAN), teoría y práctica con configuración de gateways, nodos y sensores, así como la conexión al servidor The Things Network y a la plataforma de nube AWS con visualización en de datos en tiempo real con un dashboard."
+            "title": "Plataforma de gestión logística de servicios de mudanza y paquetería",
+            "subtitle": "Proyecto desarrollado para empresa +4 años en producción."
         },
         "project5": {
-            "title": "ParaLaOlla",
-            "subtitle": "Dona dinero a ollas comunes del Perú. Página para facilitar el contacto entre donantes y ollas comunes."
+            "title": "Integración de Servidor Industrial OPC y monitoreo de variables en AWS",
+            "subtitle": "Se desarrolló un programa para extraer la data del Servidor Industrial OPC, integración con AWS IoT Core y visualización en dashboard ElasticSearch en AWS."
         },
         "project6": {
+            "title": "Capacitación a docentes de la UNAMAD",
+            "subtitle": "Sensores IoT, redes LPWAN, Cloud, Machine Learning."
+        },
+        "project7": {
             "title": "Oxímetro Perú",
-            "subtitle": "Iniciativa de carácter social liderada por profesionales del campo tecnológico. Tiene por finalidad brindar acceso a personas vulnerables y de escasos recursos económicos a que puedan medirse el nivel de Saturación de Oxígeno (SpO2) en lugares críticos del Perú donde la pandemia ha afectado en mayor medida. Para ello se está facilitando equipos de medición (pulsioxímetros) a voluntarios y personas interesadas en operar el servicio en determinados puntos de medición.",
+            "subtitle": "Visualiza ubicación de oxímetros en tiempos reales para facilitar el acceso a personas vulnerables.",
             "button": "Demo",
             "link": "https://oximetroperu.web.app/"
         },
-        "project7": {
-            "title": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes Covid-19",
-            "subtitle": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes Covid-19 utilizando visión computacional, computación en la nube y Telegram.",
-            "button": "Explicación",
-            "link": "https://www.facebook.com/watch/?v=438908840774804"
-        },
         "project8": {
+            "title": "Monitoreo de Nivel de Tanques de Oxígeno para pacientes Covid-19",
+            "subtitle": "Lectura de nivel de oxígeno usando imágenes, computación en la nube, alertas por email y Telegram."
+        },
+        "project9": {
             "title": "Sistema de monitoreo en tiempo real basado en IoT para una gestión eficiente del servicio de riego y mantenimiento de un parque del distrito de San Isidro usando las tecnologías Sigfox y Machine Learning",
-            "subtitle": "Se desarrolló e implementó un prototipo con la tecnología LPWAN Sigfox para enviar datos como la humedad del suelo (%), humedad relativa (%) y temperatura ambiente (°C); se utilizó la nube FIWARE para recepcionar y mostrar los datos en un dashboard; finalmente se pronosticó la humedad del suelo con 3 días de anticipación usando Machine Learning."
+            "subtitle": "Sensor de humedad, Sigfox, FIWARE, predicción de humedad."
         }
     },
     "research": {
@@ -232,13 +238,13 @@
         },
         "project6": {
             "title": "Reconocimiento de los movimientos de la mano al rostro para combatir el COVID-19 utilizando un sensor IMU y un modelo de aprendizaje profundo embebido en una SBC",
-            "button": "Ver paper",
-            "link": "https://link.springer.com/chapter/10.1007/978-3-030-75680-2_97"
+            "button": "Ver proyecto",
+            "link": "https://github.com/alvaro-martin/Hand-towards-face-COVID19"
         },
         "project7": {
             "title": "Aplicación móvil COVID-19 basada en señales RSSI para cumplir con el distanciamiento social utilizando la señal de bluetooth de los smartphones",
-            "button": "Ver paper",
-            "link": "https://www.elsevier.com/books/data-science-for-covid-19/kose/978-0-12-824536-1"
+            "button": "Ver proyecto",
+            "link": "https://github.com/alvaro-martin/data-sience-for-covid19"
         },
         "project8": {
             "title": "Sistema de Guiado Smart Campus para visitantes basado en Filtros Bayesianos",

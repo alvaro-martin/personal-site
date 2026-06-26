@@ -2,21 +2,23 @@ import { useTranslation } from 'react-i18next';
 import content from 'data/content.json';
 import { CardGrid } from 'components/02.molecules';
 
+import Siemens from 'assets/siemens.webp';
+import ComIoTPeru from 'assets/comiotperu-rpijam.webp';
 import Hydroponic from 'assets/hydroponic.webp';
 import AuboPlatform from 'assets/auboplatform.webp';
 import OPCUA from 'assets/opcua.webp';
 import UNAMAD from 'assets/unamad.webp';
-import Olla from 'assets/olla.webp';
 import Oximetro from 'assets/oximetro.webp';
 import Nahui from 'assets/nahui.webp';
 import Sigfox1 from 'assets/sigfox1.webp';
 
 const imageMap = {
+    siemens: Siemens,
+    comiotperu: ComIoTPeru,
     hydroponic: Hydroponic,
     auboplatform: AuboPlatform,
     opcua: OPCUA,
     unamad: UNAMAD,
-    olla: Olla,
     oximetro: Oximetro,
     nahui: Nahui,
     sigfox1: Sigfox1,

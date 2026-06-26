@@ -166,40 +166,46 @@
         "title": "Portfolio",
         "subtitle": "Most recent work",
         "project1": {
+            "title": "Siemens Challenge",
+            "subtitle": "AI-powered tool to extract, normalize, and match electrical motor requirements from PDF datasheets against a catalog using LLMs and Docker.",
+            "button": "See project",
+            "link": "https://github.com/alvaro-martin/siemens-challenge"
+        },
+        "project2": {
+            "title": "Environmental IoT Monitoring System",
+            "subtitle": "Containerized IoT environmental monitoring system for Raspberry Pi — MQTT + InfluxDB + Node-RED + Grafana",
+            "button": "See project",
+            "link": "https://github.com/alvaro-martin/ComIoTPeru-RPIJAM"
+        },
+        "project3": {
             "title": "NFT Hydroponic Module Construction and Parameters Monitoring",
             "subtitle": "Design, monitoring and construction of NFT (Nutrient Film Technique) Hydroponic Module and measurement of water quality parameters in real time (in progress)."
         },
-        "project2": {
-            "title": "Development of IoT Platform for Truck Tracking.",
-            "subtitle": "Aubo IoT platform for real-time parameter monitoring (in progress)."
+        "project4": {
+            "title": "Logistics management platform for moving and packaging services",
+            "subtitle": "Project developed for a company, 4+ years in production."
         },
-        "project3": {
+        "project5": {
             "title": "Integration of Industrial OPC Server and variable monitoring in AWS",
             "subtitle": "A program was developed to extract the data from the Industrial OPC Server and was integrated with AWS IoT Core to visualize it in real time in a dashboard."
         },
-        "project4": {
-            "title": "LoRaWAN Training Universidad Nacional Amazonica Madre de Dios (UNAMAD)",
-            "subtitle": "LoRaWAN (LPWAN IoT technology), theory and practice with configuration of gateways, nodes and sensors, as well as connection to The Things Network server and the AWS cloud platform with real-time data visualization with a dashboard."
-        },
-        "project5": {
-            "title": "ParaLaOlla",
-            "subtitle": "Donate money to common pots in Peru. Web page to facilitate contact between donors and pots."
-        },
         "project6": {
+            "title": "Training for UNAMAD teachers",
+            "subtitle": "IoT sensors, LPWAN networks, Cloud, Machine Learning."
+        },
+        "project7": {
             "title": "Oxímetro Perú",
-            "subtitle": "It's a social initiative led by professionals in the technological field. Its purpose is to provide access to vulnerable people with limited economic resources so that the level of Oxygen Saturation (SpO2) can be measured in critical places in Peru where the pandemic has affected it to a greater extent. To this end, measurement equipment (pulse oximeters) is being provided to volunteers and people interested in operating the service at certain measurement points.",
+            "subtitle": "Visualizes oximeter locations in real time to facilitate access for vulnerable people.",
             "button": "Demo",
             "link": "https://oximetroperu.web.app/"
         },
-        "project7": {
-            "title": "Oxygen Tank Level Monitoring for Covid-19 patients",
-            "subtitle": "Oxygen Tank Level Monitoring for Covid-19 patients using computer vision, cloud computing and Telegram.",
-            "button": "Explanation",
-            "link": "https://www.facebook.com/watch/?v=438908840774804"
-        },
         "project8": {
+            "title": "Oxygen Tank Level Monitoring for Covid-19 patients",
+            "subtitle": "Oxygen level reading using images, cloud computing, email and Telegram alerts."
+        },
+        "project9": {
             "title": "Real-time monitoring system based on IoT for efficient management of the irrigation and maintenance service of a park in the district of San Isidro using Sigfox and Machine Learning technologies",
-            "subtitle": "A prototype was developed and implemented with LPWAN Sigfox technology to send data such as soil moisture (%), relative humidity (%) and ambient temperature (°C); the FIWARE cloud was used to receive and display the data in a dashboard; Finally, soil moisture was forecast 3 days in advance using Machine Learning."
+            "subtitle": "Humidity sensor, Sigfox, FIWARE, humidity prediction."
         }
     },
     "research": {
@@ -233,13 +239,13 @@
         },
         "project6": {
             "title": "Recognition of movements from the hand to the face to combat COVID-19 using an IMU sensor and a deep learning model embedded in an SBC",
-            "button": "See paper",
-            "link": "https://link.springer.com/chapter/10.1007/978-3-030-75680-2_97"
+            "button": "See project",
+            "link": "https://github.com/alvaro-martin/Hand-towards-face-COVID19"
         },
         "project7": {
             "title": "COVID-19 mobile application based on RSSI signals to comply with social distancing using the bluetooth signal of smartphones",
-            "button": "See paper",
-            "link": "https://www.elsevier.com/books/data-science-for-covid-19/kose/978-0-12-824536-1"
+            "button": "See project",
+            "link": "https://github.com/alvaro-martin/data-sience-for-covid19"
         },
         "project8": {
             "title": "Smart Campus Guidance System for visitors based on Bayesian Filters",
