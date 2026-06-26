@@ -5,12 +5,12 @@ import { Hobbies } from './Hobbies';
 describe('Hobbies', () => {
   it('renders section title from i18n', () => {
     renderWithProviders(<Hobbies />);
-    expect(screen.getByText('Pasatiempos')).toBeInTheDocument();
+    expect(screen.getByText('Hobbies')).toBeInTheDocument();
   });
 
   it('renders subtitle', () => {
     renderWithProviders(<Hobbies />);
-    expect(screen.getByText('Lo que hago fuera del trabajo')).toBeInTheDocument();
+    expect(screen.getByText('What I do outside of work')).toBeInTheDocument();
   });
 
   it('renders Paintings subsection', () => {

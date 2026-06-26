@@ -6,24 +6,24 @@ import { Research } from './Research';
 describe('Research', () => {
   it('renders section title from i18n', () => {
     renderWithProviders(<Research />);
-    expect(screen.getByText('Investigación')).toBeInTheDocument();
+    expect(screen.getByText('Research')).toBeInTheDocument();
   });
 
   it('renders subtitle', () => {
     renderWithProviders(<Research />);
-    expect(screen.getByText('Trabajos de Investigación')).toBeInTheDocument();
+    expect(screen.getByText('Papers')).toBeInTheDocument();
   });
 
   it('renders all project titles from i18n', () => {
     renderWithProviders(<Research />);
-    expect(screen.getAllByText(/Propuesta y Evaluación de una Arquitectura/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Proposal and Evaluation of a Software Architecture/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Spot-Wise Smart Parking/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/San Marcos Ciudad Inteligente/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Estudio de Planeamiento/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Sistema IoT de rastreo del bus/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Reconocimiento de los movimientos/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Aplicación móvil COVID-19/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Sistema de Guiado Smart Campus/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/San Marcos Smart City/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Planning study/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/IoT real-time bus tracking/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Recognition of movements/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/COVID-19 mobile application/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Smart Campus Guidance System/).length).toBeGreaterThanOrEqual(1);
   });
 
   it('renders all project images with alt from content.json', () => {

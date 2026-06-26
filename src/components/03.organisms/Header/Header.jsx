@@ -1,13 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import content from 'data/content.json';
 import { Toggle } from "components/02.molecules";
 import { H5 } from "components/01.atoms";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { IoChevronDown } from 'react-icons/io5';
 import { useTheme } from "styles/ThemeContext";
 
 import USflag from 'assets/US-flag.webp';
 import ESflag from 'assets/ES-flag.webp';
+import DEflag from 'assets/DE-flag.webp';
+import BRflag from 'assets/BR-flag.webp';
+
+const languages = [
+    { code: "es", flag: ESflag, alt: "Spanish" },
+    { code: "en", flag: USflag, alt: "English" },
+    { code: "de", flag: DEflag, alt: "German" },
+    { code: "pt-BR", flag: BRflag, alt: "Portuguese" },
+];
 
 const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(
@@ -36,6 +46,8 @@ const Header = () => {
     const [t, i18n] = useTranslation("global");
     const { id, setTheme, language, setLanguage } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
+    const [langOpen, setLangOpen] = useState(false);
+    const langRef = useRef(null);
     const isDesktop = useMediaQuery('(min-width: 1400px)');
 
     useEffect(() => {
@@ -48,6 +60,18 @@ const Header = () => {
         if (isDesktop) setIsOpen(false);
     }, [isDesktop]);
 
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (langRef.current && !langRef.current.contains(e.target)) {
+                setLangOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const currentLang = languages.find(l => l.code === language) || languages[0];
+
     const handleLanguageChange = (lng) => {
         i18n.changeLanguage(lng);
         setLanguage(lng);
@@ -59,7 +83,7 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-background6 flex flex-row items-center justify-between h-20 w-full px-4 fixed left-0 right-0 top-0 z-50 overflow-hidden">
+            <header className="bg-background6 flex flex-row items-center justify-between h-20 w-full px-4 fixed left-0 right-0 top-0 z-50">
                 {/* Matrix rain background */}
                 <div className="matrix-rain" aria-hidden="true">
                     <div className="matrix-column" style={{ left: '1%', animationDuration: '4.5s', animationDelay: '0s' }}>01010</div>
@@ -114,23 +138,33 @@ const Header = () => {
                             </ul>
                         </nav>
                         <Toggle isActive={id === 'dark'} onToggle={setTheme} />
-                        <div className="flex flex-row items-center mx-4">
+                        <div className="relative flex items-center mx-4" ref={langRef}>
                             <button
                                 type="button"
-                                onClick={() => handleLanguageChange("es")}
-                                aria-label="Switch to Spanish"
-                                className="h-[30px] w-[53px] mx-1 cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
+                                onClick={() => setLangOpen(!langOpen)}
+                                aria-label="Select language"
+                                aria-expanded={langOpen}
+                                className="flex items-center gap-1 h-[30px] cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
                             >
-                                <img src={ESflag} alt="Spanish" height="100%" width="100%" className="object-cover rounded" />
+                                <img src={currentLang.flag} alt={currentLang.alt} className="h-[30px] w-[53px] object-cover rounded" />
+                                <IoChevronDown className={`text-text transition-transform duration-normal ${langOpen ? 'rotate-180' : ''}`} size={16} />
                             </button>
-                            <button
-                                type="button"
-                                onClick={() => handleLanguageChange("en")}
-                                aria-label="Switch to English"
-                                className="h-[30px] w-[53px] mx-1 cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
-                            >
-                                <img src={USflag} alt="English" height="100%" width="100%" className="object-cover rounded" />
-                            </button>
+
+                            {langOpen && (
+                                <div className="absolute top-full right-0 mt-1 grid grid-cols-2 gap-1 bg-background6 border border-border rounded-lg p-2 z-60 shadow-lg w-max">
+                                    {languages.map(({ code, flag, alt }) => (
+                                        <button
+                                            key={code}
+                                            type="button"
+                                            onClick={() => { handleLanguageChange(code); setLangOpen(false); }}
+                                            aria-label={alt}
+                                            className="h-[30px] w-[53px] cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
+                                        >
+                                            <img src={flag} alt={alt} className="h-full w-full object-cover rounded" />
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}
@@ -183,23 +217,33 @@ const Header = () => {
                         </ul>
                         <div className="mt-6 flex flex-col items-center gap-4">
                             <Toggle isActive={id === 'dark'} onToggle={setTheme} />
-                            <div className="flex flex-row items-center gap-2">
+                            <div className="flex flex-col items-center gap-2">
                                 <button
                                     type="button"
-                                    onClick={() => handleLanguageChange("es")}
-                                    aria-label="Switch to Spanish"
-                                    className="h-[30px] w-[53px] cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
+                                    onClick={() => setLangOpen(!langOpen)}
+                                    aria-label="Select language"
+                                    aria-expanded={langOpen}
+                                    className="flex items-center gap-1 h-[30px] cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
                                 >
-                                    <img src={ESflag} alt="Spanish" height="100%" width="100%" className="object-cover rounded" />
+                                    <img src={currentLang.flag} alt={currentLang.alt} className="h-[30px] w-[53px] object-cover rounded" />
+                                    <IoChevronDown className={`text-text transition-transform duration-normal ${langOpen ? 'rotate-180' : ''}`} size={16} />
                                 </button>
-                                <button
-                                    type="button"
-                                    onClick={() => handleLanguageChange("en")}
-                                    aria-label="Switch to English"
-                                    className="h-[30px] w-[53px] cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
-                                >
-                                    <img src={USflag} alt="English" height="100%" width="100%" className="object-cover rounded" />
-                                </button>
+
+                                {langOpen && (
+                                    <div className="grid grid-cols-2 gap-1 p-2">
+                                        {languages.map(({ code, flag, alt }) => (
+                                            <button
+                                                key={code}
+                                                type="button"
+                                                onClick={() => { handleLanguageChange(code); setLangOpen(false); }}
+                                                aria-label={alt}
+                                                className="h-[30px] w-[53px] cursor-pointer rounded overflow-hidden focus-visible:outline-2 focus-visible:outline-border-focus focus-visible:outline-offset-2 transition-opacity duration-normal hover:opacity-80"
+                                            >
+                                                <img src={flag} alt={alt} className="h-full w-full object-cover rounded" />
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </nav>

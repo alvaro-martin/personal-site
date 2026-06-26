@@ -12,14 +12,14 @@ describe('Hero', () => {
 
   it('renders degree title', () => {
     renderWithProviders(<Hero />);
-    expect(screen.getByText('Msc. Ciencias de la Computación')).toBeInTheDocument();
+    expect(screen.getByText('Msc. Computer Science')).toBeInTheDocument();
   });
 
   it('renders all title lines', () => {
     renderWithProviders(<Hero />);
-    expect(screen.getByText('Ingeniero Mecánico Eléctrico')).toBeInTheDocument();
+    expect(screen.getByText('Mechanical & Electrical Engineer')).toBeInTheDocument();
     expect(screen.getByText('AI Engineer')).toBeInTheDocument();
-    expect(screen.getByText('Investigador IoT')).toBeInTheDocument();
+    expect(screen.getByText('IoT Researcher')).toBeInTheDocument();
   });
 
   it('renders photo with gradient border', () => {

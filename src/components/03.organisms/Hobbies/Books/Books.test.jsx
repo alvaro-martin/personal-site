@@ -23,13 +23,13 @@ describe('Books', () => {
 
   it('renders date labels below images', () => {
     renderWithProviders(<Books />);
-    expect(screen.getByText('Abril 2026')).toBeInTheDocument();
-    expect(screen.getByText('Febrero 2024')).toBeInTheDocument();
+    expect(screen.getByText('April 2026')).toBeInTheDocument();
+    expect(screen.getByText('February 2024')).toBeInTheDocument();
   });
 
   it('renders subsection label', () => {
     renderWithProviders(<Books />);
-    expect(screen.getByText('Libros')).toBeInTheDocument();
+    expect(screen.getByText('Books')).toBeInTheDocument();
   });
 
   it('uses lazy loading for images', () => {

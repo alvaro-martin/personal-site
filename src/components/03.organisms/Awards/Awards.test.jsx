@@ -6,19 +6,19 @@ import { Awards } from './Awards';
 describe('Awards', () => {
   it('renders section title from i18n', () => {
     renderWithProviders(<Awards />);
-    expect(screen.getByText('Reconocimientos')).toBeInTheDocument();
+    expect(screen.getByText('Acknowledgments')).toBeInTheDocument();
   });
 
   it('renders subtitle', () => {
     renderWithProviders(<Awards />);
-    expect(screen.getByText('y Premios')).toBeInTheDocument();
+    expect(screen.getByText('and Awards')).toBeInTheDocument();
   });
 
   it('renders all project titles from i18n', () => {
     renderWithProviders(<Awards />);
-    expect(screen.getAllByText(/Distinción a la Innovación/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Monitoreo de Nivel de Tanques/).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Sistema de monitoreo en tiempo real/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Distinction for Innovation/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Oxygen Tank Level Monitoring/).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Real-time monitoring system/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Hackster Bounty Winner/).length).toBeGreaterThanOrEqual(1);
   });
 

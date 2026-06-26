@@ -17,6 +17,12 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336"
     },
+    "geo-llmstxt": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-llmstxt/SKILL.md",
+      "computedHash": "65395ae15cea6236e9800f60f5fc7a5083451d825f4640d457750c7480b38871"
+    },
     "git-commit": {
       "source": "github/awesome-copilot",
       "sourceType": "github",

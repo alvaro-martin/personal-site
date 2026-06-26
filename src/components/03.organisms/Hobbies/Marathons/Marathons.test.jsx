@@ -23,14 +23,14 @@ describe('Marathons', () => {
 
   it('renders date labels below images', () => {
     renderWithProviders(<Marathons />);
-    expect(screen.getByText('Mayo 2026')).toBeInTheDocument();
-    expect(screen.getByText('Diciembre 2025')).toBeInTheDocument();
-    expect(screen.getByText('Junio 2025')).toBeInTheDocument();
+    expect(screen.getByText('May 2026')).toBeInTheDocument();
+    expect(screen.getByText('December 2025')).toBeInTheDocument();
+    expect(screen.getByText('June 2025')).toBeInTheDocument();
   });
 
   it('renders subsection label', () => {
     renderWithProviders(<Marathons />);
-    expect(screen.getByText('Maratones')).toBeInTheDocument();
+    expect(screen.getByText('Marathons')).toBeInTheDocument();
   });
 
   it('uses lazy loading for images', () => {

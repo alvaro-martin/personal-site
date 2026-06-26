@@ -8,7 +8,7 @@ const ThemeProvider = ({ children }) => {
   });
 
   const [language, setLanguageState] = useState(() => {
-    return localStorage.getItem('language') || 'es';
+    return localStorage.getItem('language') || 'en';
   });
 
   useEffect(() => {

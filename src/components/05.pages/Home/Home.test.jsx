@@ -5,11 +5,11 @@ import { Home } from './Home';
 describe('Home', () => {
   it('renders all section components', () => {
     renderWithProviders(<Home />);
-    expect(screen.getByText('Hola, yo soy')).toBeInTheDocument();
-    expect(screen.getByText('Sobre mi')).toBeInTheDocument();
-    expect(screen.getByText('Experiencia Profesional')).toBeInTheDocument();
-    expect(screen.getByText('Portafolio')).toBeInTheDocument();
-    expect(screen.getAllByText('Investigación').length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByText('Reconocimientos')).toBeInTheDocument();
+    expect(screen.getByText("Hello, I'm")).toBeInTheDocument();
+    expect(screen.getByText('About Me')).toBeInTheDocument();
+    expect(screen.getByText('Professional Experience')).toBeInTheDocument();
+    expect(screen.getByText('Portfolio')).toBeInTheDocument();
+    expect(screen.getAllByText('Research').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText('Acknowledgments')).toBeInTheDocument();
   });
 });

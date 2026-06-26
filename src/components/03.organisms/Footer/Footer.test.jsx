@@ -11,20 +11,20 @@ describe('Footer', () => {
 
   it('renders four subtitle lines matching hero', () => {
     renderWithProviders(<Footer />);
-    expect(screen.getByText('Msc. Ciencias de la Computación')).toBeInTheDocument();
-    expect(screen.getByText('Ingeniero Mecánico Eléctrico')).toBeInTheDocument();
+    expect(screen.getByText('Msc. Computer Science')).toBeInTheDocument();
+    expect(screen.getByText('Mechanical & Electrical Engineer')).toBeInTheDocument();
     expect(screen.getByText('AI Engineer')).toBeInTheDocument();
-    expect(screen.getByText('Investigador IoT')).toBeInTheDocument();
+    expect(screen.getByText('IoT Researcher')).toBeInTheDocument();
   });
 
   it('renders footer nav links from content.json', () => {
     renderWithProviders(<Footer />);
-    expect(screen.getByText('Inicio')).toBeInTheDocument();
-    expect(screen.getByText('Sobre mi')).toBeInTheDocument();
-    expect(screen.getByText('Idiomas')).toBeInTheDocument();
-    expect(screen.getByText('Portafolio')).toBeInTheDocument();
-    expect(screen.getByText('Investigación')).toBeInTheDocument();
-    expect(screen.getByText('Reconocimientos')).toBeInTheDocument();
+    expect(screen.getByText('Home')).toBeInTheDocument();
+    expect(screen.getByText('About')).toBeInTheDocument();
+    expect(screen.getByText('Languages')).toBeInTheDocument();
+    expect(screen.getByText('Portfolio')).toBeInTheDocument();
+    expect(screen.getByText('Research')).toBeInTheDocument();
+    expect(screen.getByText('Awards')).toBeInTheDocument();
   });
 
   it('renders anchor hrefs from content.json', () => {
@@ -46,9 +46,9 @@ describe('Footer', () => {
     expect(screen.getByText(new RegExp(currentYear))).toBeInTheDocument();
   });
 
-  it('renders "Todos los derechos reservados"', () => {
+  it('renders "All rights reserved"', () => {
     renderWithProviders(<Footer />);
-    expect(screen.getByText(/Todos los derechos reservados/)).toBeInTheDocument();
+    expect(screen.getByText(/All rights reserved/)).toBeInTheDocument();
   });
 
   it('renders social media links from content.json', () => {

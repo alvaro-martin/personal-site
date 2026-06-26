@@ -23,14 +23,14 @@ describe('Paintings', () => {
 
   it('renders date labels below images', () => {
     renderWithProviders(<Paintings />);
-    expect(screen.getByText('Junio 2026')).toBeInTheDocument();
-    const septiembreLabels = screen.getAllByText('Septiembre 2024');
-    expect(septiembreLabels.length).toBe(2);
+    expect(screen.getByText('June 2026')).toBeInTheDocument();
+    const septemberLabels = screen.getAllByText('September 2024');
+    expect(septemberLabels.length).toBe(2);
   });
 
   it('renders subsection label', () => {
     renderWithProviders(<Paintings />);
-    expect(screen.getByText('Pinturas')).toBeInTheDocument();
+    expect(screen.getByText('Paintings')).toBeInTheDocument();
   });
 
   it('uses lazy loading for images', () => {

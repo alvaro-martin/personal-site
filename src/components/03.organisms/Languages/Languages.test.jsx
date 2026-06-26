@@ -5,20 +5,20 @@ import { Languages } from './Languages';
 describe('Languages', () => {
   it('renders section title from i18n', () => {
     renderWithProviders(<Languages />);
-    expect(screen.getByText('Idiomas')).toBeInTheDocument();
+    expect(screen.getByText('Languages')).toBeInTheDocument();
   });
 
   it('renders subtitle', () => {
     renderWithProviders(<Languages />);
-    expect(screen.getByText('Mis idiomas')).toBeInTheDocument();
+    expect(screen.getByText('My languages')).toBeInTheDocument();
   });
 
   it('renders all four languages', () => {
     renderWithProviders(<Languages />);
-    expect(screen.getByText('Español')).toBeInTheDocument();
-    expect(screen.getByText('Inglés')).toBeInTheDocument();
-    expect(screen.getByText('Portugués')).toBeInTheDocument();
-    expect(screen.getByText('Alemán')).toBeInTheDocument();
+    expect(screen.getByText('Spanish')).toBeInTheDocument();
+    expect(screen.getByText('English')).toBeInTheDocument();
+    expect(screen.getByText('Portuguese')).toBeInTheDocument();
+    expect(screen.getByText('German')).toBeInTheDocument();
   });
 
   it('renders TOEFL badge for English', () => {

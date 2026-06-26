@@ -6,29 +6,29 @@ import { Skills } from './Skills';
 describe('Skills', () => {
   it('renders section title from i18n', () => {
     renderWithProviders(<Skills />);
-    expect(screen.getByText('Habilidades')).toBeInTheDocument();
+    expect(screen.getByText('Skills')).toBeInTheDocument();
   });
 
   it('renders subtitle', () => {
     renderWithProviders(<Skills />);
-    expect(screen.getByText('Mi nivel técnico')).toBeInTheDocument();
+    expect(screen.getByText('My technical level')).toBeInTheDocument();
   });
 
   it('renders all category titles from i18n', () => {
     renderWithProviders(<Skills />);
-    expect(screen.getByText('Mecánica Eléctrica')).toBeInTheDocument();
-    expect(screen.getByText('Desarrollador Frontend')).toBeInTheDocument();
-    expect(screen.getByText('Desarrollador Backend')).toBeInTheDocument();
-    expect(screen.getByText('Ingeniería IoT')).toBeInTheDocument();
+    expect(screen.getByText('Mechanical & Electrical')).toBeInTheDocument();
+    expect(screen.getByText('Frontend Developer')).toBeInTheDocument();
+    expect(screen.getByText('Backend Developer')).toBeInTheDocument();
+    expect(screen.getByText('IoT Engineer')).toBeInTheDocument();
     expect(screen.getByText('Machine Learning')).toBeInTheDocument();
-    expect(screen.getByText('Inglés')).toBeInTheDocument();
+    expect(screen.getByText('English')).toBeInTheDocument();
   });
 
   it('expands a skill category and shows skills with percentages', () => {
     renderWithProviders(<Skills />);
     const expandButtons = screen.getAllByRole('button', { name: /Expand.*skills/i });
     fireEvent.click(expandButtons[0]);
-    expect(screen.getByText('Planeamiento del Mantenimiento')).toBeInTheDocument();
+    expect(screen.getByText('Maintenance planning')).toBeInTheDocument();
     const percents = screen.getAllByText('40%');
     expect(percents.length).toBeGreaterThanOrEqual(1);
   });

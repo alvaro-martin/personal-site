@@ -5,40 +5,40 @@ import { Services } from './Services';
 describe('Services', () => {
   it('renders section title from i18n', () => {
     renderWithProviders(<Services />);
-    expect(screen.getByText('Servicios')).toBeInTheDocument();
+    expect(screen.getByText('Services')).toBeInTheDocument();
   });
 
   it('renders subtitle', () => {
     renderWithProviders(<Services />);
-    expect(screen.getByText('Qué ofrezco')).toBeInTheDocument();
+    expect(screen.getByText('What I offer')).toBeInTheDocument();
   });
 
   it('renders all six service titles', () => {
     renderWithProviders(<Services />);
-    expect(screen.getByText('Ingeniería Mecánica Eléctrica')).toBeInTheDocument();
-    expect(screen.getByText('Desarrollador Frontend')).toBeInTheDocument();
-    expect(screen.getByText('Desarrollador Backend y Cloud')).toBeInTheDocument();
-    expect(screen.getByText('Proyectos IoT')).toBeInTheDocument();
-    expect(screen.getByText('Proyectos de Machine Learning')).toBeInTheDocument();
-    expect(screen.getByText('Investigación')).toBeInTheDocument();
+    expect(screen.getByText('Mechanical & Electrical Engineer')).toBeInTheDocument();
+    expect(screen.getByText('Frontend Developer')).toBeInTheDocument();
+    expect(screen.getByText('Backend & Cloud Developer')).toBeInTheDocument();
+    expect(screen.getByText('IoT Projects')).toBeInTheDocument();
+    expect(screen.getByText('Machine Learning Projects')).toBeInTheDocument();
+    expect(screen.getByText('Research')).toBeInTheDocument();
   });
 
-  it('renders "Ver más" buttons for each service', () => {
+  it('renders "View more" buttons for each service', () => {
     renderWithProviders(<Services />);
-    const viewMoreButtons = screen.getAllByText('Ver más');
+    const viewMoreButtons = screen.getAllByText('View more');
     expect(viewMoreButtons.length).toBe(6);
   });
 
-  it('opens popup when "Ver más" is clicked', () => {
+  it('opens popup when "View more" is clicked', () => {
     renderWithProviders(<Services />);
-    const viewMoreButtons = screen.getAllByText('Ver más');
+    const viewMoreButtons = screen.getAllByText('View more');
     fireEvent.click(viewMoreButtons[0]);
-    expect(screen.getByText('Implementación de Proyectos de Mantenimiento Preventivo.')).toBeInTheDocument();
+    expect(screen.getByText('Preventive Maintenance Projects Implementation.')).toBeInTheDocument();
   });
 
   it('closes popup when close button is clicked', () => {
     renderWithProviders(<Services />);
-    const viewMoreButtons = screen.getAllByText('Ver más');
+    const viewMoreButtons = screen.getAllByText('View more');
     fireEvent.click(viewMoreButtons[0]);
     const closeButton = screen.getByLabelText('Close dialog');
     expect(closeButton).toBeTruthy();

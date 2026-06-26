@@ -6,22 +6,22 @@ import { About } from './About';
 describe('About', () => {
   it('renders section title from i18n', () => {
     renderWithProviders(<About />);
-    expect(screen.getByText('Sobre mi')).toBeInTheDocument();
+    expect(screen.getByText('About Me')).toBeInTheDocument();
   });
 
   it('renders subtitle', () => {
     renderWithProviders(<About />);
-    expect(screen.getByText('Mi introducción')).toBeInTheDocument();
+    expect(screen.getByText('My introduction')).toBeInTheDocument();
   });
 
   it('renders description text', () => {
     renderWithProviders(<About />);
-    expect(screen.getByText(/paranoico constructivo/)).toBeInTheDocument();
+    expect(screen.getByText(/constructive paranoid/)).toBeInTheDocument();
   });
 
   it('renders CV download button', () => {
     renderWithProviders(<About />);
-    expect(screen.getByText('Descargar CV')).toBeInTheDocument();
+    expect(screen.getByText('Download CV')).toBeInTheDocument();
   });
 
   it('renders photo with alt from content.json', () => {

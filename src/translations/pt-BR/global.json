@@ -1,0 +1,336 @@
+{
+    "header": {
+        "home": "Início",
+        "about": "Sobre mim",
+        "skills": "Habilidades",
+        "languages": "Idiomas",
+        "services": "Serviços",
+        "portfolio": "Portfólio",
+        "research": "Pesquisa",
+        "awards": "Prêmios",
+        "hobbies": "Hobbies",
+        "contactme": "Contato"
+    },
+    "hero": {
+        "hello1": "Olá, eu sou",
+        "hello2": "Alvaro Martín!",
+        "title1": "Msc. Ciência da Computação",
+        "title2": "Engenheiro Mecânico e Elétrico",
+        "title3": "Engenheiro de IA",
+        "title4": "Pesquisador IoT"
+    },
+    "about": {
+        "title": "Sobre mim",
+        "subtitle": "Minha introdução",
+        "description": "Sou um paranóico construtivo obcecado pelo futuro. As 3 palavras que me definem: Curioso, Esforçado e Autodidata. Meus 3 heróis: Franz Kafka, Nikola Tesla e Bruce Lee. Tenho muito interesse em Desenvolvimento e Engenharia de Software para fornecer soluções inovadoras para o setor Elétrico e Industrial usando Internet das Coisas, Inteligência Artificial, Gêmeos Digitais, Desenvolvimento Web 3D, Blockchain, etc. Não há um dia em que pare de aprender.",
+        "cv": "Baixar currículo",
+        "cvLink": "/personal-site/cv/CV-PT-Alvaro-Aspilcueta.pdf"
+    },
+    "services": {
+        "title": "Serviços",
+        "subtitle": "O que ofereço",
+        "service1": "Engenheiro Mecânico e Elétrico",
+        "service1-1": "Implementação de Projetos de Manutenção Preventiva.",
+        "service1-2": "Integração de Servidores OPC Industriais na nuvem.",
+        "service1-3": "Implementação de Monitoramento Remoto de Equipamentos Industriais.",
+        "service1-4": "Programação de CLPs.",
+        "service2": "Desenvolvedor Frontend",
+        "service2-1": "Design de Interface do Usuário.",
+        "service2-2": "Design de páginas web.",
+        "service2-3": "Desenvolvimento de páginas web.",
+        "service3": "Desenvolvedor Backend e Cloud",
+        "service3-1": "Desenvolvimento Node JS.",
+        "service3-2": "Desenvolvimento Firebase.",
+        "service3-3": "Desenvolvimento Amplify.",
+        "service3-4": "Certificado AWS.",
+        "service4": "Projetos IoT",
+        "service4-1": "Implementação de Projetos WiFi.",
+        "service4-2": "Implementação de Projetos Sigfox.",
+        "service4-3": "Implementação de Projetos LoRaWAN.",
+        "service4-4": "Especialista AWS IoT Core.",
+        "service5": "Projetos de Machine Learning",
+        "service5-1": "Implementação de projetos TinyML.",
+        "service5-2": "Desenvolvimento de modelos TensorFlow.",
+        "service5-3": "Desenvolvimento de modelos OpenCV Computer Vision.",
+        "service6": "Pesquisa",
+        "service6-1": "Orientação de teses.",
+        "service6-2": "Consultoria em redação de artigos científicos.",
+        "service6-3": "Consultoria em projetos de pesquisa.",
+        "viewMore": "Ver mais"
+    },
+    "contactme": {
+        "title": "Contato",
+        "subtitle": "Entre em contato",
+        "name": "Nome",
+        "email": "E-mail",
+        "message": "Mensagem",
+        "button": "Enviar mensagem",
+        "location": "Localização",
+        "emaildata": "hello@aubo.io",
+        "locationData": "Lima, Peru"
+    },
+    "newProject": {
+        "title": "Tem um novo projeto?",
+        "subtitle": "Entre em contato agora e vamos levar seu projeto adiante!",
+        "button": "Fale comigo"
+    },
+    "footer": {
+        "title": "Alvaro Martín",
+        "link1": "Início",
+        "link2": "Sobre mim",
+        "link3": "Idiomas",
+        "link4": "Portfólio",
+        "link5": "Pesquisa",
+        "link6": "Prêmios",
+        "link7": "Hobbies",
+        "madeBy": "Feito com ❤️ por 🙋🏽‍♂️",
+        "copyright": "Todos os direitos reservados."
+    },
+    "skills": {
+        "title": "Habilidades",
+        "subtitle": "Meu nível técnico",
+        "engineer": {
+            "title": "Mecânica e Elétrica",
+            "subtitle": "Engenharia",
+            "maintenance": "Planejamento de manutenção",
+            "opc": "Protocolo OPC UA",
+            "digsilent": "Digsilent",
+            "design": "Projeto de Linhas de Transmissão",
+            "power": "Análise de Sistemas de Potência",
+            "plc": "Programação de CLPs Siemens",
+            "autocad": "AutoCAD",
+            "solidworks": "SolidWorks"
+        },
+        "frontend": {
+            "title": "Desenvolvedor Frontend",
+            "subtitle": "Lado do cliente",
+            "html": "HTML",
+            "js": "JavaScript",
+            "css": "CSS",
+            "react": "React",
+            "styled-components": "React Styled-components",
+            "testing": "Testing",
+            "3d": "Three JS para Desenvolvimento Web 3D"
+        },
+        "backend": {
+            "title": "Desenvolvedor Backend",
+            "subtitle": "Lado do servidor",
+            "node": "Node JS",
+            "python": "Python",
+            "firebase": "Firebase",
+            "amplify": "AWS Amplify",
+            "aws": "AWS - Amazon Web Services",
+            "iac-aws": "IaC - AWS CloudFormation",
+            "iac-terraform": "IaC - Terraform",
+            "gcp": "GCP - Google Cloud Platform",
+            "az": "Azure",
+            "bash": "Bash scripting"
+        },
+        "iot": {
+            "title": "Engenheiro IoT",
+            "subtitle": "Projetos",
+            "wifi": "WiFi",
+            "sigfox": "Sigfox",
+            "lorawan": "LoRaWAN",
+            "https": "HTTPS",
+            "mqtt": "MQTT",
+            "micros": "Programação de microcontroladores",
+            "C": "C++"
+        },
+        "ml": {
+            "title": "Machine Learning",
+            "subtitle": "Projetos",
+            "tf": "TensorFlow",
+            "tfjs": "TensorFlow JS",
+            "tinyml": "Tiny ML",
+            "opencv": "OpenCV"
+        },
+        "english": {
+            "title": "Inglês",
+            "subtitle": "Nível Conversacional / B2 - Intermediário Superior",
+            "reading": "Leitura",
+            "listening": "Compreensão oral",
+            "writing": "Escrita",
+            "speaking": "Conversação"
+        }
+    },
+    "languages": {
+        "title": "Idiomas",
+        "subtitle": "Meus idiomas",
+        "spanish": "Espanhol",
+        "english": "Inglês",
+        "portuguese": "Português",
+        "german": "Alemão"
+    },
+    "portfolio": {
+        "title": "Portfólio",
+        "subtitle": "Trabalhos mais recentes",
+        "project1": {
+            "title": "Siemens Challenge",
+            "subtitle": "Ferramenta baseada em IA para extrair, normalizar e comparar requisitos de motores elétricos de datasheets PDF com um catálogo usando LLMs e Docker.",
+            "button": "Ver projeto",
+            "link": "https://github.com/alvaro-martin/siemens-challenge"
+        },
+        "project2": {
+            "title": "Sistema de Monitoramento IoT Ambiental",
+            "subtitle": "Sistema de monitoramento IoT ambiental containerizado para Raspberry Pi — MQTT + InfluxDB + Node-RED + Grafana",
+            "button": "Ver projeto",
+            "link": "https://github.com/alvaro-martin/ComIoTPeru-RPIJAM"
+        },
+        "project3": {
+            "title": "Construção e Monitoramento de Parâmetros de Módulo Hidropônico NFT",
+            "subtitle": "Projeto, medição e construção de Módulo Hidropônico NFT (Nutrient Film Technique)"
+        },
+        "project4": {
+            "title": "Plataforma de gestão logística para serviços de mudança e entrega de pacotes",
+            "subtitle": "Projeto desenvolvido para empresa, há mais de 4 anos em produção."
+        },
+        "project5": {
+            "title": "Integração de Servidor Industrial OPC e monitoramento de variáveis na AWS",
+            "subtitle": "Foi desenvolvido um programa para extrair dados do Servidor Industrial OPC, integração com AWS IoT Core e visualização em dashboard ElasticSearch na AWS."
+        },
+        "project6": {
+            "title": "Treinamento para professores da UNAMAD",
+            "subtitle": "Sensores IoT, redes LPWAN, Cloud, Machine Learning."
+        },
+        "project7": {
+            "title": "Oxímetro Perú",
+            "subtitle": "Visualiza a localização de oxímetros em tempo real para facilitar o acesso a pessoas vulneráveis.",
+            "button": "Demo",
+            "link": "https://oximetroperu.web.app/"
+        },
+        "project8": {
+            "title": "Monitoramento do Nível de Tanques de Oxigênio para pacientes com Covid-19",
+            "subtitle": "Leitura do nível de oxigênio usando imagens, computação em nuvem, alertas por e-mail e Telegram."
+        },
+        "project9": {
+            "title": "Sistema de monitoramento em tempo real baseado em IoT para gestão eficiente do serviço de irrigação e manutenção de um parque no distrito de San Isidro usando Sigfox e Machine Learning",
+            "subtitle": "Sensor de umidade, Sigfox, FIWARE, previsão de umidade."
+        }
+    },
+    "research": {
+        "title": "Pesquisa",
+        "subtitle": "Artigos",
+        "project1": {
+            "title": "Proposta e Avaliação de uma Arquitetura de Software para um Gêmeo Digital de Campus Inteligente",
+            "subtitle": "Dissertação de mestrado",
+            "button": "Baixar dissertação",
+            "link": "/personal-site/master-thesis/thesis.pdf"
+        },
+        "project2": {
+            "title": "Spot-Wise Smart Parking: Uma Arquitetura Habilitada por Edge com YOLOv11 para um Gêmeo Digital",
+            "button": "Ver artigo",
+            "link": "https://journals-sol.sbc.org.br/index.php/jisa/article/view/6664"
+        },
+        "project3": {
+            "title": "San Marcos Cidade Inteligente: Uma proposta de framework para o desenvolvimento de Serviços de Cidade Inteligente baseada na ISO 37120:2018",
+            "button": "Ver artigo",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-031-08815-5_5"
+        },
+        "project4": {
+            "title": "Estudo de Planejamento para o desenvolvimento do Smart Campus FIEE UNI",
+            "button": "Ver artigo",
+            "link": "https://ieeexplore.ieee.org/document/9922077"
+        },
+        "project5": {
+            "title": "Sistema IoT de rastreamento de ônibus em tempo real e aplicativo web do Smart Campus FIEE usando LoRaWAN",
+            "button": "Ver artigo",
+            "link": "https://ieeexplore.ieee.org/document/9922172"
+        },
+        "project6": {
+            "title": "Reconhecimento de movimentos da mão ao rosto para combater a COVID-19 usando um sensor IMU e um modelo de aprendizado profundo embarcado em um SBC",
+            "button": "Ver projeto",
+            "link": "https://github.com/alvaro-martin/Hand-towards-face-COVID19"
+        },
+        "project7": {
+            "title": "Aplicativo móvel COVID-19 baseado em sinais RSSI para cumprir o distanciamento social usando o sinal bluetooth de smartphones",
+            "button": "Ver projeto",
+            "link": "https://github.com/alvaro-martin/data-sience-for-covid19"
+        },
+        "project8": {
+            "title": "Sistema de Orientação Smart Campus para visitantes baseado em Filtros Bayesianos",
+            "button": "Ver artigo",
+            "link": "https://link.springer.com/chapter/10.1007/978-3-030-57566-3_46"
+        }
+    },
+    "acknowledgments": {
+        "title": "Agradecimentos",
+        "subtitle": "e Prêmios",
+        "project1": {
+            "title": "Distinção por Inovação no Prêmio Nacional de Democracia Digital 2021 para a Comunidade IoT Peru",
+            "subtitle": "8ª edição do Prêmio Nacional de Democracia Digital",
+            "button": "Ver publicação",
+            "link": "https://democraciadigital.pe/blogs/nota-prensa-22-iniciativas-digitales-premiadas-8va-edicion-premio-nacional-democracia-digital"
+        },
+        "project3": {
+            "title": "Monitoramento do Nível de Tanques de Oxigênio para pacientes com COVID-19",
+            "subtitle": "Quinto lugar no Concurso de Trabalhos e Projetos Tecnológicos organizado pelo Colégio de Engenheiros do Peru."
+        },
+        "project5": {
+            "title": "Sistema de monitoramento em tempo real baseado em IoT para gestão eficiente do serviço de irrigação e manutenção de um parque no distrito de San Isidro usando Sigfox e Machine Learning",
+            "subtitle": "Prêmio de Desenvolvimento Tecnológico Aplicado na feira tecnológica IEEE INTERCON 2019."
+        },
+        "project6": {
+            "title": "Hackster Bounty Winner: Dispositivo Inteligente para Chuveiro usando Amazon Alexa e Arduino",
+            "subtitle": "Controle a temperatura da água do seu chuveiro com sua voz usando Amazon Alexa e Arduino.",
+            "button": "Ver publicação",
+            "link": "https://www.hackster.io/pipo-automation/smart-shower-gadget-c97f8e"
+        }
+    },
+    "experience": {
+        "title": "Experiência Profissional",
+        "subtitle": "Minha jornada pessoal",
+        "maestria": {
+            "title": "MSc em Ciência da Computação",
+            "company": "IC-UNICAMP",
+            "date": "2023 - 2026"
+        },
+        "aubo": {
+            "title": "CEO & Fundador",
+            "company": "Aubo",
+            "date": "2019 - 2023"
+        },
+        "iotperu": {
+            "title": "Coordenador & Cofundador",
+            "company": "Comunidade IoT Peru",
+            "date": "2018 - Presente"
+        },
+        "bigdata": {
+            "title": "Professor Cloud + IA + Blockchain",
+            "company": "Big Data IoT Cloud",
+            "date": "2021"
+        },
+        "iotunmsm": {
+            "title": "Pesquisador IoT",
+            "company": "Grupo de Pesquisa IoT UNMSM",
+            "date": "2018 - 2023"
+        },
+        "priconsa": {
+            "title": "Engenheiro de Projeto de Alta e Média Tensão",
+            "company": "PRICONSA",
+            "date": "2015 - 2017"
+        },
+        "agp": {
+            "title": "Assistente de Planejamento de Manutenção",
+            "company": "AGP Group",
+            "date": "2015"
+        },
+        "milpo": {
+            "title": "Estagiário de Engenharia de Manutenção",
+            "company": "Companhia Mineradora Milpo",
+            "date": "2015"
+        },
+        "uni": {
+            "title": "Estudante de Engenharia Mecânica e Elétrica",
+            "company": "Universidade Nacional de Engenharia",
+            "date": "2011 - 2015"
+        }
+    },
+    "hobbies": {
+        "title": "Hobbies",
+        "subtitle": "O que faço fora do trabalho",
+        "paintings": "Pinturas",
+        "marathons": "Maratonas",
+        "books": "Livros"
+    }
+}

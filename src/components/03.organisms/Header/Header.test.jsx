@@ -35,22 +35,24 @@ describe('Header', () => {
     expect(screen.getByText(content.header.brandName)).toBeInTheDocument();
   });
 
-  it('renders all navigation links with Spanish i18n labels', () => {
+  it('renders all navigation links with English i18n labels', () => {
     renderWithProviders(<Header />);
-    expect(screen.getByText('Inicio')).toBeInTheDocument();
-    expect(screen.getByText('Sobre mi')).toBeInTheDocument();
-    expect(screen.getByText('Idiomas')).toBeInTheDocument();
-    expect(screen.getByText('Portafolio')).toBeInTheDocument();
-    expect(screen.getByText('Investigación')).toBeInTheDocument();
-    expect(screen.getByText('Reconocimientos')).toBeInTheDocument();
+    expect(screen.getByText('Home')).toBeInTheDocument();
+    expect(screen.getByText('About')).toBeInTheDocument();
+    expect(screen.getByText('Languages')).toBeInTheDocument();
+    expect(screen.getByText('Portfolio')).toBeInTheDocument();
+    expect(screen.getByText('Research')).toBeInTheDocument();
+    expect(screen.getByText('Awards')).toBeInTheDocument();
   });
 
-  it('renders flag images', () => {
+  it('renders flag images in language dropdown', () => {
     renderWithProviders(<Header />);
-    const esFlag = screen.getByAltText('Spanish');
-    const enFlag = screen.getByAltText('English');
-    expect(esFlag).toBeInTheDocument();
-    expect(enFlag).toBeInTheDocument();
+    const trigger = screen.getByLabelText('Select language');
+    fireEvent.click(trigger);
+    expect(screen.getAllByAltText('Spanish').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByAltText('English').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByAltText('German').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByAltText('Portuguese').length).toBeGreaterThanOrEqual(1);
   });
 
   it('toggles mobile menu on hamburger click', () => {
