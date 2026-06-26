@@ -1,0 +1,47 @@
+# Alvaro Martín
+
+> Personal portfolio and resume of Alvaro Martín — MSc Computer Science, Mechanical & Electrical Engineer, AI Engineer, and IoT Researcher from Lima, Peru. Bilingual site (Spanish/English) showcasing professional experience, projects, research, skills, and achievements.
+
+## About
+
+- [Homepage](https://alvaro-martin.github.io/personal-site/): Single-page portfolio with animated hero, typewriter intro, social links, and photo with gradient border. Bilingual (Spanish default, English toggle) with dark/light mode.
+
+## Experience
+
+- [Journey Timeline](https://alvaro-martin.github.io/personal-site/#journey): Professional timeline covering 9 entries: MSc Computer Science at IC-UNICAMP (2023-2026), CEO/Founder of Aubo (2019-2023), Coordinator/Co-Founder of IoT Peru Community (2018-Present), Cloud/AI/Blockchain teacher at Big Data IoT Cloud (2021), IoT Researcher at UNMSM (2018-2023), High/Medium Voltage Design Engineer at PRICONSA (2015-2017), Maintenance Planner at AGP Group (2015), Maintenance Engineering Intern at Milpo Mining (2015), and Mechanical & Electrical Engineering student at UNI (2011-2015).
+
+## Portfolio
+
+- [Portfolio Section](https://alvaro-martin.github.io/personal-site/#portfolio): 9 engineering and software projects including Siemens Challenge (AI-powered PDF data extraction with LLMs and Docker), Environmental IoT Monitoring System (Raspberry Pi with MQTT/InfluxDB/Grafana), NFT Hydroponic Module, logistics platform for moving services, OPC Server integration with AWS IoT Core and ElasticSearch, UNAMAD IoT training, Oxímetro Perú social initiative, oxygen tank level monitoring with computer vision, and IoT park irrigation system with Sigfox and ML.
+
+## Research
+
+- [Research Section](https://alvaro-martin.github.io/personal-site/#research): 8 published papers including Smart Campus Digital Twin architecture, Edge-enabled Smart Parking with YOLOv11, San Marcos Smart City framework proposal, Smart Campus FIEE UNI planning study, LoRaWAN bus tracking system, COVID-19 hand-to-face movement recognition with IMU sensors, RSSI-based social distancing mobile app, and Smart Campus guidance system with Bayesian Filters.
+
+## Awards
+
+- [Awards Section](https://alvaro-martin.github.io/personal-site/#awards): 4 recognitions including Innovation Distinction at National Digital Democracy Award 2021 (IoT Community Peru), 5th place in CIP Technological Works Competition for oxygen tank monitoring, IEEE INTERCON 2019 Applied Technological Development Award for Sigfox/ML irrigation system, and Hackster Bounty Winner for Smart Shower Gadget with Amazon Alexa.
+
+## Skills
+
+- [Skills Section](https://alvaro-martin.github.io/personal-site/#skills): 6 skill categories with percentage levels: Mechanical & Electrical Engineering (AutoCAD, SolidWorks, PLC programming, Digsilent), Frontend Development (HTML, CSS, JavaScript, React), Backend/Cloud (Node.js, Python, Firebase, AWS Amplify, AWS, GCP, Azure, Terraform), IoT Engineering (WiFi, Sigfox, LoRaWAN, MQTT, microcontrollers), Machine Learning (TensorFlow, TensorFlow.js, TinyML, OpenCV), and English proficiency.
+
+## Languages
+
+- [Languages Section](https://alvaro-martin.github.io/personal-site/#languages): 4 languages with proficiency levels: Spanish (Native), English (C1, TOEFL certified), Portuguese (C1), German (A2 to B1 in progress).
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/almartinuni/
+- GitHub: https://github.com/alvaro-martin
+- Location: Lima, Peru
+
+## Key Facts
+
+- Full name: Alvaro Martín
+- Titles: MSc Computer Science, Mechanical & Electrical Engineer, AI Engineer, IoT Researcher
+- Based in: Lima, Peru
+- Education: MSc Computer Science at IC-UNICAMP (2023-2026), Mechanical & Electrical Engineering at UNI
+- Certified: AWS, TOEFL English (C1)
+- Industries: IoT, AI/ML, Full-Stack Development, Mechanical & Electrical Engineering
+- Site deployed on GitHub Pages at /personal-site/ base path
